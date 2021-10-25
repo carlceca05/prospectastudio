@@ -1186,7 +1186,7 @@ body[data-page="company"] header .logo,
 body[data-page="blog"] header .logo,
 body[data-page="contacts"].gray_black-scene header .logo,
 body[data-page="segments"] header .logo {
-    background-image: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/content/logo-4b99d42ae7158612f49a38ebace28cc1.svg")
+    background-image: url("../img/prospecta.svg")
 }
 .black-text-header nav ul li a,
 header.active_light-gray-header-add nav ul li a,
@@ -1232,7 +1232,7 @@ body[data-page="segments"].segments_related-scene header .logo,
 body[data-page="segments"].segments_case-scene header .logo,
 body[data-page="segments"].segments_cover-scene header .logo,
 body[data-page="segments"].segments_cta-scene header .logo {
-    background-image: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/content/logo-black-dbed9be2a95b23a937dcd0c218111e0d.svg")
+    background-image: url("../img/prospecta-negro.svg")
 }
 .logo {
     width: 114px;
@@ -2120,7 +2120,7 @@ footer .footer-top .footer-logo {
 }
 footer .footer-top .footer-logo .logo {
     padding: 0 0 24px 0;
-    background-image: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/content/logo-4b99d42ae7158612f49a38ebace28cc1.svg")
+    background-image: url("../img/prospecta.svg")
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     footer .footer-top .footer-logo .logo {
