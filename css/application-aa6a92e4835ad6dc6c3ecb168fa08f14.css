@@ -10,6 +10,7 @@ div.button span {
     background-repeat: no-repeat;
     -webkit-font-smoothing: antialiased
 }
+
 div.selector,
 div.checker,
 div.button,
@@ -41,6 +42,7 @@ div.button * {
     margin: 0;
     padding: 0
 }
+
 .highContrastDetect {
     background: url("/web/20170209145956im_/https://yalantis.com/assets/images/bg-input.png") repeat-x 0 0;
     width: 0px;
@@ -980,6 +982,8 @@ input.uniform-input:focus {
     color: white;
     border: 1px solid white
 }
+
+
 .btn_white:hover {
     color: #16181c;
     background-color: white
@@ -1009,6 +1013,9 @@ input.uniform-input:focus {
     background-color: white;
     border: 1px solid #f16522
 }
+
+
+
 @font-face {
     font-family: 'brandon_text_regularregular';
     src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-990f2cf86d830759ee147e96485b1cf9.eot");
