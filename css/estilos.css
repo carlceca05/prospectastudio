@@ -89,7 +89,7 @@ body{
 
 
 
-/*
+
 div.selector,
 div.selector span,
 div.checker span,
@@ -159,8 +159,7 @@ input[type="search"]:active {
     -moz-appearance: none;
     -webkit-appearance: none
 }
-*/
-/*
+
 div.selector {
     background-position: 0 -130px;
     line-height: 26px;
@@ -357,7 +356,7 @@ div.radio.disabled span.checked,
 div.radio.disabled.active span.checked {
     background-position: -162px -279px
 }
-*/
+
 
 /*
 div.uploader {
@@ -524,7 +523,6 @@ textarea.uniform.focus {
 
 div.button span {
     font-weight: bold;
-    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
     font-size: 12px;
     letter-spacing: 1px;
     text-transform: uppercase
@@ -633,7 +631,6 @@ input.uniform-input:focus {
     transition: opacity 1.2s, visibility 1.2s
 }
 .l-loader .text {
-    /*font-family: 'radikalregular';*/
     color: #23252c;
     letter-spacing: -1px;
     font-size: 40px;
@@ -989,7 +986,7 @@ input.uniform-input:focus {
     padding-left: 20px;
     padding-right: 20px
 }
-/*
+
 .flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1004,13 +1001,14 @@ input.uniform-input:focus {
     display: -ms-inline-flexbox;
     display: inline-flex
 }
-*/
+
+
 @media only screen and (min-width: 1025px) {
     .flex-desktop_reverse {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse
+        flex-direction: row-reverse;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
@@ -1018,7 +1016,7 @@ input.uniform-input:focus {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
-        flex-direction: row-reverse
+        flex-direction: row-reverse;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
@@ -1026,7 +1024,7 @@ input.uniform-input:focus {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
-        flex-direction: column
+        flex-direction: column;
     }
 }
 @media only screen and (max-width: 767px) {
@@ -1034,20 +1032,20 @@ input.uniform-input:focus {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
-        flex-direction: column
+        flex-direction: column;
     }
 }
 .white-text-header nav ul li a {
     color: white
 }
 .white-text-header .logo {
-    background-image: url("../img/prospecta.svg")
+    background-image: url("../img/prospecta.svg");
 }
 .black-text-header nav ul li a {
-    color: #111111
+    color: #111111;
 }
 .black-text-header .logo {
-    background-image: url("../img/prospecta-negro.svg")
+    background-image: url("../img/prospecta-negro.svg");
 }
 .btn {
     -webkit-user-select: none;
@@ -1141,24 +1139,6 @@ input.uniform-input:focus {
     border: 1px solid #f16522
 }
 
-
-/*
-@font-face {
-    font-family: 'brandon_text_regularregular';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-990f2cf86d830759ee147e96485b1cf9.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-990f2cf86d830759ee147e96485b1cf9.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-82c990b3a2fde57ae1901519302a33f5.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-5f0241040e4e5041719c648082f7ca91.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-67e5287719386d52ff10dc38144ced2d.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'icomoon';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-9ee02e0ac2217f44399999ff21dd9df6.eot?52t6nz");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-9ee02e0ac2217f44399999ff21dd9df6.eot?52t6nz#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-6c457052e86974793ae6ef3788ce7962.ttf?52t6nz") format("truetype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-6b628109a8fa9bf8563eacb866792bd9.woff?52t6nz") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-60d8690769d91e34141e0c9c11561002.svg?52t6nz#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal
-}
-*/
-/*
 html,
 body,
 div,
@@ -1201,7 +1181,7 @@ td {
     vertical-align: baseline;
     background: transparent
 }
-*/
+
 
 
 sup {
@@ -1241,22 +1221,8 @@ li {
     padding-right: 20px
 }
 
-/*
-.flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex
-}
-.inline-flex {
-    display: -webkit-inline-box;
-    display: -webkit-inline-flex;
-    display: -moz-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex
-}
-*/
+
+
 @media only screen and (min-width: 1025px) {
     .flex-desktop_reverse {
         -webkit-box-orient: horizontal;
@@ -1310,9 +1276,10 @@ body[data-page="company"].active_map-black-background header nav ul li a,
 body[data-page="company"] header nav ul li a,
 body[data-page="blog"] header nav ul li a,
 body[data-page="contacts"].gray_black-scene header nav ul li a,
-body[data-page="segments"] header nav ul li a {
+body[data-page="segments"] header nav ul li a  {
     color: white
 }
+
 .white-text-header .logo,
 body[data-page="home"] header .logo,
 body[data-page="technologies"] header .logo,
@@ -1326,10 +1293,12 @@ body[data-page="blog"] header .logo,
 body[data-page="contacts"].gray_black-scene header .logo,
 body[data-page="segments"] header .logo {
     background-image: url("../img/prospecta.svg")
+
 }
 .black-text-header nav ul li a,
 header.active_light-gray-header-add nav ul li a,
 header.active_light-gray-header nav ul li a,
+/*
 body[data-page="works"] header nav ul li a,
 body[data-page="technologies"].light_gray-scene header nav ul li a,
 body[data-page="technologies"].white-scene header nav ul li a,
@@ -1348,12 +1317,13 @@ body[data-page="segments"].segments_features-scene header nav ul li a,
 body[data-page="segments"].segments_related-scene header nav ul li a,
 body[data-page="segments"].segments_case-scene header nav ul li a,
 body[data-page="segments"].segments_cover-scene header nav ul li a,
-body[data-page="segments"].segments_cta-scene header nav ul li a {
-    color: #111111
+body[data-page="segments"].segments_cta-scene header nav ul li a */ {
+    color: #111111;
 }
 .black-text-header .logo,
 header.active_light-gray-header-add .logo,
 header.active_light-gray-header .logo,
+/*
 body[data-page="works"] header .logo,
 body[data-page="technologies"].light_gray-scene header .logo,
 body[data-page="technologies"].white-scene header .logo,
@@ -1370,8 +1340,9 @@ body[data-page="segments"].segments_features-scene header .logo,
 body[data-page="segments"].segments_related-scene header .logo,
 body[data-page="segments"].segments_case-scene header .logo,
 body[data-page="segments"].segments_cover-scene header .logo,
-body[data-page="segments"].segments_cta-scene header .logo {
+body[data-page="segments"].segments_cta-scene header .logo */ {
     background-image: url("../img/prospecta-negro.svg")
+
 }
 
 
@@ -1633,6 +1604,9 @@ body[data-page="home"] header.active_red-header {
 }
 body[data-page="home"].active_red-scene header {
     background-color: rgba(148, 24, 78, 0.9);
+}
+body[data-page="home"].active_light-red-scene header {
+    background-color: rgba(169, 23, 67, 0.9);
 }
 body[data-page="home"].active_red-scene .wrapper {
     background-color: #b5016a;
@@ -2003,7 +1977,7 @@ body[data-page="segments"].segments_cta-scene .section-segments-we-cover {
     }
 }
 .device-menu.black span {
-    background-color: #111111
+    background-color: #111111;
 }
 .device-menu.open span {
     background-color: white
@@ -2685,199 +2659,6 @@ body:after {
 }
 
 
-/*
-@font-face {
-    font-family: 'brandon_textblack_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black_italic-webfont-e7138b419d43d438f6a8be98d2a28cf6.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black_italic-webfont-e7138b419d43d438f6a8be98d2a28cf6.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black_italic-webfont-ee08b237d19425ef3275549d2756ac87.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black_italic-webfont-f320458bfcb012b73aa0fafa2cf4c7ab.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black_italic-webfont-c3740e496c64bf0839bb9674980896f4.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-*/
-/*
-@font-face {
-    font-family: 'brandon_textblack';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black-webfont-2589cd46a470b43dc79249370099f893.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black-webfont-2589cd46a470b43dc79249370099f893.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black-webfont-76194045c82d00433ef226a437935ea6.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black-webfont-ecb8304e6eaeccbdbb37e9fb140e3d17.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_black-webfont-9a711634741b99050f1606c0386f76de.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textbold_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold_italic-webfont-22ef696b8f65a29d81c46bc3ec75f317.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold_italic-webfont-22ef696b8f65a29d81c46bc3ec75f317.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold_italic-webfont-b04b42c9384cc4c1b3a15ca645f0267b.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold_italic-webfont-017f249e9e4b277cf79be6a4e9b43292.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold_italic-webfont-009e55a5ba6c50532e617204e1b46534.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textbold';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold-webfont-1c4073f992334acef5495e01dca4df45.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold-webfont-1c4073f992334acef5495e01dca4df45.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold-webfont-9db0de8d0bcb4595f343757f521c4b5a.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold-webfont-593bced7e6761cca6d5a1ad2d73720ad.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_bold-webfont-a0c4f4c4ade584ed64028973903a64ea.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textregular_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_italic-webfont-f7bfee50aa604054347e890cc03cc6fd.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_italic-webfont-f7bfee50aa604054347e890cc03cc6fd.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_italic-webfont-5bd33954e63056cbe987a3d05a1a1b3f.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_italic-webfont-1b598cadc17aa22d9b13277d08386808.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_italic-webfont-1f9cb41aea99dcc6ca67b8abdca212f6.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textlight_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light_italic-webfont-2773bf96a07cc36226d9e822ef638f02.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light_italic-webfont-2773bf96a07cc36226d9e822ef638f02.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light_italic-webfont-7b6b7e3884c50953cdfd37907be11715.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light_italic-webfont-22e62a70ff3a62a8d800b694399cf178.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light_italic-webfont-e36e776246d3c890175a90592da0bce0.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textlight';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light-webfont-46f2f7ce82424021f028b6e05dedb597.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light-webfont-46f2f7ce82424021f028b6e05dedb597.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light-webfont-cdcb1de68928c17275729b30c8119dd3.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light-webfont-dccaabdb5833d3221616a84987af41a2.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_light-webfont-bb961c76594e2ad835bde87069074097.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textmedium_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium_italic-webfont-5f7c58721b708488f35c4fade55bf0a3.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium_italic-webfont-5f7c58721b708488f35c4fade55bf0a3.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium_italic-webfont-be3bedbb1bc5d6e63ae91449d706bb3c.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium_italic-webfont-8a06db9a35ae966d07d41754b0e8e272.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium_italic-webfont-4289554138a1199515048e6ca168c266.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textmedium';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium-webfont-2b5cbf6dcd269918905c1796bef08162.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium-webfont-2b5cbf6dcd269918905c1796bef08162.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium-webfont-ea8c51d38c8d0c36da903d60e13d9fce.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium-webfont-399ddb1aa2f4b2d6541ca16bd56e2316.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_medium-webfont-9133659eb09a931c57ff6e75a1a29a5c.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textthin_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin_italic-webfont-8c3a0a80fe46663ba58d8fe2b0c2df2d.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin_italic-webfont-8c3a0a80fe46663ba58d8fe2b0c2df2d.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin_italic-webfont-1106cc17bee8b80a9b581f53880dbb06.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin_italic-webfont-7091c709552af3479e4de052ef7cf915.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin_italic-webfont-f7c1f0f82d9739c681571282c1c23e1b.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_textthin';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin-webfont-5cee85a4754da3d378110591dcd60714.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin-webfont-5cee85a4754da3d378110591dcd60714.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin-webfont-b7eb948e20f81ef8fd227bd3223a2f5b.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin-webfont-f556af36a14f2dc6eef8d4c13e597588.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text_thin-webfont-0a78980131c097995833e807f0a23a88.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'brandon_text_regularregular';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-990f2cf86d830759ee147e96485b1cf9.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-990f2cf86d830759ee147e96485b1cf9.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-82c990b3a2fde57ae1901519302a33f5.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-5f0241040e4e5041719c648082f7ca91.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/brandon_text-webfont-67e5287719386d52ff10dc38144ced2d.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalblack_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black_italic-webfont-eb73203be1be23cf0dda3c6a3db4297a.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black_italic-webfont-eb73203be1be23cf0dda3c6a3db4297a.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black_italic-webfont-2fdb206efc9cb1f5b6b1e84d5764870d.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black_italic-webfont-ce09b58b7994346a26fcfbbcd27e073a.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black_italic-webfont-de62e8956ae473c473cfb2a7d2225c8f.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalblack';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black-webfont-c5c848104d7cd4277014f51e34272f41.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black-webfont-c5c848104d7cd4277014f51e34272f41.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black-webfont-285e48b028c29291c7582b775a90a207.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black-webfont-25990f78b6231ddba30daa8ae6c52787.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_black-webfont-599b0c99b518ec3804ab2ab8fa1c620e.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalbold_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold_italic-webfont-5347050a81e34e2eaf025e6a32c94016.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold_italic-webfont-5347050a81e34e2eaf025e6a32c94016.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold_italic-webfont-593cfb7db4a9db6fedf6dc211f1dd508.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold_italic-webfont-da9e3e734de1e7776ed54e84b453dbe9.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold_italic-webfont-95d1d6c7f83807a0a9dfcddc6e56554a.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalbold';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold-webfont-59ccf366fbeb495e064c65373e4517d6.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold-webfont-59ccf366fbeb495e064c65373e4517d6.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold-webfont-c1d6861db56886f644745a0e7fe6a727.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold-webfont-d1ec9470b26d7581c32e0eb30851dec7.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_bold-webfont-02cacf50c30140e02e1a0427d198d36b.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalitalic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_italic-webfont-1d7a34eff5bad9b16c3510db2838867f.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_italic-webfont-1d7a34eff5bad9b16c3510db2838867f.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_italic-webfont-8d891e3bfeeb85fb8bed9bc637d20403.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_italic-webfont-5c15394f7aafb346da4c0b3f8b033a4a.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_italic-webfont-1255362ea020239fe0cff7e862f95aac.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikallight_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light_italic-webfont-c36ea460fd7c40aec7e5fa529abbb806.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light_italic-webfont-c36ea460fd7c40aec7e5fa529abbb806.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light_italic-webfont-3f8f1a063285ec82294c6a096f99422b.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light_italic-webfont-bc0af941dd64b3855a42a25f4614211a.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light_italic-webfont-9bf5b9358e016206f3f2c87924cd0a35.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikallight';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light-webfont-0c7c8f276533c4a7240db42cf8693d79.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light-webfont-0c7c8f276533c4a7240db42cf8693d79.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light-webfont-fee32943cc5ecad2305be01de9693b5c.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light-webfont-49be61dcce23fc5caa93a80b2fb02396.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_light-webfont-29b7d7131dfbacaedf9f3876a2427471.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalmedium_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium_italic-webfont-6afe59d955f7d0be4bed3ec50f4a4220.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium_italic-webfont-6afe59d955f7d0be4bed3ec50f4a4220.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium_italic-webfont-9bfc985ff79a0d31588d965ab7594eaf.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium_italic-webfont-a655c9dd052e4f09de69f46079b9443c.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium_italic-webfont-6b970a1ab62bfd7beea75079ca8b4bf5.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalmedium';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium-webfont-c3b5cebabecd6b39f7b74e011bf9ca89.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium-webfont-c3b5cebabecd6b39f7b74e011bf9ca89.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium-webfont-9ba1fc92caa7d6e191d2930a23a86477.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium-webfont-dd415226006737d7c1ca2dc5abab0bfe.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_medium-webfont-d7925373a2b0790476e8a6176a8da55e.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalthin_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin_italic-webfont-8b3ea08b57f202fa08b2b82be5daed89.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin_italic-webfont-8b3ea08b57f202fa08b2b82be5daed89.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin_italic-webfont-b25c09ead168494bcf7a4354fa5651bf.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin_italic-webfont-ee9e8ac48973d6db362e9f6ec936cb67.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin_italic-webfont-1a6c3cdcbe08ae7c5c9328f78ce5cc52.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalthin';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin-webfont-a6a5d70f8697e03fee3dacff1e44b5a3.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin-webfont-a6a5d70f8697e03fee3dacff1e44b5a3.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin-webfont-3b99e679e304bfc39b5a08cec37a2398.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin-webfont-ed8ff2c8564ffcc7f11b887c3d23f9cc.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_thin-webfont-56dbb47e839df9a4e6dbc4d62dd2ae79.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalultrathin_italic';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_ultrathin_italic-webfont-05d556c217549f4ec2f4a923e62eb604.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_ultrathin_italic-webfont-05d556c217549f4ec2f4a923e62eb604.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_ultrathin_italic-webfont-641bb75f87439837a20882806573c6db.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_ultrathin_italic-webfont-4f6e62f8847c756fb1db3c96a9b7d516.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal_ultrathin_italic-webfont-640366440b951f385e6bfdd64645232e.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalultrathin';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/v2/nootype_-_radikal_ultrathin-webfont.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/v2/nootype_-_radikal_ultrathin-webfont.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/v2/nootype_-_radikal_ultrathin-webfont.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/v2/nootype_-_radikal_ultrathin-webfont.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/v2/nootype_-_radikal_ultrathin-webfont.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'radikalregular';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-10798268f5a1f88b297d855e0f2a3a97.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-10798268f5a1f88b297d855e0f2a3a97.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-ecc4c3c91d70a125d26700b20903d803.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-ab3661f687265d9a8d6867bb2b07f99c.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-e7e85f3afbe22eb10f7a71547ed8721d.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-@font-face {
-    font-family: 'icomoon';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-9ee02e0ac2217f44399999ff21dd9df6.eot?52t6nz");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-9ee02e0ac2217f44399999ff21dd9df6.eot?52t6nz#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-6c457052e86974793ae6ef3788ce7962.ttf?52t6nz") format("truetype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-6b628109a8fa9bf8563eacb866792bd9.woff?52t6nz") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/icomoon-60d8690769d91e34141e0c9c11561002.svg?52t6nz#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal
-}
-*/
 
 /*
 i,
@@ -2987,48 +2768,49 @@ i,
 .btn-more {
     color: #f16522;
     padding-left: 20px;
-    font-family: "brandon_text_regularregular", Helvetica, Arial, sans-serif;
     border: 1px solid #f16522;
     position: relative;
     -webkit-transition-timing-function: ease;
-    transition-timing-function: ease
+    transition-timing-function: ease;
 }
 .btn-more:hover {
-    background-color: #f16522;
-    color: #fff
+    background-color: #fff;
+    color: #000;
 }
 .btn-more.loading {
-    background-color: #f16522;
-    color: #fff
+    background-color: #fff;
+    color: #000;
 }
 .btn-more.loading .icon-load-more {
     -webkit-animation: rotation 1s linear infinite;
-    animation: rotation 1s linear infinite
+    animation: rotation 1s linear infinite;
 }
 @-webkit-keyframes rotation {
     0% {
         -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
     100% {
         -webkit-transform: rotate(360deg);
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 @keyframes rotation {
     0% {
         -webkit-transform: rotate(0deg);
-        transform: rotate(0deg)
+        transform: rotate(0deg);
     }
     100% {
         -webkit-transform: rotate(360deg);
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
+
+/*
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
 }
 html.lock-screen {
     overflow: hidden
@@ -3039,7 +2821,6 @@ html.lock-screen {
     height: 100%
 }
 .index-preview a {
-    /*font-family: "brandon_text_regularregular", Helvetica, Arial, sans-serif;*/
     font-size: 22px;
     line-height: 32px;
     color: #111111
@@ -3053,6 +2834,7 @@ html.lock-screen {
 .lock-screen {
     overflow: hidden
 }
+*/
 .wrapper {
     background-color: #16181c;
     position: relative;
