@@ -4,9 +4,16 @@
     font-family: 'Open Sans', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 }
+
+:root{
+    --stroke: #fff;
+}
+
+
 body{
     font-family: 'Open Sans', sans-serif;;
 }
+
 /*
 @font-face {
     font-family: 'radikalregular';
@@ -16,6 +23,28 @@ body{
     font-style: normal
 }
 */
+.letra{ 
+    /*--color: hsl(var(--hue), 80%, 60%);*/
+    color: rgba(28, 30, 36, 1);
+    /*text-transform: uppercase;*/
+    font-size: 80em;
+    /*letter-spacing: 0.25vmin;*/
+    margin: 0;
+    position: absolute;
+    top:70%;
+    left: 50%;
+    line-height: 0.8;
+    /*color: var(--color);*/
+    transform: translate(-30%, -70%) translate(calc(var(--index)* (var(--x,20)* 1% )), calc(var(--index)* (var(--y,20)*1% )));
+                -webkit-text-stroke: 0.25vmin var(--stroke);
+                /*
+                -webkit-animation: party 1s
+                calc(var(--index)* -0.1s ) infinite linear;
+                  */
+                /*animation: party 1s
+                calc(var(--index)* 0.1s ) infinite linear;*/
+  }
+
 
 .texto-blanco{
     color: #fff;
@@ -2338,10 +2367,12 @@ footer .icon.icon_twitter:before {
         height: 0 !important
     }
 }
+/*
 body:after {
     display: none;
     content: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_fb_hover-eceb94f51797541fde78338c054240c2.svg") url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_twitter_hover-f820301013e6cfd9af957d2e8f85d1fd.svg") url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_g+_hover-a0bb6ce61698f39ff07a8b40a34c0885.svg") url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_pocket_hover-55d274ca1c62b56137cbd7d469e72ef0.svg") url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_rss_hover-4882a2fef79c2a14def4fd82045b0515.svg")
 }
+*/
 .post {
     text-align: left;
     padding: 25px 0 0
