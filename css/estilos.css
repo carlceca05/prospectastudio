@@ -1613,6 +1613,7 @@ body[data-page="home"].active_azure-scene header {
 body[data-page="home"].active_azure-scene .wrapper {
     background-color: #01b5ac
 }
+/*
 body[data-page="works"] header {
     background-color: rgba(245, 245, 245, 0.9)
 }
@@ -1921,6 +1922,7 @@ body[data-page="segments"].segments_cta-scene header {
 body[data-page="segments"].segments_cta-scene .section-segments-we-cover {
     background: whitesmoke
 }
+*/
 .device-menu {
     display: none;
     position: fixed;
@@ -2108,6 +2110,8 @@ footer .footer-top {
         padding: 100px 0 25px 0
     }
 }
+
+
 footer .footer-top .socials {
     float: right;
     padding: 5px 0 0 0
@@ -2167,6 +2171,8 @@ footer .footer-top nav {
     text-align: center;
     opacity: 1
 }
+
+
 @media only screen and (min-width: 768px) and (max-width: 1155px) {
     footer .footer-top nav {
         width: 100%;
@@ -2174,6 +2180,8 @@ footer .footer-top nav {
         top: 20px
     }
 }
+
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     footer .footer-top nav {
         position: relative;
@@ -2308,11 +2316,12 @@ footer .footer-bottom p {
         padding: 0 0 25px 0
     }
 }
+
+/*
+
 footer i,
 footer [class^="icon_"],
 footer [class*=" icon_"] {
-    /*font-family: 'icomoon' !important;*/
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -2324,6 +2333,8 @@ footer [class*=" icon_"] {
     height: auto !important;
     background: none !important
 }
+
+
 footer .icon {
     display: inline-block;
     zoom: 1
@@ -2347,8 +2358,10 @@ footer .icon.icon_twitter:before {
     height: 761px;
     width: 1px;
     position: relative;
-    z-index: 3
+    z-index: 3;
 }
+*/
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .fake-block-footer {
         min-height: 0;
@@ -2373,6 +2386,8 @@ body:after {
     content: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_fb_hover-eceb94f51797541fde78338c054240c2.svg") url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_twitter_hover-f820301013e6cfd9af957d2e8f85d1fd.svg") url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_g+_hover-a0bb6ce61698f39ff07a8b40a34c0885.svg") url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_pocket_hover-55d274ca1c62b56137cbd7d469e72ef0.svg") url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/ic_rss_hover-4882a2fef79c2a14def4fd82045b0515.svg")
 }
 */
+
+
 .post {
     text-align: left;
     padding: 25px 0 0
@@ -2392,7 +2407,7 @@ body:after {
 .post strong,
 .post b {
     font-weight: normal;
-    /*font-family: 'brandon_textbold', Helvetica, Arial, sans-serif/*
+    /*font-family: 'brandon_textbold', Helvetica, Arial, sans-serif*/
 }
 .post iframe {
     max-width: 100%;
@@ -2643,6 +2658,8 @@ body:after {
 .post-carousel__controls a.arr-right {
     left: 100%
 }
+
+
 /*
 @font-face {
     font-family: 'brandon_textblack_italic';
@@ -3211,14 +3228,15 @@ html.lock-screen {
 }
 .top {
     padding: 42px 32px 0 40px;
-    background-color: #16181c;  /*#16181c   */
+    background-color: #16181c; 
     box-sizing: border-box;
-    position: fixed;
+    position: fixed; /*fixed*/
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 1
+    z-index: 1;
+    
 }
 .top.company-page {
     background-color: #23252c
@@ -7961,6 +7979,10 @@ html,
 body {
     overflow-x: hidden
 }
+
+
+
+
 .design-title {
     background-color: #16181c;
     color: white
@@ -9477,6 +9499,18 @@ input[type="checkbox"] {
     width: auto
 }
 
+
+
+
+
+/* todos los medias queries  */
+
+
+
+
+
+
+/* formulario */
 .form {
     color: #23252c;
     display: block;
@@ -9879,6 +9913,18 @@ select[data-customize="select"] {
 }
 
 
+
+
+/*  estrelas */
+
+
+
+/*  nose */
+
+
+
+
+/* fancy   */
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 
 .fancybox-wrap,
@@ -10142,7 +10188,6 @@ select[data-customize="select"] {
         display: table
     }
 }
-
 .hljs {
     display: block;
     overflow-x: auto;
