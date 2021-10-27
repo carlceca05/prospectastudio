@@ -26606,15 +26606,18 @@ if (!self.__WB_pmw) {
                     h = $(".indicators").innerHeight(),
                     c = $("header").outerHeight();
                 new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", triggerHook: "onLeave", offset: -c, duration: c }).setClassToggle("header", "active_purple-header-add").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", triggerHook: "onLeave", duration: s - c - a }).setClassToggle("header", "active_purple-header").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", offset: -a, duration: s + a }).setClassToggle("body", "active_purple-scene").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", offset: a }).setTween(i).addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.azure", triggerHook: "onCenter", duration: r }).setClassToggle("body", "active_azure-scene").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.azure", offset: a }).setTween(e).addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_black-scene").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", offset: a }).setTween(n).addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".indicators", offset: h }).setClassToggle("header", "active_black-header-footer").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".info", duration: l }).setClassToggle("body", "active_light-black-scene").addTo(t);
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", triggerHook: "onLeave", duration: s - c - a }).setClassToggle("header", "active_purple-header").addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", offset: -a, duration: s + a }).setClassToggle("body", "active_purple-scene").addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", offset: a }).setTween(i).addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.azure", triggerHook: "onCenter", duration: r }).setClassToggle("body", "active_azure-scene").addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.azure", offset: a }).setTween(e).addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_black-scene").addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", offset: a }).setTween(n).addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_black-scene").addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", offset: a }).setTween(n).addTo(t),
+
+                new ScrollMagic.Scene({ triggerElement: ".indicators", offset: h }).setClassToggle("header", "active_black-header-footer").addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".info", duration: l }).setClassToggle("body", "active_light-black-scene").addTo(t);
             }
             function b() {
                 function t() {
@@ -27049,7 +27052,8 @@ if (!self.__WB_pmw) {
                 s || t.preventDefault();
             };
         })(window);
-    var psParticle = function (t) {
+    
+    var psParticle = function (t) {  
         (this.ps = t),
             (this.ttl = null),
             (this.color = t.colorArr),
