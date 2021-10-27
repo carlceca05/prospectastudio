@@ -3244,9 +3244,11 @@ html.lock-screen {
 #particle-slider.bg {
     background-image: none
 }
+/*
 .company-page .bg {
     background-image: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/stars-static-93b43ba567e2f160fd849b083f20106d.png")
 }
+*/
 @media only screen and (max-width: 767px) {
     .company-page .bg {
         background-position-y: 75%
@@ -3261,7 +3263,9 @@ html.lock-screen {
     overflow: hidden;
     margin: 8% 5% 5% 5%;
     z-index: 6;
+    /*
     background-image: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/bg-index-intro-92b4c7f74791ac3a1483e0b8956615d7.png");
+    */
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain
