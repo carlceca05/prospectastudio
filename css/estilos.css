@@ -3521,12 +3521,13 @@ html.lock-screen {
         padding: 100px 0
     }
 }
+/*
 @media only screen and (max-width: 767px) {
     .info.better .info__title,
     .info.portfolio .info__title {
         padding: 0 37px 19px 37px
     }
-}
+}*/
 .info.better .info__text,
 .info.portfolio .info__text {
     padding: 0 40px 45px 40px
@@ -7984,11 +7985,13 @@ ul.share-buttons li .icon:before {
 .black-text-header .logo {
     background-image: url("../img/prospecta-negro.svg")
 }
+
+/*
 html,
 body {
     overflow-x: hidden
 }
-
+*/
 
 
 

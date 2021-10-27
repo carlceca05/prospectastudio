@@ -26940,10 +26940,10 @@ if (!self.__WB_pmw) {
                         $(this).hasClass("open")
                             ? ($(".head").css("display", "none"), $(this).removeClass("open"), $(".head").removeClass("active"), $("html, body").removeClass("lock-screen"))
                             : ($(".head").css("display", "block"),
-                              $(this).addClass("open"),
-                              $("html, body").addClass("lock-screen"),
-                              $(".head").addClass("active"),
-                              TweenMax.staggerFromTo(".header-nav li", l, { opacity: 0, cycle: { x: [-100, h] } }, { opacity: 1, cycle: { x: [0, 0] } }, c));
+                                $(this).addClass("open"),
+                                $("html, body").addClass("lock-screen"),
+                                $(".head").addClass("active"),
+                                TweenMax.staggerFromTo(".header-nav li", l, { opacity: 0, cycle: { x: [-100, h] } }, { opacity: 1, cycle: { x: [0, 0] } }, c));
                 });
             }
             function r() {
