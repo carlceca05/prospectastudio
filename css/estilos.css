@@ -1,28 +1,15 @@
+/* mis estilos CHB */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
-
 @font-face{
     font-family: 'Open Sans', sans-serif;
     src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 }
-
 :root{
     --stroke: #fff;
 }
-
-
 body{
     font-family: 'Open Sans', sans-serif;;
 }
-
-/*
-@font-face {
-    font-family: 'radikalregular';
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-10798268f5a1f88b297d855e0f2a3a97.eot");
-    src: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-10798268f5a1f88b297d855e0f2a3a97.eot#iefix") format("embedded-opentype"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-ecc4c3c91d70a125d26700b20903d803.woff2") format("woff2"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-ab3661f687265d9a8d6867bb2b07f99c.woff") format("woff"), url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/nootype_-_radikal-webfont-e7e85f3afbe22eb10f7a71547ed8721d.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal
-}
-*/
 .letra{ 
     /*--color: hsl(var(--hue), 80%, 60%);*/
     color: rgba(28, 30, 36, 1);
@@ -36,16 +23,10 @@ body{
     line-height: 0.8;
     /*color: var(--color);*/
     transform: translate(-30%, -70%) translate(calc(var(--index)* (var(--x,20)* 1% )), calc(var(--index)* (var(--y,20)*1% )));
-                -webkit-text-stroke: 0.25vmin var(--stroke);
-                /*
-                -webkit-animation: party 1s
-                calc(var(--index)* -0.1s ) infinite linear;
-                  */
-                /*animation: party 1s
-                calc(var(--index)* 0.1s ) infinite linear;*/
-  }
-
-
+    -webkit-text-stroke: 0.25vmin var(--stroke);
+    /* -webkit-animation: party 1s calc(var(--index)* -0.1s ) infinite linear;  */
+    /* animation: party 1s calc(var(--index)* 0.1s ) infinite linear;*/
+}
 .texto-blanco{
     color: #fff;
 }
@@ -70,17 +51,45 @@ body{
     justify-content: center;
 }
 .img-fluid {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 .texto-mayusculas {
-  text-transform: uppercase !important;
+    text-transform: uppercase !important;
 }
+.arriba{
+    position: fixed;
+    right: 22px;
+    text-align: center;
+    line-height: 50px;
+    bottom: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(180,180,180,.7);
+    border-radius: 25px;
+    color: #fff;
+    vertical-align: middle;
+    z-index: 999;
+}
+.appwhatsapp{
+    position: fixed;
+    right: 20px;
+    bottom: 80px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+.appwhatsapp img{
+    width: 50px;
+    height: auto;
+}
+
+
+
 
 
 
 /*
-
 div.selector,
 div.selector span,
 div.checker span,
