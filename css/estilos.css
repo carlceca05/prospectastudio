@@ -3030,14 +3030,19 @@ html.lock-screen {
         padding: 14px 0 0 0
     }
 }
+/*
 .company-page .top {
     background-color: #23252c;
 }
+*/
 .top {
+    height: 100vh;
+
+
     padding: 42px 32px 0 40px;
     background-color: #16181c; 
     box-sizing: border-box;
-    position: fixed; /*fixed*/
+    position: relative; /*fixed*/
     top: 0;
     left: 0;
     bottom: 0;
@@ -3045,25 +3050,29 @@ html.lock-screen {
     z-index: 1;
     
 }
+
+/*
 .top.company-page {
-    background-color: #23252c
+    background-color: #23252c;
 }
+*/
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .top {
         padding: 21px 32px 0 40px;
-        position: relative
+        position: relative; /* fixed  */
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .top {
         padding: 21px 32px 0 40px;
-        position: relative
+        position: relative  /* fixed   */
     }
 }
 @media only screen and (max-width: 767px) {
     .top {
         padding: 0 15px 0 15px;
-        position: relative
+        position: relative;  /* fixed  */
     }
 }
 #particle-slider.bg {
