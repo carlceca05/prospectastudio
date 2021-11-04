@@ -26598,9 +26598,11 @@ if (!self.__WB_pmw) {
                 var e = ([$(".wrapper"), $("header")], TweenLite.from(".azure .text__w", ut, { y: dt, opacity: 0, ease: Power1.easeOut })),
                     i = TweenLite.from(".purple .text__w", ut, { y: dt, opacity: 0, ease: Power1.easeOut }),
                     n = TweenLite.from(".black .text__w", ut, { y: dt, opacity: 0, ease: Power1.easeOut }),
+                    p = TweenLite.from(".red .text__w", ut, { y: dt, opacity: 0, ease: Power1.easeOut }),
                     s = $(".purple").outerHeight(),
                     r = $(".azure").outerHeight(),
                     o = $(".black").outerHeight(),
+                    v = $(".black").outerHeight(),
                     a = window.innerHeight / 3,
                     l = $(".talents").innerHeight() + $(".info").innerHeight() + a,
                     h = $(".indicators").innerHeight(),
@@ -26614,7 +26616,7 @@ if (!self.__WB_pmw) {
                 new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_black-scene").addTo(t),
                 new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", offset: a }).setTween(n).addTo(t),
                 new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_red-scene").addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", offset: a }).setTween(n).addTo(t),
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", offset: a }).setTween(p).addTo(t),
 
                 new ScrollMagic.Scene({ triggerElement: ".indicators", offset: h }).setClassToggle("header", "active_black-header-footer").addTo(t),
                 new ScrollMagic.Scene({ triggerElement: ".info", duration: l }).setClassToggle("body", "active_light-black-scene").addTo(t);
@@ -27288,24 +27290,4 @@ if (!self.__WB_pmw) {
                     void 0 !== n && t && e && window.location.reload());
         }.call(this);
 }
-/*
-     FILE ARCHIVED ON 15:00:07 Feb 09, 2017 AND RETRIEVED FROM THE
-     INTERNET ARCHIVE ON 17:44:56 Oct 26, 2021.
-     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
-     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
-     SECTION 108(a)(3)).
-*/
-/*
-playback timings (ms):
-  captures_list: 123.424
-  exclusion.robots: 0.922
-  exclusion.robots.policy: 0.273
-  RedisCDXSource: 1.804
-  esindex: 0.01
-  LoadShardBlock: 93.661 (3)
-  PetaboxLoader3.datanode: 104.198 (4)
-  CDXLines.iter: 23.645 (3)
-  load_resource: 103.796
-  PetaboxLoader3.resolve: 53.374
-*/
