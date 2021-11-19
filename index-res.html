@@ -28,21 +28,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
 
 
-
-
-
-   
-
-   
     <script defer>
         (function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)
     </script>
 
     
+    <style>
+        @media only screen and (min-width:901px) and (max-width:3000px){
+            .aparece{
+                display: none;
+            }
+        }
+        @media only screen and (min-width:300px) and (max-width:900px){
+            .desaparece{
+                display: none;
+            }
+            .top{
+                background-image: url(img/p.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+    </style>
 
- 
 
-  
 </head>
 
 <body data-page="home" data-action="index" data-anm=".anm">
@@ -65,11 +75,13 @@
             </div>
         </div>
         <div class="bg">
+            
             <div class="slides">
                 <div id="first-slide" class="slide"
-                    data-src="https://web.archive.org/web/20170209145953oe_/https://yalantis.com/assets/v2/general/y-1b2a02600dd0fc5002a8c1ee5d642597.png">
+                    data-src="img/p.png">
                 </div>
             </div>
+            
             <canvas class="draw"></canvas>
         </div>
     </section>
@@ -257,39 +269,27 @@
 
     </footer>
 
-
+    <!--menu-->
     <header class="clearfix">
         <nav class="head">
             <div class="nav__i">
                 <ul class="header-nav clearfix">
                     <li class="header-menu-item">
-                        <a class="active" href="/web/20170209145953/https://yalantis.com/">HOME</a>
+                        <a class="active" href="index.html">INICIO</a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="/web/20170209145953/https://yalantis.com/works/">WORKS</a>
+                        <a href="">INICIO</a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="/web/20170209145953/https://yalantis.com/technologies/">TECHNOLOGIES</a>
+                        <a href="">TRABAJOS</a>
                     </li>
                     <li class="header-menu-item">
-                        <a href="/web/20170209145953/https://yalantis.com/design/">DESIGN</a>
-                    </li>
-                    <li class="header-menu-item">
-                        <a href="/web/20170209145953/https://yalantis.com/services/">SERVICES</a>
-                    </li>
-                    <li class="header-menu-item">
-                        <a href="/web/20170209145953/https://yalantis.com/about/">COMPANY</a>
-                    </li>
-                    <li class="header-menu-item">
-                        <a href="/web/20170209145953/https://yalantis.com/blog/">BLOG</a>
-                    </li>
-                    <li class="header-menu-item">
-                        <a rel="nofollow" href="/web/20170209145953/https://yalantis.com/contacts/">CONTACTS</a>
+                        <a href="">CONTACTO</a>
                     </li>
                 </ul>
             </div>
         </nav>
-        <a href="/web/20170209145953/https://yalantis.com/" class="logo">
+        <a href="index.html" class="logo">
         </a>
         <a href="#" class="device-menu">
             <div class="device-menu__i">
@@ -300,6 +300,9 @@
         </a>
     </header>
 
+
+
+    <!--ventanas emergentes-->
     <div class="modal fade modal-subscribe" id="subscribeModal" tabindex="-1" role="dialog">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true"></span>
