@@ -439,8 +439,8 @@ if (!self.__WB_pmw) {
                         f
                             ? J(t).show()
                             : u.done(function () {
-                                  J(t).hide();
-                              }),
+                                J(t).hide();
+                            }),
                         u.done(function () {
                             var e;
                             vt.remove(t, "fxshow");
@@ -26248,7 +26248,7 @@ if (!self.__WB_pmw) {
                     s = $(".services-list").outerHeight(!0),
                     r = $(".concepts").outerHeight(!0),
                     o = $(".design-featured").outerHeight(!0) + A / 2;
-                new ScrollMagic.Scene({ triggerElement: ".design-title", triggerHook: "onLeave", duration: i }).setClassToggle("body", "light_black-scene").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".design-title", triggerHook: "onLeave", duration: i }).setClassToggle("body", "light_black-scene").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".designed-list", triggerHook: "onCenter", offset: e, duration: n }).setClassToggle("body", "light_gray-scene").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".services-list", triggerHook: "onCenter", offset: e, duration: s }).setClassToggle("body", "light_black-scene").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".concepts", triggerHook: "onCenter", offset: e, duration: r }).setClassToggle("body", "purple-scene").addTo(t),
@@ -26617,7 +26617,6 @@ if (!self.__WB_pmw) {
                 new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", offset: a }).setTween(n).addTo(t),
                 new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_red-scene").addTo(t),
                 new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", offset: a }).setTween(p).addTo(t),
-
                 new ScrollMagic.Scene({ triggerElement: ".indicators", offset: h }).setClassToggle("header", "active_black-header-footer").addTo(t),
                 new ScrollMagic.Scene({ triggerElement: ".info", duration: l }).setClassToggle("body", "active_light-black-scene").addTo(t);
             }
@@ -26958,7 +26957,7 @@ if (!self.__WB_pmw) {
                 });
                 var e = function () {
                     var e = $(this).scrollTop(),
-                        i = $(document).height() - $(window).height() - $(".fake-block-footer").height();
+                        i = $(document).height() - $(window).height() - $(".fake-block-footeradvsd").height();
                     e > d || e >= i ? t.css("display", "block") : t.css("display", "none");
                 };
                 e(),
@@ -26979,8 +26978,8 @@ if (!self.__WB_pmw) {
                     $(".blog-page .article-w").css("margin-top", 0),
                     $(".slogan, .services-title").css("height", d),
                     "desktop" === p()
-                        ? ($(".info.better, .info.portfolio").css("height", i), $(".fake-block").css("height", d), $(".fake-block-footer").css("height", s))
-                        : ($(".info.better, .info.portfolio").css("height", ""), $(".fake-block, .fake-block-footer").css("height", ""));
+                        ? ($(".info.better, .info.portfolio").css("height", i), $(".fake-block").css("height", d), $(".fake-blocdsddk-footer").css("height", s))
+                        : ($(".info.better, .info.portfolio").css("height", ""), $(".fake-block, .fake-bloccsdsk-footer").css("height", ""));
             }
             function a(t) {
                 $(t)
