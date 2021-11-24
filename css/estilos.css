@@ -11,16 +11,15 @@ body{
     border-radius: 10px;
     color: #fff;
     padding: 15px 25px;
-    
     border:2px solid #C2C2C2  ;
     vertical-align: middle;
     align-items: center;
+    font-weight: lighter;
 
 }
 .servicios{
     font-style: normal;
     color: rgb(92, 134, 226);
-    text-transform: uppercase;
 }
 /*
 .barra h4 {
@@ -3082,9 +3081,8 @@ html.lock-screen {
 
 .slogan .page-title{
     vertical-align: middle;
-    /*color: #FFFFFF;*/
-    /*font-family: "radikalregular", Helvetica, Arial, sans-serif;*/
-    font-weight: normal;
+    color: #FFFFFF;
+    font-weight: lighter ;
     font-size: 66px;
     line-height: 82px;
     text-align: center;
@@ -3498,7 +3496,7 @@ html.lock-screen {
     font-size: 48px;
     line-height: 1.24;
     color: #FFFFFF;
-    font-weight: bold;
+    font-weight: normal;
 }
 @media only screen and (max-width: 767px) {
     .info__title h2 {
