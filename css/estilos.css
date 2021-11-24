@@ -4,6 +4,28 @@
 body{
     font-family: 'Open Sans', sans-serif;;
 }
+.barra{
+    min-height: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+    color: #fff;
+    padding: 15px 25px;
+    
+    border:2px solid #C2C2C2  ;
+    vertical-align: middle;
+    align-items: center;
+    
+}
+/*
+.barra h4 {
+    margin: 0 auto;
+}
+*/
+
+
+
+
 /* mis estilos CHB */
 @media only screen and (min-width:901px) and (max-width:3000px){
     .aparece{
