@@ -19,7 +19,7 @@ body{
 }
 .servicios{
     font-style: normal;
-    color: rgb(92, 134, 226);
+    color: rgb(253, 253, 253);
 }
 /*
 .barra h4 {
@@ -1122,13 +1122,13 @@ input.uniform-input:focus {
     color: white
 }
 .white-text-header .logo {
-    background-image: url("../img/prospecta.svg");
+    background-image: url("../img/prospectastudio-logo.png");
 }
 .black-text-header nav ul li a {
     color: #111111;
 }
 .black-text-header .logo {
-    background-image: url("../img/prospecta-negro.svg");
+    background-image: url("../img/prospectastudio-logo.png");
 }
 .btn {
     -webkit-user-select: none;
@@ -1375,7 +1375,7 @@ body[data-page="company"] header .logo,
 body[data-page="blog"] header .logo,
 body[data-page="contacts"].gray_black-scene header .logo,
 body[data-page="segments"] header .logo {
-    background-image: url("../img/prospecta.svg")
+    background-image: url("../img/prospectastudio-logo.png")
 
 }
 .black-text-header nav ul li a,
@@ -1424,7 +1424,7 @@ body[data-page="segments"].segments_related-scene header .logo,
 body[data-page="segments"].segments_case-scene header .logo,
 body[data-page="segments"].segments_cover-scene header .logo,
 body[data-page="segments"].segments_cta-scene header .logo */ {
-    background-image: url("../img/prospecta-negro.svg")
+    background-image: url("../img/prospectastudio-logo.png")
 
 }
 
@@ -2146,7 +2146,7 @@ footer {
 }
 footer .footer-top {
     position: relative;
-    padding: 42px 0 29px 0
+    padding: 42px 49px 29px 49px;
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     footer .footer-top {
@@ -2349,7 +2349,7 @@ footer .footer-top .footer-logo {
 }
 footer .footer-top .footer-logo .logo {
     padding: 0 0 24px 0;
-    background-image: url("../img/prospecta.svg")
+    background-image: url("../img/prospectastudio-logo.png")
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     footer .footer-top .footer-logo .logo {
@@ -7876,13 +7876,13 @@ ul.share-buttons li .icon:before {
     color: white
 }
 .white-text-header .logo {
-    background-image: url("../img/prospecta.svg")
+    background-image: url("../img/prospectastudio-logo.png")
 }
 .black-text-header nav ul li a {
     color: #111111
 }
 .black-text-header .logo {
-    background-image: url("../img/prospecta-negro.svg")
+    background-image: url("../img/prospectastudio-logo.png")
 }
 
 
