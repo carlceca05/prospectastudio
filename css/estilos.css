@@ -3169,7 +3169,7 @@ html.lock-screen {
     }
 }
 .bg {
-    /*position: absolute;*/
+    position: absolute;
     left: 0;
     top: 0;
     right: 0;
@@ -3177,12 +3177,13 @@ html.lock-screen {
     overflow: hidden;
     /*margin: 8% 5% 5% 5%;*/
     z-index: 6;
-    /*
-    background-image: url("https://web.archive.org/web/20170209145956im_/https://yalantis.com/assets/v2/general/bg-index-intro-92b4c7f74791ac3a1483e0b8956615d7.png");
-    */
+    
+    background-image: url("../img/p.png");
+    
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain
+    background-size: cover;
+    
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .bg {
