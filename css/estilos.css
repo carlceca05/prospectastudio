@@ -17,6 +17,11 @@ body{
     align-items: center;
 
 }
+.servicios{
+    font-style: normal;
+    color: rgb(92, 134, 226);
+    text-transform: uppercase;
+}
 /*
 .barra h4 {
     margin: 0 auto;
@@ -3135,6 +3140,8 @@ html.lock-screen {
     bottom: 0;
     right: 0;
     z-index: 1;
+    display: flex;
+    align-items: center;
     
 }
 .top.company-page {

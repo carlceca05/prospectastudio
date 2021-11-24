@@ -1,9 +1,9 @@
 const typed = new Typed('.typed', {
 	strings: [
-		'<i class="mascota"> Campañas en Google Ads </i>',
-		'<i class="mascota">Diseño Web</i>',
-		'<i class="mascota">Social Media Marketing </i>',
-		'<i class="mascota">Branding</i>'
+		'<i class="servicios"> Campañas en Google Ads </i>',
+		'<i class="servicios">Diseño Web</i>',
+		'<i class="servicios">Social Media Marketing </i>',
+		'<i class="servicios">Branding</i>'
 	],
 
 	//stringsElement: '#cadenas-texto', // ID del elemento que contiene cadenas de texto a mostrar.
