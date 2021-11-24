@@ -15,7 +15,7 @@ body{
     border:2px solid #C2C2C2  ;
     vertical-align: middle;
     align-items: center;
-    
+
 }
 /*
 .barra h4 {
@@ -158,6 +158,9 @@ body{
 .appwhatsapp img{
     width: 50px;
     height: auto;
+}
+.gordita{
+    font-weight: 800;
 }
 
 
@@ -3488,7 +3491,7 @@ html.lock-screen {
     font-size: 48px;
     line-height: 1.24;
     color: #FFFFFF;
-    font-weight: normal
+    font-weight: bold;
 }
 @media only screen and (max-width: 767px) {
     .info__title h2 {
