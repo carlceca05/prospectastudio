@@ -26069,7 +26069,7 @@ if (!self.__WB_pmw) {
                         $(".bg").attr("id", "particle-slider");
                         new ParticleSlider({ ptlGap: 5, ptlSize: 2, width: 1e9, height: 1e9, mouseForce: 500, showArrowControls: !0 });
                     }
-                } else $(".bg").removeAttr("id");
+                } else $(".bg").removeAttr("id"); 
             }
             function a(t) {
                 $(t)

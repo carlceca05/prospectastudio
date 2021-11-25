@@ -8,14 +8,19 @@ body{
     min-height: 20px;
     display: flex;
     justify-content: space-between;
-    border-radius: 10px;
+    border-radius: 40px;
     color: #fff;
-    padding: 15px 25px;
+    padding: 15px 35px;
     border:2px solid #C2C2C2  ;
     vertical-align: middle;
     align-items: center;
     font-weight: lighter;
 
+}
+.chi{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 .servicios{
     font-style: normal;
@@ -183,7 +188,7 @@ div.button,
 div.button span {
     background-image: url("/web/20170209145956im_/https://yalantis.com/assets/images/sprite.png");
     background-repeat: no-repeat;
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
 }
 
 
@@ -227,9 +232,9 @@ div.button * {
 input.uniform-input,
 select.uniform-multiselect,
 textarea.uniform {
-    padding: 3px;
+    padding: 5px;
     background: url("/web/20170209145956im_/https://yalantis.com/assets/images/bg-input.png") repeat-x 0 0;
-    outline: 0
+    outline: 0;
 }
 input.uniform-input.active,
 select.uniform-multiselect.active,
@@ -571,13 +576,12 @@ div.button.disabled.active span {
 }
 
 
-/*
 
 input.uniform-input,
 select.uniform-multiselect,
 textarea.uniform {
-    font-size: 12px;
-    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    /*font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;*/
     font-weight: normal;
     color: #777;
     border-top: solid 1px #aaa;
@@ -600,7 +604,7 @@ textarea.uniform.focus {
     border-color: #999
 }
 
-*/
+
 
 
 
@@ -9414,9 +9418,10 @@ div.checker.focus span.checked {
 }
 .form-input-holder {
     position: relative;
+    width: 48%;
     font-size: 20px;
     line-height: 1.2;
-    padding: 24px 0 0
+    padding: 24px 0 0;
 }
 .form-label {
     position: absolute;
@@ -9525,7 +9530,7 @@ div.checker.focus span.checked {
 select[data-customize="select"] {
     opacity: 0;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0)
+    filter: alpha(opacity=0);
 }
 #subscribe-complete {
     display: none

@@ -2,7 +2,7 @@
 <html class="no-js" lang="es">
 
 <head>
-    <title>Prospecta Studio | + Perfil </title>
+    <title>Prospecta Studio | +Perfil </title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -33,6 +33,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
 
+    <link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="css/classic-10_7.css">
+
 
     <script defer>
         (function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)
@@ -40,6 +42,23 @@
 
     
     <style>
+        #mc_embed_signup {
+        background: #fff;
+        clear: left;
+        font: 14px Helvetica, Arial, sans-serif;
+        }
+    
+        .seleccion select{
+            width: 100%;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            line-height: 21px;
+            padding: 9px 0;
+            text-align: center;
+        }
+                                        
         @media only screen and (min-width:901px) and (max-width:3000px){
             .aparece{
                 display: none;
@@ -49,13 +68,20 @@
             .desaparece{
                 display: none;
             }
+            .chi{
+                flex-direction: column;
+            }
+            .form-input-holder{
+                width: 100%;
+            }
+            /*
             .top{
-                background-image: /*radial-gradient(circle at right,rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 60%),*/ url(img/movil.png);
+                background-image: url(img/movil.png);
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
                 
-            }
+            }*/
         }
     </style>
 
@@ -91,7 +117,7 @@
                 
             </div>
         </div>
-        <div class="bg desaparece">
+        <div class="bg ">  <!--desaparece-->
             
             <div class="slides">
                 <div id="first-slide" class="slide"
@@ -337,8 +363,64 @@
         </a>
     </header>
 
-
-    <!--ventanas emergentes-->
+    <!--ventanas emergentes formulario -->
+    <div class="modal fade modal-subscribe" id="subscribeModal2" tabindex="-1" role="dialog">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </button>
+        <div class="modal-dtable">
+            <div class="modal-dtcell">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <form action="https://studio.us20.list-manage.com/subscribe/post?u=287c9376151a7e881fee1c4a7&amp;id=8cc513fe73" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form form-light form-subscribe" target="_blank" novalidate> <!--id="subscribe-form"-->
+                            <h3>Envíanos tus datos</h3>
+                            <div class="form-field field-email chi" >
+                                <div class="form-input-holder">
+                                    <label class="form-label">Nombre completo</label>
+                                    <input type="text" value="" name="FNAME" class="required form-input" id="mce-FNAME">
+                                </div>
+                                <div class="form-input-holder">
+                                    <label class="form-label">Correo electrónico</label>
+                                    <input type="email" value="" name="EMAIL" class="required form-input" id="mce-EMAIL">
+                                </div>
+                            </div>
+                            <div class="form-field field-email chi" >
+                                <div class="form-input-holder">
+                                    <label class="form-label">Telefono</label>
+                                    <input  type="text" name="PHONE" class="required form-input" value="" id="mce-PHONE">
+                                </div>
+                                <div class="form-input-holder">
+                                    <label class="form-label">Mensaje (Describe tu proyecto)</label>
+                                    <input type="text" value="" name="MENSAJE" class="required form-input" id="mce-MENSAJE">
+                                </div>
+                            </div>
+                            <h4 style="margin: 15px 0;"> Servicio que requieres: </h4 >
+                            <div class="form-field field-subscribe-categories">
+                                <label class="form-checkbox-label">
+                                    <input type="checkbox" value="1" name="group[228326][1]" id="mce-group[228326]-228326-0" data-uniform="" >Campañas en Google Ads
+                                </label>
+                                <label class="form-checkbox-label">
+                                    <input type="checkbox" value="2" name="group[228326][2]" id="mce-group[228326]-228326-1" data-uniform=""> Diseño Web
+                                </label>
+                                <label class="form-checkbox-label">
+                                    <input type="checkbox" value="4" name="group[228326][4]" id="mce-group[228326]-228326-2" data-uniform=""> Social Media Marketing
+                                </label>
+                                <label class="form-checkbox-label">
+                                    <input type="checkbox" value="8" name="group[228326][8]" id="mce-group[228326]-228326-3" data-uniform="" > Branding
+                                </label>
+                            </div>
+                            <div class="form-controls">
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_287c9376151a7e881fee1c4a7_8cc513fe73" tabindex="-1" value=""></div>
+                                <div class="clear" ><input type="submit" value="Enviar" name="subscribe" id="mc-embedded-subscribe" class="btn btn_orange btn-subscribe"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--ventanas emergentes formulario 
     <div class="modal fade modal-subscribe" id="subscribeModal2" tabindex="-1" role="dialog">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true"></span>
@@ -387,8 +469,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!--ventanas emergentes-->
+    </div>-->
+    <!--ventanas emergentes
     <div class="modal fade modal-subscribe" id="subscribeModal" tabindex="-1" role="dialog">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true"></span>
@@ -438,6 +520,7 @@
             </div>
         </div>
     </div>
+    -->
 
 
     <!-- icono arriba -->
@@ -481,6 +564,11 @@
     <script src="js/typed.js@2.0.12.js"></script>
     <script src="js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"  async></script>
+    
+    <script src="js/mc-validate.js"></script>
+    <script
+    type='text/javascript'>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[3] = 'SERVICIO'; ftypes[3] = 'dropdown'; fnames[5] = 'EMPRESA'; ftypes[5] = 'text'; fnames[6] = 'ACERCA'; ftypes[6] = 'text'; fnames[2] = 'MENSAJE'; ftypes[2] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+<!--End mc_embed_signup-->
 
 
 
