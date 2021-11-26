@@ -1392,7 +1392,7 @@ body[data-page="segments"] header .logo {
 .black-text-header nav ul li a,
 header.active_light-gray-header-add nav ul li a,
 header.active_light-gray-header nav ul li a,
-/*
+
 body[data-page="works"] header nav ul li a,
 body[data-page="technologies"].light_gray-scene header nav ul li a,
 body[data-page="technologies"].white-scene header nav ul li a,
@@ -1411,13 +1411,13 @@ body[data-page="segments"].segments_features-scene header nav ul li a,
 body[data-page="segments"].segments_related-scene header nav ul li a,
 body[data-page="segments"].segments_case-scene header nav ul li a,
 body[data-page="segments"].segments_cover-scene header nav ul li a,
-body[data-page="segments"].segments_cta-scene header nav ul li a */ {
+body[data-page="segments"].segments_cta-scene header nav ul li a  {
     color: #111111;
 }
 .black-text-header .logo,
 header.active_light-gray-header-add .logo,
 header.active_light-gray-header .logo,
-/*
+
 body[data-page="works"] header .logo,
 body[data-page="technologies"].light_gray-scene header .logo,
 body[data-page="technologies"].white-scene header .logo,
@@ -1434,7 +1434,7 @@ body[data-page="segments"].segments_features-scene header .logo,
 body[data-page="segments"].segments_related-scene header .logo,
 body[data-page="segments"].segments_case-scene header .logo,
 body[data-page="segments"].segments_cover-scene header .logo,
-body[data-page="segments"].segments_cta-scene header .logo */ {
+body[data-page="segments"].segments_cta-scene header .logo  {
     background-image: url("../img/prospectastudio-logo.webp")
 
 }
@@ -3093,7 +3093,7 @@ html.lock-screen {
 .slogan .page-title{
     vertical-align: middle;
     color: #FFFFFF;
-    font-weight: lighter ;
+    font-weight: 500 ;
     font-size: 66px;
     line-height: 82px;
     text-align: center;
@@ -3107,7 +3107,7 @@ html.lock-screen {
 }
 @media only screen and (max-width: 767px) {
     .slogan .page-title {
-        font-size: 36px;
+        font-size: 40px;
         line-height: 50px;
         padding: 14px 0 0 0
     }
@@ -3174,8 +3174,9 @@ html.lock-screen {
         position: relative
     }
 }
+
 #particle-slider.bg {
-    background-image: none
+    background-image: none;
 }
 /*
 .company-page .bg {
@@ -3184,7 +3185,7 @@ html.lock-screen {
 */
 @media only screen and (max-width: 767px) {
     .company-page .bg {
-        background-position-y: 75%
+        background-position-y: 75%;
     }
 }
 .bg {

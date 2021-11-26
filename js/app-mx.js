@@ -26060,17 +26060,21 @@ if (!self.__WB_pmw) {
                 var t = $(".values-list").find(".values-list__item");
                 e(t);
             }
+
             function o() {
                 if ("desktop" === ft()) {
                     if ($(".company-page").length) {
                         $(".bg").attr("id", "particle-slider");
                         new ParticleSlider({ ptlGap: 2, ptlSize: 2, width: 1e9, height: 1e9, mouseForce: 20, showArrowControls: !0 });
-                    } else if ($(".top").length) {
+                    } 
+                    else if ($(".top").length) {
                         $(".bg").attr("id", "particle-slider");
                         new ParticleSlider({ ptlGap: 5, ptlSize: 2, width: 1e9, height: 1e9, mouseForce: 500, showArrowControls: !0 });
                     }
-                } else $(".bg").removeAttr("id"); 
+                } 
+                else $(".bg").removeAttr("id");
             }
+
             function a(t) {
                 $(t)
                     .on("touchstart", function (t) {
