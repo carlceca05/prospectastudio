@@ -26,6 +26,13 @@ body{
     font-style: normal;
     color: rgb(253, 253, 253);
 }
+.privacidad{
+    text-decoration: none;
+    color: #fff;
+}
+.privacidad:hover{
+    color:#bbb;
+}
 /*
 .barra h4 {
     margin: 0 auto;
@@ -1126,13 +1133,13 @@ input.uniform-input:focus {
     color: white
 }
 .white-text-header .logo {
-    background-image: url("../img/prospectastudio-logo.png");
+    background-image: url("../img/prospectastudio-logo.webp");
 }
 .black-text-header nav ul li a {
     color: #111111;
 }
 .black-text-header .logo {
-    background-image: url("../img/prospectastudio-logo.png");
+    background-image: url("../img/prospectastudio-logo.webp");
 }
 .btn {
     -webkit-user-select: none;
@@ -1379,7 +1386,7 @@ body[data-page="company"] header .logo,
 body[data-page="blog"] header .logo,
 body[data-page="contacts"].gray_black-scene header .logo,
 body[data-page="segments"] header .logo {
-    background-image: url("../img/prospectastudio-logo.png")
+    background-image: url("../img/prospectastudio-logo.webp")
 
 }
 .black-text-header nav ul li a,
@@ -1428,7 +1435,7 @@ body[data-page="segments"].segments_related-scene header .logo,
 body[data-page="segments"].segments_case-scene header .logo,
 body[data-page="segments"].segments_cover-scene header .logo,
 body[data-page="segments"].segments_cta-scene header .logo */ {
-    background-image: url("../img/prospectastudio-logo.png")
+    background-image: url("../img/prospectastudio-logo.webp")
 
 }
 
@@ -2353,7 +2360,7 @@ footer .footer-top .footer-logo {
 }
 footer .footer-top .footer-logo .logo {
     padding: 0 0 24px 0;
-    background-image: url("../img/prospectastudio-logo.png")
+    background-image: url("../img/prospectastudio-logo.webp")
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     footer .footer-top .footer-logo .logo {
@@ -7880,13 +7887,13 @@ ul.share-buttons li .icon:before {
     color: white
 }
 .white-text-header .logo {
-    background-image: url("../img/prospectastudio-logo.png")
+    background-image: url("../img/prospectastudio-logo.webp")
 }
 .black-text-header nav ul li a {
     color: #111111
 }
 .black-text-header .logo {
-    background-image: url("../img/prospectastudio-logo.png")
+    background-image: url("../img/prospectastudio-logo.webp")
 }
 
 
