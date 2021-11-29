@@ -21,7 +21,7 @@ if (!self.__WB_pmw) {
         var e = this;
         if (
             ((e.sliderId = "particle-slider"),
-            (e.color = "#fff"),
+            (e.color = "#000"),
             (e.hoverColor = "#88f"),
             (e.width = 0),
             (e.height = 0),
