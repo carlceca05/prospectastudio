@@ -26942,6 +26942,9 @@ if (!self.__WB_pmw) {
             function n() {
                 "desktop" !== p() && "tablet" !== p() ? ($(".head").css("display", "none"), (u = !0)) : e();
             }
+
+
+            /*
             function s() {
                 $(".device-menu").on("click", function (t) {
                     t.preventDefault(),
@@ -26954,6 +26957,8 @@ if (!self.__WB_pmw) {
                                 TweenMax.staggerFromTo(".header-nav li", l, { opacity: 0, cycle: { x: [-100, h] } }, { opacity: 1, cycle: { x: [0, 0] } }, c));
                 });
             }
+            */
+
             function r() {
                 var t;
                 $("footer").each(function () {
