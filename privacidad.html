@@ -42,9 +42,34 @@
 
 
     <style>
+        .menuss{
+                            display: none;
+                            position: absolute;
+                            top: 0;
+                            right: 5%;
+                            padding-top: 30px;
+                            padding-bottom: 20px;
+                            background-color: white;
+                            min-height: 25px;
+                        }
+                        #menus  ul li {
+                            float: none;
+                            width: 150px
+                        }
+                        .caja{
+                            display: flex;
+                            
+                        }
+                        .show{
+                            display: block;
+                        }
+        #menus:active {
+            content: x;
+
+        }
         .encabezado {
             padding: 150px 50px;
-            color: #fff;
+            color: #000;
             text-align: center;
         }
         .encabezado h1{
@@ -57,7 +82,7 @@
         }
         .dialogo{
             padding: 0 150px 100px  150px ;
-            color: #fff;
+            color: #000;
         }
         .dialogo p{
             margin-bottom: 20px;
@@ -68,7 +93,7 @@
         
 
         .top {
-            background-image: url(img/p-movil.png);
+            background-color: white;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
@@ -87,7 +112,7 @@
             }
             .encabezado {
             padding:120px 20px 100px 20px;
-            color: #fff;
+            color: #000;
             text-align: center;
             }
             .encabezado h1{
@@ -100,7 +125,7 @@
             }
             .dialogo{
                 padding: 0 30px 50px 30px ;
-                color: #fff;
+                color: #000;
             }
             .dialogo p{
                 margin-bottom: 20px;
@@ -114,12 +139,12 @@
 
 </head>
 
-<body data-page="home" data-action="index" data-anm=".anm">
+<body data-page="home" data-action="index" data-anm=".anm"  style="background-color: white;"  >
 
     <section class="top">
     </section>
 
-    <section class="wrapper">
+    <section class="wrapper white">
         <div class="text__w">
             <div class=" encabezado">
                 <h1 class=" ">POLÍTICA DE PRIVACIDAD</h1>
@@ -246,34 +271,73 @@
             </ul>
         </div>
     </footer>
-
     <!--menu-->
-    <header class="clearfix">
+    <header class="clearfix" style="background-color: white;" >
         <nav class="head">
             <div class="nav__i">
                 <ul class="header-nav clearfix">
-                    
+                    <!--
                     <li class="header-menu-item">
                         <a class="active" href="index.html">Inicio</a>
+                    </li>-->
+                    <li class="header-menu-item ">
+                        <a href="index.html"></a>
                     </li>
-                    <li class="header-menu-item">
-                        <a href="index.html">Inicio</a>
-                    </li>
-                    <li class="header-menu-item">
+                    <li class="header-menu-item desaparece">
                         <a href="https://www.facebook.com/prospecta.studio" target="_blank">
                             <i class="bi bi-facebook"></i>
                         </a>
                     </li>
-                    <li class="header-menu-item">
+                    <li class="header-menu-item desaparece">
                         <a href="https://www.instagram.com/prospecta.studio" target="_blank">
                             <i class="bi bi-instagram"></i>
                         </a>
                     </li>
-                    <li class="header-menu-item">
-                        <a href="https://api.whatsapp.com/send?phone=5215587426237&text=!Hola%20Exámenes%20de%20Confianza%2C%20requiero%20más%20información%20sobre%20un%20servicio.%20Me%20gustaría%20que%20me%20contactaran%20cuanto%20antes.%0A%0ANombre%3A%0ACorreo%3A%0ATeléfono%3A%0AEmpresa%3A%0ACargo%3A%0AServicio%3A%0AMensaje%3A"
+                    <li class="header-menu-item desaparece">
+                        <a href="https://api.whatsapp.com/send?phone=5215587426237&text=!Hola%20Prospecta%20Studio%20requiero%20más%20información%20sobre%20un%20servicio.%20Me%20gustaría%20que%20me%20contactaran%20cuanto%20antes."
                             target="_blank">
-                            <i class="bi bi-whatsapp"> </i> 55 8742 62 37
+                            <i class="bi bi-whatsapp"> </i> 55 8742 6237
                         </a>
+                    </li>
+                    <li class="header-menu-item aparece">
+                        <a href="#">  </a>
+                        <ul >
+                            <li><a href="index.html/#googleads"> Google Ads </a></li>
+                            <li><a href="index.html/#web"> Diseño Web </a></li>
+                            <li><a href="index.html/#redes"> Social Media </a></li>
+                            <li><a href="index.html/#branding"> Branding</a></li>
+                        </ul>
+                    </li>
+                    <li class="header-menu-item aparece">
+                        <a href="https://www.facebook.com/prospecta.studio" target="_blank">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://www.instagram.com/prospecta.studio" target="_blank">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="header-menu-item aparece">
+                        <a href="https://api.whatsapp.com/send?phone=5215587426237&text=!Hola%20Prospecta%20Studio%20requiero%20más%20información%20sobre%20un%20servicio.%20Me%20gustaría%20que%20me%20contactaran%20cuanto%20antes."
+                            target="_blank">
+                            <i class="bi bi-whatsapp"> </i> 55 8742 6237
+                        </a>
+                    </li>
+                    <li class="header-menu-item desaparece" id="menus">
+                        <a href="#" onclick="myFunction()"> <i class="bi bi-list " style="font-size: 1.6em;" ></i> </a>
+                        <script>
+                            function myFunction() {
+                                document.getElementById("myDropdown").classList.toggle("show");
+                            };
+                        </script>
+                        <ul id="myDropdown" class="menuss">
+                            <div class="caja">
+                            <li><a href="#"> nada </a></li>
+                            <li><a href="index.html/#googleads"> Google Ads </a></li>
+                            <li><a href="index.html/#web"> Diseño Web </a></li>
+                            <li><a href="index.html/#redes"> Social Media </a></li>
+                            <li><a href="index.html/#branding"> Branding</a></li>
+                            </div>
+                        </ul>
                     </li>
                 </ul>
             </div>

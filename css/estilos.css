@@ -3107,6 +3107,14 @@ html.lock-screen {
     text-align: center;
     /*padding: 23px 0 0 0*/
 }
+.slogan h3{
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .slogan .page-title {
         font-size: 66px;
@@ -3513,7 +3521,7 @@ html.lock-screen {
 }
 .info__title h2 {
     /*font-family: "radikalregular", Helvetica, Arial, sans-serif;*/
-    font-size: 48px;
+    font-size: 66px;
     line-height: 1.24;
     /*color: #FFFFFF;*/
     font-weight: normal;
@@ -9394,8 +9402,8 @@ div.checker.focus span.checked {
     margin: 0 0;
     font-size: 48px;
     line-height: 1.25;
-    font-family: "radikalregular", Helvetica, Arial, sans-serif;
-    font-weight: normal
+    /*font-family: "radikalregular", Helvetica, Arial, sans-serif;*/
+    font-weight: normal;
 }
 @media only screen and (max-width: 767px) {
     .form-subscribe h3 {
