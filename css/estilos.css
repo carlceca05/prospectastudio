@@ -1126,13 +1126,23 @@ input.uniform-input:focus {
     color: white
 }
 .white-text-header .logo {
-    background-image: url("../img/prospectastudio-logo-dark.webp");
+    background-image: url(../img/prospectastudio-logo-dark.svg);
+    background-image: image-set (
+        url(../img/prospectastudio-logo-dark.svg),
+        url(../img/prospectastudio-logo-dark.webp)
+        url(../img/prospectastudio-logo-dark.png),
+    );
 }
 .black-text-header nav ul li a {
     color: #111111;
 }
 .black-text-header .logo {
-    background-image: url("../img/prospectastudio-logo-dark.webp");
+    background-image:url(../img/prospectastudio-logo-dark.svg);
+    background-image: image-set (
+        url(../img/prospectastudio-logo-dark.svg),
+        url(../img/prospectastudio-logo-dark.webp)
+        url(../img/prospectastudio-logo-dark.png),
+    );
 }
 .btn {
     -webkit-user-select: none;
@@ -1388,7 +1398,13 @@ body[data-page="company"] header .logo,
 body[data-page="blog"] header .logo,
 body[data-page="contacts"].gray_black-scene header .logo,
 body[data-page="segments"] header .logo {
-    background-image: url("../img/prospectastudio-logo-dark.webp")
+    background-image: url(../img/prospectastudio-logo-dark.svg);
+    background-image: image-set (
+        url(../img/prospectastudio-logo-dark.svg),
+        url(../img/prospectastudio-logo-dark.webp)
+        url(../img/prospectastudio-logo-dark.png),
+    );
+
 
 }
 .black-text-header nav ul li a,
@@ -1437,7 +1453,12 @@ body[data-page="segments"].segments_related-scene header .logo,
 body[data-page="segments"].segments_case-scene header .logo,
 body[data-page="segments"].segments_cover-scene header .logo,
 body[data-page="segments"].segments_cta-scene header .logo  {
-    background-image: url("../img/prospectastudio-logo-dark.webp")
+    background-image:url(../img/prospectastudio-logo-dark.svg);
+    background-image: image-set (
+        url(../img/prospectastudio-logo-dark.svg),
+        url(../img/prospectastudio-logo-dark.webp)
+        url(../img/prospectastudio-logo-dark.png),
+    );
 
 }
 
@@ -1653,10 +1674,11 @@ header.active_black-header-footer {
     }
 }
 
-
+/*
 body[data-page="home"] header.active_blue-header-add {
     background-color: #119cdd;
 }
+*/
 /*
 body[data-page="home"] header.active_purple-header-add {
     background-color: #3f2caa;
@@ -2138,7 +2160,7 @@ body[data-page="segments"].segments_cta-scene .section-segments-we-cover {
 footer {
     background-color: #fff;
     padding: 0 40px 18px 40px;
-    position: relative;   /*/fixed    */
+    position: fixed;   /*/fixed    */
     left: 0;
     bottom: 0;
     width: 100%;
@@ -2368,7 +2390,12 @@ footer .footer-top .footer-logo {
 }
 footer .footer-top .footer-logo .logo {
     padding: 0 0 24px 0;
-    background-image: url("../img/prospectastudio-logo-dark.webp")
+    background-image:url(../img/prospectastudio-logo-dark.svg);
+    background-image: image-set (
+        url(../img/prospectastudio-logo-dark.svg),
+        url(../img/prospectastudio-logo-dark.webp)
+        url(../img/prospectastudio-logo-dark.png),
+    );
 }
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     footer .footer-top .footer-logo .logo {
@@ -2457,7 +2484,7 @@ footer .icon.icon_twitter:before {
 }
 
 .fake-block-footer {
-    height: 0px;   /*  761px    */
+    height: 761px;   /*  761px    */
     width: 1px;
     position: relative;
     z-index: 3;
@@ -3151,6 +3178,9 @@ html.lock-screen {
         line-height: 30px;
         padding: 14px 0 0 0
     }
+    .slogan h3{
+        font-size: 18px;
+    }
 }
 .company-page .top {
     background-color: #23252c;
@@ -3312,14 +3342,15 @@ html.lock-screen {
     margin-right: 6px;
     /*font-family: "brandon_text_regularregular", Helvetica, Arial, sans-serif*/
 }
+
 .works-list__item.black .text .tags span {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
 }
 .works-list__item .text .content p:last-child {
     padding: 0
 }
 .works-list__item .text .content p span {
-    /*font-family: "brandon_textregular_italic", Helvetica, Arial, sans-serif;*/
+    
     font-size: 18px
 }
 .works-list__item.blue .btn_white:hover {
@@ -3328,6 +3359,7 @@ html.lock-screen {
 .works-list__item.purple .btn_white:hover {
     color: #3f2caa
 }
+/*
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .works-list__item.blue {
         background-color: #119cdd
@@ -3339,6 +3371,9 @@ html.lock-screen {
         background-color: #111111
     }
 }
+
+/*
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
     .works-list__item.blue {
         background-color: #119cdd
@@ -3364,6 +3399,7 @@ html.lock-screen {
         font-size: 15px
     }
 }
+*/
 @media only screen and (max-width: 767px) {
     .works-list__item {
         padding: 25px 15px 35px 15px
@@ -3377,6 +3413,7 @@ html.lock-screen {
         width: 100%;
         padding: 15px 0;
     }
+    /*
     .works-list__item.blue {
         background-color: #119cdd;
     }
@@ -3392,6 +3429,7 @@ html.lock-screen {
     .works-list__item.red {
         background-color: #eb11ad;
     }
+    */
     .works-list__item__w .text__w .text {
         max-width: 100%;
         padding: 0;
@@ -7904,13 +7942,23 @@ ul.share-buttons li .icon:before {
     color: white
 }
 .white-text-header .logo {
-    background-image: url("../img/prospectastudio-logo-dark.webp")
+    background-image:url(../img/prospectastudio-logo-dark.svg);
+    background-image: image-set (
+        url(../img/prospectastudio-logo-dark.svg),
+        url(../img/prospectastudio-logo-dark.webp)
+        url(../img/prospectastudio-logo-dark.png),
+    );
 }
 .black-text-header nav ul li a {
     color: #111111
 }
 .black-text-header .logo {
-    background-image: url("../img/prospectastudio-logo-dark.webp")
+    background-image:url(../img/prospectastudio-logo-dark.svg);
+    background-image: image-set (
+        url(../img/prospectastudio-logo-dark.svg),
+        url(../img/prospectastudio-logo-dark.webp)
+        url(../img/prospectastudio-logo-dark.png),
+    );
 }
 
 

@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 <!--class="no-js"-->
-
 <head>
     <title>Prospecta Studio | +Perfil </title>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Estudio de prospeccion digital dedicado a la creacion digital para redes sociales, paginas web, marketing, campañas en google ads.">
-    <meta name="keywords"
-        content="estudio de prospeccion digital, prospecta, studio, digital, marketing, diseño web, redes sociales, social media, desarrollo web, ">
+    <meta name="description" content="Estudio de prospeccion digital dedicado a la creacion digital para redes sociales, paginas web, marketing, campañas en google ads.">
+    <meta name="keywords" content="estudio de prospeccion digital, prospecta, studio, digital, marketing, diseño web, redes sociales, social media, desarrollo web, SEM, SEO, redes, media social, media, social, diseño,  ">
 
     <link rel="shortcut icon" href="img/prospecta-studio.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
@@ -43,29 +40,24 @@
 
     <style>
         .menuss{
-                            display: none;
-                            position: absolute;
-                            top: 0;
-                            right: 5%;
-                            padding-top: 30px;
-                            padding-bottom: 20px;
-                            background-color: white;
-                            min-height: 25px;
-                        }
-                        #menus  ul li {
-                            float: none;
-                            width: 150px
-                        }
-                        .caja{
-                            display: flex;
-                            
-                        }
-                        .show{
-                            display: block;
-                        }
-        #menus:active {
-            content: x;
-
+            display: none;
+            position: absolute;
+            top: 0;
+            right: 5%;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            background-color: white;
+            min-height: 25px;
+        }
+        #menus  ul li {
+            float: none;
+            width: 150px
+        }
+        .caja{
+            display: flex;   
+        }
+        .show{
+            display: block;
         }
         #mc_embed_signup {
             background: #fff;
@@ -112,6 +104,38 @@
 
             }
         }
+
+
+        .logito{
+            animation: logoani 2s linear; 
+        }
+        @keyframes logoani {
+            0%{
+                opacity: 0;
+            }
+            100%{
+                opacity: 1;
+            }
+        }
+
+
+        /*
+        .efeito{
+            animation: entrada 6s linear;
+        }
+        @keyframes entrada {
+            0%{
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            100%{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        */
+
+
     </style>
 
 
@@ -120,8 +144,14 @@
 <body data-page="home" data-action="index" data-anm=".anm">
     <!-- loader -->
     <div class="l-loader">
-        <div class="text">
-            <img class="" src="img/prospectastudio-logo-dark.png"  alt="">
+        <div class="text"  >
+            <picture class="logito" style=" display: flex;  justify-content: center">
+                <source class="lazyload" type="image/svg" width="50%"  srcset="img/prospectastudio-logo-dark.svg">
+                <source class="lazyload" type="image/webp" width="50%" srcset="img/prospectastudio-logo-dark.webp">
+                <img class="lazyload" src="img/prospectastudio-logo-dark.png" width="50%" alt="prospecta studio " >
+            </picture>
+            <!--
+            <img class="logito" src="img/prospectastudio-logo-dark.svg" width="50%"  alt="">-->
             <!--
             <span class="letter">P</span><span class="letter">r</span><span class="letter">o</span><span
                 class="letter">s</span><span class="letter">p</span><span class="letter">e</span><span
@@ -163,17 +193,84 @@
     </section>
     <div class="fake-block"></div>
     <section class="wrapper white">
-        <div class="works-list">
-            <div class="works-list__item " id="googleads">
+        <style>
+            /*
+            .animado{
+                opacity: 0;
+                transition: all 0.5s;
+            }
+            .mostrarArriba{
+                animation: mostrarArriba 1s;
+            }
+            @keyframes mostrarArriba{
+                0%{
+                    transform: translateY(60px);
+                }
+                100%{
+                    transform: translateY(0);
+                }
+            }
+            */
+            .fadeTop {
+  opacity: 0; 
+  transform: translate(0, 30vh);
+  transition: all 3s;
+}
+.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+        </style>
+
+        <script>
+            /*
+            let animado = document.querySelectorAll(".animado");
+
+            function mostrarScroll(){
+                let scrollTop = document.documentElement.scrollTop;
+                for (var i=0; i < animado.length; i++ ){
+                    let alturaAnimado = animado[i].offsetTop;
+                    if(alturaAnimado - 300 < scrollTop) {
+                        animado[i].style.opacity = 1;
+                        animado[i].classList.add("mostrarArriba");
+                    }
+                }
+            }
+            window.addEventListener('scroll', mostrarScroll);
+            */
+
+            window.addEventListener('scroll', function()  {
+  let elements = document.getElementsByClassName('scroll-content');
+  let screenSize = window.innerHeight;
+  
+        for(var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+
+        if(element.getBoundingClientRect().top < screenSize) {
+          element.classList.add('visible');
+        } else {
+          element.classList.remove('visible');
+        }
+
+      }
+});
+        </script>
+        <div class="works-list ">
+            <div class="works-list__item purple" id="googleads">
                 <div class="works-list__item__w clearfix">
                     <div class="img-block">
                         <div class="img-w">
-                            <img class="lazyload" alt="google ads" title="Prospecta Studio" data-src="img/ads.webp" />
+                            <!--
+                            <img class="lazyload" alt="google ads" title="Prospecta Studio" data-src="img/ads.webp" />-->
+                            <picture>
+                                <source class="lazyload" type="image/webp" title="prospecta studio" data-srcset="img/ads.webp">
+                                <img class="lazyload" type="image/png" data-src="img/ads.png" title="prospecta studio" alt="prospecta studio">
+                            </picture>
                         </div>
                     </div>
-                    <div class="text__w">
-                        <div class="text">
-                            <h2 title="Prospecta Studio">Campañas en Google Ads </h2>
+                    <div class="text__w scroll-content fadeTop">
+                        <div class="text ">
+                            <h2 class="" title="Prospecta Studio ">Campañas en Google Ads </h2>
                             <h3>Creación y administración de campañas publicitarias en Google Ads</h3>
                             <div class="tags">
                                 <span>Productos</span>
@@ -184,24 +281,22 @@
                                 <p>Consigue más clientes, al anunciarte en Google podrás llegar a las personas que
                                     buscan lo que ofreces en el momento oportuno.</p>
                             </div>
-                            <!--
-                            <a class="btn btn_white" href="">
-                                <span>Ver más...</span>
-                            </a>
-                            -->
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="works-list__item " id="web" >
+            <div class="works-list__item azure" id="web" >
                 <div class="works-list__item__w clearfix">
                     <div class="img-block">
                         <div class="img-w">
-                            <img class="lazyload" title="Prospecta Studio" alt="diseñoweb"
-                                data-src="img/marketing.webp" />
+                            <!--<img class="lazyload" title="Prospecta Studio" alt="diseñoweb" data-src="img/marketing.webp" />-->
+                            <picture>
+                                <source class="lazyload" type="image/webp" title="prospecta studio" data-srcset="img/marketing.webp">
+                                <img class="lazyload" type="image/png" data-src="img/marketing.png" title="prospecta studio" alt="prospecta studio">
+                            </picture>
                         </div>
                     </div>
-                    <div class="text__w">
+                    <div class="text__w scroll-content fadeTop">
                         <div class="text">
                             <h2>Diseño Web</h2>
                             <h3>Diseñamos la página web que te ayudará a vender más fácil y rápido en internet</h3>
@@ -224,23 +319,23 @@
                     </div>
                 </div>
             </div>
-            <div class="works-list__item " id="redes" >
-                <!--red-->
+            
+            <div class="works-list__item purple" id="redes">
                 <div class="works-list__item__w clearfix">
                     <div class="img-block">
                         <div class="img-w">
                             <picture>
-                                <source class="lazyload" type="image/webp"  srcset="img/redes-sociales.webp">
-                                <img class="lazyload" src="img/redes-sociales.png" alt="prospecta studio">
-                              </picture>
+                                <source class="lazyload" type="image/webp" title="prospecta studio"  data-srcset="img/redes-sociales.webp">
+                                <img class="lazyload" type="image/png" title="prospecta studio" data-src="img/redes-sociales.png" alt="prospecta studio">
+                            </picture>
                             <!--
                             <img class="lazyload" title="Prospecta Studio" alt="marleting"
                                 data-src="img/redes-sociales.webp" />
                                 -->
                         </div>
                     </div>
-                    <div class="text__w">
-                        <div class="text">
+                    <div class="text__w scroll-content fadeTop">
+                        <div class="text ">
                             <h2>Social Media Marketing</h2>
                             <h3>Activamos/reactivamos tus redes y te ayudamos a formar una comunidad interactiva
                                 interesada en lo que tu negocio ofrece</h3>
@@ -263,14 +358,18 @@
                     </div>
                 </div>
             </div>
-            <div class="works-list__item " id="branding">
+            <div class="works-list__item black" id="branding">
                 <div class="works-list__item__w clearfix">
                     <div class="img-block">
                         <div class="img-w">
-                            <img class="lazyload" title="Prospecta Studio" alt="branding" data-src="img/compu.webp" />
+                            <!--<img class="lazyload" title="Prospecta Studio" alt="branding" data-src="img/compu.webp" />-->
+                            <picture>
+                                <source class="lazyload" type="image/webp" title="prospecta studio"  data-srcset="img/compu.webp">
+                                <img class="lazyload" type="image/png" title="prospecta studio" data-src="img/compu.png" alt="prospecta studio">
+                            </picture>
                         </div>
                     </div>
-                    <div class="text__w">
+                    <div class="text__w scroll-content fadeTop">
                         <div class="text">
                             <h2>Branding</h2>
                             <h3>Diseño de branding personal y corporativo</h3>
@@ -413,10 +512,14 @@
                         </a>
                     </li>
                     
+                    
 
+                    <li class="header-menu-item desaparece "    id="menus">
+                        
+                        <a class="" onclick="myFunction()"><i class="bi bi-list" style="font-size: 1.6em;" ></i></a> 
+                  
+<!--<i class="bi bi-list" style="font-size: 1.6em;" ></i>-->
 
-                    <li class="header-menu-item desaparece" id="menus">
-                        <a href="#" onclick="myFunction()"> <i class="bi bi-list " style="font-size: 1.6em;" ></i> </a>
                         <script>
                             function myFunction() {
                                 document.getElementById("myDropdown").classList.toggle("show");
@@ -539,7 +642,7 @@
     </noscript>
 
 
-
+    
     <script src="js/app-mx.js"></script>
 
     <script src="js/lazysizes.min.js" async></script>

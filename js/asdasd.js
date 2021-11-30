@@ -21,7 +21,7 @@ if (!self.__WB_pmw) {
         var e = this;
         if (
             ((e.sliderId = "particle-slider"),
-            (e.color = "#000"),
+            (e.color = "#fff"),
             (e.hoverColor = "#88f"),
             (e.width = 0),
             (e.height = 0),
@@ -283,7 +283,7 @@ if (!self.__WB_pmw) {
             }
             function _(t, e) {
                 var i = e.nodeName.toLowerCase();
-                "input" === i && Tt.test(t.type) ? (e.checked = t.checked) : ("input" === i || "textarea" === i) && (e.defaultValue = t.defaultValue);
+                "input" === i && Ct.test(t.type) ? (e.checked = t.checked) : ("input" === i || "textarea" === i) && (e.defaultValue = t.defaultValue);
             }
             function y(e, i) {
                 var n,
@@ -324,12 +324,12 @@ if (!self.__WB_pmw) {
                     },
                 };
             }
-            function C(t, e) {
+            function T(t, e) {
                 if (e in t) return e;
                 for (var i = e[0].toUpperCase() + e.slice(1), n = e, s = Gt.length; s--; ) if (((e = Gt[s] + i), e in t)) return e;
                 return n;
             }
-            function T(t, e, i) {
+            function C(t, e, i) {
                 var n = Yt.exec(e);
                 return n ? Math.max(0, n[1] - (i || 0)) + (n[2] || "px") : e;
             }
@@ -359,8 +359,8 @@ if (!self.__WB_pmw) {
                             ((r[o] = vt.get(n, "olddisplay")),
                             (i = n.style.display),
                             e
-                                ? (r[o] || "none" !== i || (n.style.display = ""), "" === n.style.display && Ct(n) && (r[o] = vt.access(n, "olddisplay", b(n.nodeName))))
-                                : ((s = Ct(n)), ("none" === i && s) || vt.set(n, "olddisplay", s ? i : J.css(n, "display"))));
+                                ? (r[o] || "none" !== i || (n.style.display = ""), "" === n.style.display && Tt(n) && (r[o] = vt.access(n, "olddisplay", b(n.nodeName))))
+                                : ((s = Tt(n)), ("none" === i && s) || vt.set(n, "olddisplay", s ? i : J.css(n, "display"))));
                 for (o = 0; a > o; o++) (n = t[o]), n.style && ((e && "none" !== n.style.display && "" !== n.style.display) || (n.style.display = e ? r[o] || "" : "none"));
                 return t;
             }
@@ -397,7 +397,7 @@ if (!self.__WB_pmw) {
                     u = this,
                     d = {},
                     p = t.style,
-                    f = t.nodeType && Ct(t),
+                    f = t.nodeType && Tt(t),
                     m = vt.get(t, "fxshow");
                 i.queue ||
                     ((a = J._queueHooks(t, "fx")),
@@ -439,8 +439,8 @@ if (!self.__WB_pmw) {
                         f
                             ? J(t).show()
                             : u.done(function () {
-                                J(t).hide();
-                            }),
+                                  J(t).hide();
+                              }),
                         u.done(function () {
                             var e;
                             vt.remove(t, "fxshow");
@@ -587,7 +587,7 @@ if (!self.__WB_pmw) {
                 var s;
                 if (J.isArray(e))
                     J.each(e, function (e, s) {
-                        i || Te.test(t) ? n(t, s) : F(t + "[" + ("object" == typeof s ? e : "") + "]", s, i, n);
+                        i || Ce.test(t) ? n(t, s) : F(t + "[" + ("object" == typeof s ? e : "") + "]", s, i, n);
                     });
                 else if (i || "object" !== J.type(e)) n(t, e);
                 else for (s in e) F(t + "[" + s + "]", e[s], i, n);
@@ -1022,8 +1022,8 @@ if (!self.__WB_pmw) {
                 var b,
                     w,
                     x,
-                    C,
                     T,
+                    C,
                     k,
                     S,
                     P,
@@ -1093,12 +1093,12 @@ if (!self.__WB_pmw) {
                         var n = "0x" + e - 65536;
                         return n !== n || i ? e : 0 > n ? String.fromCharCode(n + 65536) : String.fromCharCode((n >> 10) | 55296, (1023 & n) | 56320);
                     },
-                    Ct = function () {
+                    Tt = function () {
                         I();
                     };
                 try {
                     Q.apply((G = J.call(F.childNodes)), F.childNodes), G[F.childNodes.length].nodeType;
-                } catch (Tt) {
+                } catch (Ct) {
                     Q = {
                         apply: G.length
                             ? function (t, e) {
@@ -1111,7 +1111,7 @@ if (!self.__WB_pmw) {
                     };
                 }
                 (w = e.support = {}),
-                    (T = e.isXML = function (t) {
+                    (C = e.isXML = function (t) {
                         var e = t && (t.ownerDocument || t).documentElement;
                         return e ? "HTML" !== e.nodeName : !1;
                     }),
@@ -1123,8 +1123,8 @@ if (!self.__WB_pmw) {
                             ? ((O = n),
                               (A = n.documentElement),
                               (i = n.defaultView),
-                              i && i !== i.top && (i.addEventListener ? i.addEventListener("unload", Ct, !1) : i.attachEvent && i.attachEvent("onunload", Ct)),
-                              (N = !T(n)),
+                              i && i !== i.top && (i.addEventListener ? i.addEventListener("unload", Tt, !1) : i.attachEvent && i.attachEvent("onunload", Tt)),
+                              (N = !C(n)),
                               (w.attributes = s(function (t) {
                                   return (t.className = "i"), !t.getAttribute("className");
                               })),
@@ -1285,7 +1285,7 @@ if (!self.__WB_pmw) {
                         }
                         return (M = null), t;
                     }),
-                    (C = e.getText = function (t) {
+                    (T = e.getText = function (t) {
                         var e,
                             i = "",
                             n = 0,
@@ -1293,9 +1293,9 @@ if (!self.__WB_pmw) {
                         if (s) {
                             if (1 === s || 9 === s || 11 === s) {
                                 if ("string" == typeof t.textContent) return t.textContent;
-                                for (t = t.firstChild; t; t = t.nextSibling) i += C(t);
+                                for (t = t.firstChild; t; t = t.nextSibling) i += T(t);
                             } else if (3 === s || 4 === s) return t.nodeValue;
-                        } else for (; (e = t[n++]); ) i += C(e);
+                        } else for (; (e = t[n++]); ) i += T(e);
                         return i;
                     }),
                     (x = e.selectors = {
@@ -1448,7 +1448,7 @@ if (!self.__WB_pmw) {
                                 return (
                                     (t = t.replace(wt, xt)),
                                     function (e) {
-                                        return (e.textContent || e.innerText || C(e)).indexOf(t) > -1;
+                                        return (e.textContent || e.innerText || T(e)).indexOf(t) > -1;
                                     }
                                 );
                             }),
@@ -2155,10 +2155,10 @@ if (!self.__WB_pmw) {
                 });
             var wt = /[+-]?(?:\d*\.|)\d+(?:[eE][+-]?\d+|)/.source,
                 xt = ["Top", "Right", "Bottom", "Left"],
-                Ct = function (t, e) {
+                Tt = function (t, e) {
                     return (t = e || t), "none" === J.css(t, "display") || !J.contains(t.ownerDocument, t);
                 },
-                Tt = /^(?:checkbox|radio)$/i;
+                Ct = /^(?:checkbox|radio)$/i;
             !(function () {
                 var t = Z.createDocumentFragment(),
                     e = t.appendChild(Z.createElement("div")),
@@ -2786,7 +2786,7 @@ if (!self.__WB_pmw) {
                             a = J.camelCase(e),
                             l = t.style;
                         return (
-                            (e = J.cssProps[a] || (J.cssProps[a] = C(l, a))),
+                            (e = J.cssProps[a] || (J.cssProps[a] = T(l, a))),
                             (o = J.cssHooks[e] || J.cssHooks[a]),
                             void 0 === i
                                 ? o && "get" in o && void 0 !== (s = o.get(t, !1, n))
@@ -2809,7 +2809,7 @@ if (!self.__WB_pmw) {
                         o,
                         a = J.camelCase(e);
                     return (
-                        (e = J.cssProps[a] || (J.cssProps[a] = C(t.style, a))),
+                        (e = J.cssProps[a] || (J.cssProps[a] = T(t.style, a))),
                         (o = J.cssHooks[e] || J.cssHooks[a]),
                         o && "get" in o && (s = o.get(t, !0, i)),
                         void 0 === s && (s = w(t, e, n)),
@@ -2831,7 +2831,7 @@ if (!self.__WB_pmw) {
                         },
                         set: function (t, i, n) {
                             var s = n && Bt(t);
-                            return T(t, i, n ? k(t, e, n, "border-box" === J.css(t, "boxSizing", !1, s), s) : 0);
+                            return C(t, i, n ? k(t, e, n, "border-box" === J.css(t, "boxSizing", !1, s), s) : 0);
                         },
                     };
                 }),
@@ -2845,7 +2845,7 @@ if (!self.__WB_pmw) {
                             return s;
                         },
                     }),
-                        Wt.test(t) || (J.cssHooks[t + e].set = T);
+                        Wt.test(t) || (J.cssHooks[t + e].set = C);
                 }),
                 J.fn.extend({
                     css: function (t, e) {
@@ -2879,7 +2879,7 @@ if (!self.__WB_pmw) {
                                 ? this.show()
                                 : this.hide()
                             : this.each(function () {
-                                  Ct(this) ? J(this).show() : J(this).hide();
+                                  Tt(this) ? J(this).show() : J(this).hide();
                               });
                     },
                 }),
@@ -2980,7 +2980,7 @@ if (!self.__WB_pmw) {
                 }),
                 J.fn.extend({
                     fadeTo: function (t, e, i, n) {
-                        return this.filter(Ct).css("opacity", 0).show().end().animate({ opacity: e }, t, i, n);
+                        return this.filter(Tt).css("opacity", 0).show().end().animate({ opacity: e }, t, i, n);
                     },
                     animate: function (t, e, i, n) {
                         var s = J.isEmptyObject(t),
@@ -3588,8 +3588,8 @@ if (!self.__WB_pmw) {
                 (J.expr.filters.visible = function (t) {
                     return !J.expr.filters.hidden(t);
                 });
-            var Ce = /%20/g,
-                Te = /\[\]$/,
+            var Te = /%20/g,
+                Ce = /\[\]$/,
                 ke = /\r?\n/g,
                 Se = /^(?:submit|button|image|reset|file)$/i,
                 Pe = /^(?:input|select|textarea|keygen)/i;
@@ -3604,7 +3604,7 @@ if (!self.__WB_pmw) {
                         s(this.name, this.value);
                     });
                 else for (i in t) F(i, t[i], e, s);
-                return n.join("&").replace(Ce, "+");
+                return n.join("&").replace(Te, "+");
             }),
                 J.fn.extend({
                     serialize: function () {
@@ -3617,7 +3617,7 @@ if (!self.__WB_pmw) {
                         })
                             .filter(function () {
                                 var t = this.type;
-                                return this.name && !J(this).is(":disabled") && Pe.test(this.nodeName) && !Se.test(t) && (this.checked || !Tt.test(t));
+                                return this.name && !J(this).is(":disabled") && Pe.test(this.nodeName) && !Se.test(t) && (this.checked || !Ct.test(t));
                             })
                             .map(function (t, e) {
                                 var i = J(this).val();
@@ -4609,8 +4609,8 @@ if (!self.__WB_pmw) {
                                 b = t(s.of),
                                 w = t.position.getWithinInfo(s.within),
                                 x = t.position.getScrollInfo(w),
-                                C = (s.collision || "flip").split(" "),
-                                T = {};
+                                T = (s.collision || "flip").split(" "),
+                                C = {};
                             return (
                                 (y = n(b)),
                                 b[0].preventDefault && (s.at = "left top"),
@@ -4627,13 +4627,13 @@ if (!self.__WB_pmw) {
                                         (i[1] = c.test(i[1]) ? i[1] : "center"),
                                         (t = u.exec(i[0])),
                                         (e = u.exec(i[1])),
-                                        (T[this] = [t ? t[0] : 0, e ? e[0] : 0]),
+                                        (C[this] = [t ? t[0] : 0, e ? e[0] : 0]),
                                         (s[this] = [d.exec(i[0])[0], d.exec(i[1])[0]]);
                                 }),
-                                1 === C.length && (C[1] = C[0]),
+                                1 === T.length && (T[1] = T[0]),
                                 "right" === s.at[0] ? (_.left += m) : "center" === s.at[0] && (_.left += m / 2),
                                 "bottom" === s.at[1] ? (_.top += g) : "center" === s.at[1] && (_.top += g / 2),
-                                (p = e(T.at, m, g)),
+                                (p = e(C.at, m, g)),
                                 (_.left += p[0]),
                                 (_.top += p[1]),
                                 this.each(function () {
@@ -4647,7 +4647,7 @@ if (!self.__WB_pmw) {
                                         k = u + f + i(this, "marginRight") + x.width,
                                         S = d + y + i(this, "marginBottom") + x.height,
                                         P = t.extend({}, _),
-                                        D = e(T.my, c.outerWidth(), c.outerHeight());
+                                        D = e(C.my, c.outerWidth(), c.outerHeight());
                                     "right" === s.my[0] ? (P.left -= u) : "center" === s.my[0] && (P.left -= u / 2),
                                         "bottom" === s.my[1] ? (P.top -= d) : "center" === s.my[1] && (P.top -= d / 2),
                                         (P.left += D[0]),
@@ -4655,8 +4655,8 @@ if (!self.__WB_pmw) {
                                         r || ((P.left = l(P.left)), (P.top = l(P.top))),
                                         (n = { marginLeft: f, marginTop: y }),
                                         t.each(["left", "top"], function (e, i) {
-                                            t.ui.position[C[e]] &&
-                                                t.ui.position[C[e]][i](P, {
+                                            t.ui.position[T[e]] &&
+                                                t.ui.position[T[e]][i](P, {
                                                     targetWidth: m,
                                                     targetHeight: g,
                                                     elemWidth: u,
@@ -8571,12 +8571,12 @@ if (!self.__WB_pmw) {
                                 return r + 1;
                             throw "Unknown name at position " + l;
                         },
-                        C = function () {
+                        T = function () {
                             if (i.charAt(l) !== e.charAt(s)) throw "Unexpected literal at position " + l;
                             l++;
                         };
                     for (s = 0; e.length > s; s++)
-                        if (y) "'" !== e.charAt(s) || b("'") ? C() : (y = !1);
+                        if (y) "'" !== e.charAt(s) || b("'") ? T() : (y = !1);
                         else
                             switch (e.charAt(s)) {
                                 case "d":
@@ -8604,10 +8604,10 @@ if (!self.__WB_pmw) {
                                     (a = new Date((w("!") - this._ticksTo1970) / 1e4)), (m = a.getFullYear()), (g = a.getMonth() + 1), (v = a.getDate());
                                     break;
                                 case "'":
-                                    b("'") ? C() : (y = !0);
+                                    b("'") ? T() : (y = !0);
                                     break;
                                 default:
-                                    C();
+                                    T();
                             }
                     if (i.length > l && ((o = i.substr(l)), !/^\s+/.test(o))) throw "Extra/unparsed characters found in date: " + o;
                     if ((-1 === m ? (m = new Date().getFullYear()) : 100 > m && (m += new Date().getFullYear() - (new Date().getFullYear() % 100) + (c >= m ? 0 : -100)), _ > -1))
@@ -8852,8 +8852,8 @@ if (!self.__WB_pmw) {
                         b,
                         w,
                         x,
-                        C,
                         T,
+                        C,
                         k,
                         S,
                         P,
@@ -8931,10 +8931,10 @@ if (!self.__WB_pmw) {
                         U[0] > x;
                         x++
                     ) {
-                        for (C = "", this.maxRows = 4, T = 0; U[1] > T; T++) {
+                        for (T = "", this.maxRows = 4, C = 0; U[1] > C; C++) {
                             if (((k = this._daylightSavingAdjust(new Date(tt, J, t.selectedDay))), (S = " ui-corner-all"), (P = ""), G)) {
                                 if (((P += "<div class='ui-datepicker-group"), U[1] > 1))
-                                    switch (T) {
+                                    switch (C) {
                                         case 0:
                                             (P += " ui-datepicker-group-first"), (S = " ui-corner-" + (j ? "right" : "left"));
                                             break;
@@ -8953,7 +8953,7 @@ if (!self.__WB_pmw) {
                                     "'>" +
                                     (/all|left/.test(S) && 0 === x ? (j ? r : n) : "") +
                                     (/all|right/.test(S) && 0 === x ? (j ? n : r) : "") +
-                                    this._generateMonthYearHeader(t, J, tt, Z, Q, x > 0 || T > 0, f, m) +
+                                    this._generateMonthYearHeader(t, J, tt, Z, Q, x > 0 || C > 0, f, m) +
                                     "</div><table class='ui-datepicker-calendar'><thead><tr>",
                                     D = u ? "<th class='ui-datepicker-week-col'>" + this._get(t, "weekHeader") + "</th>" : "",
                                     w = 0;
@@ -9005,9 +9005,9 @@ if (!self.__WB_pmw) {
                                         (N = this._daylightSavingAdjust(N));
                                 P += R + "</tr>";
                             }
-                            J++, J > 11 && ((J = 0), tt++), (P += "</tbody></table>" + (G ? "</div>" + (U[0] > 0 && T === U[1] - 1 ? "<div class='ui-datepicker-row-break'></div>" : "") : "")), (C += P);
+                            J++, J > 11 && ((J = 0), tt++), (P += "</tbody></table>" + (G ? "</div>" + (U[0] > 0 && C === U[1] - 1 ? "<div class='ui-datepicker-row-break'></div>" : "") : "")), (T += P);
                         }
-                        b += C;
+                        b += T;
                     }
                     return (b += h), (t._keyEvent = !1), b;
                 },
@@ -14075,7 +14075,7 @@ if (!self.__WB_pmw) {
                         if (((p.container = s.get.elements(p.container)[0]), !p.container)) throw a + " init failed.";
                         (_ = p.container === window || p.container === document.body || !document.body.contains(p.container)),
                             _ && (p.container = window),
-                            (y = T()),
+                            (y = C()),
                             p.container.addEventListener("resize", D),
                             p.container.addEventListener("scroll", D),
                             (p.refreshInterval = parseInt(p.refreshInterval) || u.refreshInterval),
@@ -14084,10 +14084,10 @@ if (!self.__WB_pmw) {
                     x = function () {
                         p.refreshInterval > 0 && (o = window.setTimeout(M, p.refreshInterval));
                     },
-                    C = function () {
+                    T = function () {
                         return p.vertical ? s.get.scrollTop(p.container) : s.get.scrollLeft(p.container);
                     },
-                    T = function () {
+                    C = function () {
                         return p.vertical ? s.get.height(p.container) : s.get.width(p.container);
                     },
                     k = (this._setScrollPos = function (t) {
@@ -14111,10 +14111,10 @@ if (!self.__WB_pmw) {
                         r = s.rAF(S);
                     },
                     D = function (t) {
-                        "resize" == t.type && ((y = T()), (v = c)), m !== !0 && ((m = !0), P());
+                        "resize" == t.type && ((y = C()), (v = c)), m !== !0 && ((m = !0), P());
                     },
                     M = function () {
-                        if (!_ && y != T()) {
+                        if (!_ && y != C()) {
                             var t;
                             try {
                                 t = new Event("resize", { bubbles: !1, cancelable: !1 });
@@ -14200,7 +14200,7 @@ if (!self.__WB_pmw) {
                         return d;
                     }),
                     (this.scrollPos = function (t) {
-                        return arguments.length ? (s.type.Function(t) && (C = t), d) : C.call(d);
+                        return arguments.length ? (s.type.Function(t) && (T = t), d) : T.call(d);
                     }),
                     (this.info = function (t) {
                         var e = { size: y, vertical: p.vertical, scrollPos: g, scrollDirection: v, container: p.container, isDocument: _ };
@@ -14310,7 +14310,7 @@ if (!self.__WB_pmw) {
                             return (
                                 e instanceof t.Controller &&
                                     o != e &&
-                                    (o && o.removeScene(u), (o = e), k(), w(!0), x(!0), b(), o.info("container").addEventListener("resize", C), e.addScene(u), u.trigger("add", { controller: o }), u.update()),
+                                    (o && o.removeScene(u), (o = e), k(), w(!0), x(!0), b(), o.info("container").addEventListener("resize", T), e.addScene(u), u.trigger("add", { controller: o }), u.update()),
                                 u
                             );
                         }),
@@ -14319,7 +14319,7 @@ if (!self.__WB_pmw) {
                         }),
                         (this.remove = function () {
                             if (o) {
-                                o.info("container").removeEventListener("resize", C);
+                                o.info("container").removeEventListener("resize", T);
                                 var t = o;
                                 (o = void 0), t.removeScene(u), u.trigger("remove");
                             }
@@ -14391,10 +14391,10 @@ if (!self.__WB_pmw) {
                             var c = i != g;
                             (g = i), c && !t && u.trigger("shift", { reason: "triggerElementPosition" });
                         },
-                        C = function () {
+                        T = function () {
                             d.triggerHook > 0 && u.trigger("shift", { reason: "containerResize" });
                         },
-                        T = s.extend(n.validate, {
+                        C = s.extend(n.validate, {
                             duration: function (t) {
                                 if (s.type.String(t) && t.match(/^(\.|\d)*\d+%$/)) {
                                     var e = parseFloat(t) / 100;
@@ -14415,12 +14415,12 @@ if (!self.__WB_pmw) {
                             },
                         }),
                         k = function (t) {
-                            (t = arguments.length ? [t] : Object.keys(T)),
+                            (t = arguments.length ? [t] : Object.keys(C)),
                                 t.forEach(function (t) {
                                     var e;
-                                    if (T[t])
+                                    if (C[t])
                                         try {
-                                            e = T[t](d[t]);
+                                            e = C[t](d[t]);
                                         } catch (i) {
                                             e = c[t];
                                         } finally {
@@ -14937,26 +14937,26 @@ if (!self.__WB_pmw) {
                             d && ((this._time = t = d._startTime), (this._totalTime = t + this._cycle * (this._totalDuration + this._repeatDelay)));
                         }
                         if (this._cycle !== x && !this._locked) {
-                            var C = this._yoyo && 0 !== (1 & x),
-                                T = C === (this._yoyo && 0 !== (1 & this._cycle)),
+                            var T = this._yoyo && 0 !== (1 & x),
+                                C = T === (this._yoyo && 0 !== (1 & this._cycle)),
                                 k = this._totalTime,
                                 S = this._cycle,
                                 P = this._rawPrevTime,
                                 D = this._time;
                             if (
                                 ((this._totalTime = x * m),
-                                this._cycle < x ? (C = !C) : (this._totalTime += m),
+                                this._cycle < x ? (T = !T) : (this._totalTime += m),
                                 (this._time = g),
                                 (this._rawPrevTime = 0 === m ? b - 1e-4 : b),
                                 (this._cycle = x),
                                 (this._locked = !0),
-                                (g = C ? 0 : m),
+                                (g = T ? 0 : m),
                                 this.render(g, e, 0 === m),
                                 e || this._gc || (this.vars.onRepeat && this._callback("onRepeat")),
                                 g !== this._time)
                             )
                                 return;
-                            if ((T && ((g = C ? m + 1e-4 : -1e-4), this.render(g, !0, !1)), (this._locked = !1), this._paused && !w)) return;
+                            if ((C && ((g = T ? m + 1e-4 : -1e-4), this.render(g, !0, !1)), (this._locked = !1), this._paused && !w)) return;
                             (this._time = D), (this._totalTime = k), (this._cycle = S), (this._rawPrevTime = P);
                         }
                         if (!((this._time !== g && this._first) || i || c || d)) return void (v !== this._totalTime && this._onUpdate && (e || this._callback("onUpdate")));
@@ -16191,26 +16191,26 @@ if (!self.__WB_pmw) {
                                 d && ((this._time = t = d._startTime), (this._totalTime = t + this._cycle * (this._totalDuration + this._repeatDelay)));
                             }
                             if (this._cycle !== x && !this._locked) {
-                                var C = this._yoyo && 0 !== (1 & x),
-                                    T = C === (this._yoyo && 0 !== (1 & this._cycle)),
+                                var T = this._yoyo && 0 !== (1 & x),
+                                    C = T === (this._yoyo && 0 !== (1 & this._cycle)),
                                     k = this._totalTime,
                                     S = this._cycle,
                                     P = this._rawPrevTime,
                                     D = this._time;
                                 if (
                                     ((this._totalTime = x * m),
-                                    this._cycle < x ? (C = !C) : (this._totalTime += m),
+                                    this._cycle < x ? (T = !T) : (this._totalTime += m),
                                     (this._time = g),
                                     (this._rawPrevTime = 0 === m ? b - 1e-4 : b),
                                     (this._cycle = x),
                                     (this._locked = !0),
-                                    (g = C ? 0 : m),
+                                    (g = T ? 0 : m),
                                     this.render(g, e, 0 === m),
                                     e || this._gc || (this.vars.onRepeat && this._callback("onRepeat")),
                                     g !== this._time)
                                 )
                                     return;
-                                if ((T && ((g = C ? m + 1e-4 : -1e-4), this.render(g, !0, !1)), (this._locked = !1), this._paused && !w)) return;
+                                if ((C && ((g = T ? m + 1e-4 : -1e-4), this.render(g, !0, !1)), (this._locked = !1), this._paused && !w)) return;
                                 (this._time = D), (this._totalTime = k), (this._cycle = S), (this._rawPrevTime = P);
                             }
                             if (!((this._time !== g && this._first) || i || c || d)) return void (v !== this._totalTime && this._onUpdate && (e || this._callback("onUpdate")));
@@ -16358,13 +16358,13 @@ if (!self.__WB_pmw) {
                             b,
                             w,
                             x = t.length - 1,
-                            C = 0,
-                            T = t[0].a;
+                            T = 0,
+                            C = t[0].a;
                         for (h = 0; x > h; h++)
-                            (p = t[C]),
+                            (p = t[T]),
                                 (c = p.a),
                                 (u = p.d),
-                                (d = t[C + 1].d),
+                                (d = t[T + 1].d),
                                 a
                                     ? ((y = e[h]),
                                       (b = i[h]),
@@ -16376,13 +16376,13 @@ if (!self.__WB_pmw) {
                                 (f += g),
                                 (m += g),
                                 (p.c = v = f),
-                                0 !== h ? (p.b = T) : (p.b = T = p.a + 0.6 * (p.c - p.a)),
+                                0 !== h ? (p.b = C) : (p.b = C = p.a + 0.6 * (p.c - p.a)),
                                 (p.da = u - c),
                                 (p.ca = v - c),
-                                (p.ba = T - c),
-                                r ? ((_ = l(c, T, v, u)), t.splice(C, 1, _[0], _[1], _[2], _[3]), (C += 4)) : C++,
-                                (T = m);
-                        (p = t[C]), (p.b = T), (p.c = T + 0.4 * (p.d - T)), (p.da = p.d - p.a), (p.ca = p.c - p.a), (p.ba = T - p.a), r && ((_ = l(p.a, T, p.c, p.d)), t.splice(C, 1, _[0], _[1], _[2], _[3]));
+                                (p.ba = C - c),
+                                r ? ((_ = l(c, C, v, u)), t.splice(T, 1, _[0], _[1], _[2], _[3]), (T += 4)) : T++,
+                                (C = m);
+                        (p = t[T]), (p.b = C), (p.c = C + 0.4 * (p.d - C)), (p.da = p.d - p.a), (p.ca = p.c - p.a), (p.ba = C - p.a), r && ((_ = l(p.a, C, p.c, p.d)), t.splice(T, 1, _[0], _[1], _[2], _[3]));
                     },
                     c = function (t, n, s, r) {
                         var a,
@@ -16408,12 +16408,12 @@ if (!self.__WB_pmw) {
                             b,
                             w = {},
                             x = [],
-                            C = d || t[0];
+                            T = d || t[0];
                         (u = "string" == typeof u ? "," + u + "," : a), null == r && (r = 1);
                         for (f in t[0]) x.push(f);
                         if (t.length > 1) {
                             for (b = t[t.length - 1], y = !0, p = x.length; --p > -1; )
-                                if (((f = x[p]), Math.abs(C[f] - b[f]) > 0.05)) {
+                                if (((f = x[p]), Math.abs(T[f] - b[f]) > 0.05)) {
                                     y = !1;
                                     break;
                                 }
@@ -16569,13 +16569,13 @@ if (!self.__WB_pmw) {
                                     b,
                                     w,
                                     x,
-                                    C = this._autoRotate;
-                                for (s = C.length; --s > -1; )
-                                    (r = C[s][2]),
-                                        (w = C[s][3] || 0),
-                                        (x = C[s][4] === !0 ? 1 : t),
-                                        (o = this._beziers[C[s][0]]),
-                                        (g = this._beziers[C[s][1]]),
+                                    T = this._autoRotate;
+                                for (s = T.length; --s > -1; )
+                                    (r = T[s][2]),
+                                        (w = T[s][3] || 0),
+                                        (x = T[s][4] === !0 ? 1 : t),
+                                        (o = this._beziers[T[s][0]]),
+                                        (g = this._beziers[T[s][1]]),
                                         o &&
                                             g &&
                                             ((o = o[i]),
@@ -16684,8 +16684,8 @@ if (!self.__WB_pmw) {
                         b = /(?:\d|\-|\+|=|#|\.)*/g,
                         w = /opacity *= *([^)]*)/i,
                         x = /opacity:([^;]*)/i,
-                        C = /alpha\(opacity *=.+?\)/i,
-                        T = /^(rgb|hsl)/,
+                        T = /alpha\(opacity *=.+?\)/i,
+                        C = /^(rgb|hsl)/,
                         k = /([A-Z])/g,
                         S = /-([a-z])/gi,
                         P = /(^(?:url\(\"|url\())|(?:(\"\))$|\)$)/gi,
@@ -16782,7 +16782,7 @@ if (!self.__WB_pmw) {
                                 r = {};
                             if ((e = e || V(t, null)))
                                 if ((i = e.length)) for (; --i > -1; ) (s = e[i]), (-1 === s.indexOf("-transform") || kt === s) && (r[s.replace(S, D)] = e.getPropertyValue(s));
-                                else for (i in e) (-1 === i.indexOf("Transform") || Tt === i) && (r[i] = e[i]);
+                                else for (i in e) (-1 === i.indexOf("Transform") || Ct === i) && (r[i] = e[i]);
                             else if ((e = t.currentStyle || t.style)) for (i in e) "string" == typeof i && void 0 === r[i] && (r[i.replace(S, D)] = e[i]);
                             return (
                                 j || (r.opacity = B(t)),
@@ -17085,8 +17085,8 @@ if (!self.__WB_pmw) {
                                 b,
                                 w,
                                 x,
-                                C,
                                 T,
+                                C,
                                 k,
                                 S = i.split(", ").join(",").split(" "),
                                 P = n.split(", ").join(",").split(" "),
@@ -17104,7 +17104,7 @@ if (!self.__WB_pmw) {
                             )
                                 if (((f = S[u]), (m = P[u]), (b = parseFloat(f)), b || 0 === b)) o.appendXtra("", b, st(m, b), m.replace(v, ""), M && -1 !== m.indexOf("px"), !0);
                                 else if (s && ut.test(f))
-                                    (T = "," === m.charAt(m.length - 1) ? ")," : ")"),
+                                    (C = "," === m.charAt(m.length - 1) ? ")," : ")"),
                                         (k = -1 !== m.indexOf("hsl") && j),
                                         (f = ht(f, k)),
                                         (m = ht(m, k)),
@@ -17116,21 +17116,21 @@ if (!self.__WB_pmw) {
                                                   ? o
                                                         .appendXtra(w ? "hsla(" : "hsl(", f[0], st(m[0], f[0]), ",", !1, !0)
                                                         .appendXtra("", f[1], st(m[1], f[1]), "%,", !1)
-                                                        .appendXtra("", f[2], st(m[2], f[2]), w ? "%," : "%" + T, !1)
+                                                        .appendXtra("", f[2], st(m[2], f[2]), w ? "%," : "%" + C, !1)
                                                   : o
                                                         .appendXtra(w ? "rgba(" : "rgb(", f[0], m[0] - f[0], ",", !0, !0)
                                                         .appendXtra("", f[1], m[1] - f[1], ",", !0)
-                                                        .appendXtra("", f[2], m[2] - f[2], w ? "," : T, !0),
-                                              w && ((f = f.length < 4 ? 1 : f[3]), o.appendXtra("", f, (m.length < 4 ? 1 : m[3]) - f, T, !1))),
+                                                        .appendXtra("", f[2], m[2] - f[2], w ? "," : C, !0),
+                                              w && ((f = f.length < 4 ? 1 : f[3]), o.appendXtra("", f, (m.length < 4 ? 1 : m[3]) - f, C, !1))),
                                         (ut.lastIndex = 0);
                                 else if ((_ = f.match(g))) {
                                     if (((y = m.match(v)), !y || y.length !== _.length)) return o;
-                                    for (p = 0, d = 0; d < _.length; d++) (C = _[d]), (x = f.indexOf(C, p)), o.appendXtra(f.substr(p, x - p), Number(C), st(y[d], C), "", M && "px" === f.substr(x + C.length, 2), 0 === d), (p = x + C.length);
+                                    for (p = 0, d = 0; d < _.length; d++) (T = _[d]), (x = f.indexOf(T, p)), o.appendXtra(f.substr(p, x - p), Number(T), st(y[d], T), "", M && "px" === f.substr(x + T.length, 2), 0 === d), (p = x + T.length);
                                     o["xs" + o.l] += f.substr(p);
                                 } else o["xs" + o.l] += o.l ? " " + m : m;
                             if (-1 !== n.indexOf("=") && o.data) {
-                                for (T = o.xs0 + o.data.s, u = 1; u < o.l; u++) T += o["xs" + u] + o.data["xn" + u];
-                                o.e = T + o["xs" + u];
+                                for (C = o.xs0 + o.data.s, u = 1; u < o.l; u++) C += o["xs" + u] + o.data["xn" + u];
+                                o.e = C + o["xs" + u];
                             }
                             return o.l || ((o.type = -1), (o.xs0 = o.e)), o.xfirst || o;
                         }),
@@ -17214,8 +17214,8 @@ if (!self.__WB_pmw) {
                         }),
                         (o.useSVGTransformAttr = d || p);
                     var xt,
-                        Ct = "scaleX,scaleY,scaleZ,x,y,z,skewX,skewY,rotation,rotationX,rotationY,perspective,xPercent,yPercent".split(","),
-                        Tt = X("transform"),
+                        Tt = "scaleX,scaleY,scaleZ,x,y,z,skewX,skewY,rotation,rotationX,rotationY,perspective,xPercent,yPercent".split(","),
+                        Ct = X("transform"),
                         kt = Y + "transform",
                         St = X("transformOrigin"),
                         Pt = null !== X("perspective"),
@@ -17243,7 +17243,7 @@ if (!self.__WB_pmw) {
                                     (e = Et("rect", t, { width: 100, height: 50, x: 100 })),
                                     (i = e.getBoundingClientRect().width),
                                     (e.style[St] = "50% 50%"),
-                                    (e.style[Tt] = "scaleX(0.5)"),
+                                    (e.style[Ct] = "scaleX(0.5)"),
                                     (n = i === e.getBoundingClientRect().width && !(p && Pt)),
                                     It.removeChild(t)),
                                 n
@@ -17302,12 +17302,12 @@ if (!self.__WB_pmw) {
                                 a = t._gsTransform || new Dt(),
                                 l = 1e5;
                             if (
-                                (Tt
+                                (Ct
                                     ? (n = G(t, kt, null, !0))
                                     : t.currentStyle && ((n = t.currentStyle.filter.match(E)), (n = n && 4 === n.length ? [n[0].substr(4), Number(n[2].substr(4)), Number(n[1].substr(4)), n[3].substr(4), a.x || 0, a.y || 0].join(",") : "")),
                                 (i = !n || "none" === n || "matrix(1, 0, 0, 1, 0, 0)" === n),
                                 (a.svg || (t.getBBox && Nt(t))) &&
-                                    (i && -1 !== (t.style[Tt] + "").indexOf("matrix") && ((n = t.style[Tt]), (i = 0)),
+                                    (i && -1 !== (t.style[Ct] + "").indexOf("matrix") && ((n = t.style[Ct]), (i = 0)),
                                     (s = t.getAttribute("transform")),
                                     i && s && (-1 !== s.indexOf("matrix") ? ((n = s), (i = 0)) : -1 !== s.indexOf("translate") && ((n = "matrix(1,0,0,1," + s.match(/(?:\-|\b)[\d\-\.e]+\b/gi).join(",") + ")"), (i = 0)))),
                                 i)
@@ -17336,8 +17336,8 @@ if (!self.__WB_pmw) {
                                         b,
                                         w,
                                         x,
-                                        C,
-                                        T = a[0],
+                                        T,
+                                        C = a[0],
                                         k = a[1],
                                         S = a[2],
                                         P = a[3],
@@ -17357,25 +17357,25 @@ if (!self.__WB_pmw) {
                                         (p.rotationX = F * N),
                                         F &&
                                             ((x = Math.cos(-F)),
-                                            (C = Math.sin(-F)),
-                                            (y = D * x + O * C),
-                                            (b = M * x + A * C),
-                                            (w = E * x + z * C),
-                                            (O = D * -C + O * x),
-                                            (A = M * -C + A * x),
-                                            (z = E * -C + z * x),
-                                            (H = I * -C + H * x),
+                                            (T = Math.sin(-F)),
+                                            (y = D * x + O * T),
+                                            (b = M * x + A * T),
+                                            (w = E * x + z * T),
+                                            (O = D * -T + O * x),
+                                            (A = M * -T + A * x),
+                                            (z = E * -T + z * x),
+                                            (H = I * -T + H * x),
                                             (D = y),
                                             (M = b),
                                             (E = w)),
                                         (F = Math.atan2(-S, z)),
                                         (p.rotationY = F * N),
-                                        F && ((x = Math.cos(-F)), (C = Math.sin(-F)), (y = T * x - O * C), (b = k * x - A * C), (w = S * x - z * C), (A = k * C + A * x), (z = S * C + z * x), (H = P * C + H * x), (T = y), (k = b), (S = w)),
-                                        (F = Math.atan2(k, T)),
+                                        F && ((x = Math.cos(-F)), (T = Math.sin(-F)), (y = C * x - O * T), (b = k * x - A * T), (w = S * x - z * T), (A = k * T + A * x), (z = S * T + z * x), (H = P * T + H * x), (C = y), (k = b), (S = w)),
+                                        (F = Math.atan2(k, C)),
                                         (p.rotation = F * N),
-                                        F && ((x = Math.cos(-F)), (C = Math.sin(-F)), (T = T * x + D * C), (b = k * x + M * C), (M = k * -C + M * x), (E = S * -C + E * x), (k = b)),
+                                        F && ((x = Math.cos(-F)), (T = Math.sin(-F)), (C = C * x + D * T), (b = k * x + M * T), (M = k * -T + M * x), (E = S * -T + E * x), (k = b)),
                                         p.rotationX && Math.abs(p.rotationX) + Math.abs(p.rotation) > 359.9 && ((p.rotationX = p.rotation = 0), (p.rotationY = 180 - p.rotationY)),
-                                        (p.scaleX = ((Math.sqrt(T * T + k * k) * g + 0.5) | 0) / g),
+                                        (p.scaleX = ((Math.sqrt(C * C + k * k) * g + 0.5) | 0) / g),
                                         (p.scaleY = ((Math.sqrt(M * M + A * A) * g + 0.5) | 0) / g),
                                         (p.scaleZ = ((Math.sqrt(E * E + z * z) * g + 0.5) | 0) / g),
                                         (p.skewX = 0),
@@ -17383,7 +17383,7 @@ if (!self.__WB_pmw) {
                                         (p.x = R),
                                         (p.y = $),
                                         (p.z = L),
-                                        p.svg && ((p.x -= p.xOrigin - (p.xOrigin * T - p.yOrigin * D)), (p.y -= p.yOrigin - (p.yOrigin * k - p.xOrigin * M)));
+                                        p.svg && ((p.x -= p.xOrigin - (p.xOrigin * C - p.yOrigin * D)), (p.y -= p.yOrigin - (p.yOrigin * k - p.xOrigin * M)));
                                 } else if ((!Pt || r || !a.length || p.x !== a[4] || p.y !== a[5] || (!p.rotationX && !p.rotationY)) && (void 0 === p.x || "none" !== G(t, "display", i))) {
                                     var W = a.length >= 6,
                                         j = W ? a[0] : 1,
@@ -17411,9 +17411,9 @@ if (!self.__WB_pmw) {
                                 n &&
                                     ((t._gsTransform = p),
                                     p.svg &&
-                                        (xt && t.style[Tt]
+                                        (xt && t.style[Ct]
                                             ? e.delayedCall(0.001, function () {
-                                                  Wt(t.style, Tt);
+                                                  Wt(t.style, Ct);
                                               })
                                             : !xt &&
                                               t.getAttribute("transform") &&
@@ -17445,10 +17445,10 @@ if (!self.__WB_pmw) {
                                     _ = "absolute" !== d.position,
                                     y = "progid:DXImageTransform.Microsoft.Matrix(M11=" + a + ", M12=" + l + ", M21=" + h + ", M22=" + c,
                                     x = n.x + (g * n.xPercent) / 100,
-                                    C = n.y + (v * n.yPercent) / 100;
+                                    T = n.y + (v * n.yPercent) / 100;
                                 if (
-                                    (null != n.ox && ((p = (n.oxp ? g * n.ox * 0.01 : n.ox) - g / 2), (f = (n.oyp ? v * n.oy * 0.01 : n.oy) - v / 2), (x += p - (p * a + f * l)), (C += f - (p * h + f * c))),
-                                    _ ? ((p = g / 2), (f = v / 2), (y += ", Dx=" + (p - (p * a + f * l) + x) + ", Dy=" + (f - (p * h + f * c) + C) + ")")) : (y += ", sizingMethod='auto expand')"),
+                                    (null != n.ox && ((p = (n.oxp ? g * n.ox * 0.01 : n.ox) - g / 2), (f = (n.oyp ? v * n.oy * 0.01 : n.oy) - v / 2), (x += p - (p * a + f * l)), (T += f - (p * h + f * c))),
+                                    _ ? ((p = g / 2), (f = v / 2), (y += ", Dx=" + (p - (p * a + f * l) + x) + ", Dy=" + (f - (p * h + f * c) + T) + ")")) : (y += ", sizingMethod='auto expand')"),
                                     -1 !== e.indexOf("DXImageTransform.Microsoft.Matrix(") ? (u.filter = e.replace(I, y)) : (u.filter = y + " " + e),
                                     (0 === t || 1 === t) &&
                                         1 === a &&
@@ -17458,7 +17458,7 @@ if (!self.__WB_pmw) {
                                         ((_ && -1 === y.indexOf("Dx=0, Dy=0")) || (w.test(e) && 100 !== parseFloat(RegExp.$1)) || (-1 === e.indexOf(e.indexOf("Alpha")) && u.removeAttribute("filter"))),
                                     !_)
                                 ) {
-                                    var T,
+                                    var C,
                                         k,
                                         S,
                                         P = 8 > m ? 1 : -1;
@@ -17466,14 +17466,14 @@ if (!self.__WB_pmw) {
                                         p = n.ieOffsetX || 0,
                                             f = n.ieOffsetY || 0,
                                             n.ieOffsetX = Math.round((g - ((0 > a ? -a : a) * g + (0 > l ? -l : l) * v)) / 2 + x),
-                                            n.ieOffsetY = Math.round((v - ((0 > c ? -c : c) * v + (0 > h ? -h : h) * g)) / 2 + C),
+                                            n.ieOffsetY = Math.round((v - ((0 > c ? -c : c) * v + (0 > h ? -h : h) * g)) / 2 + T),
                                             _t = 0;
                                         4 > _t;
                                         _t++
                                     )
                                         (k = et[_t]),
-                                            (T = d[k]),
-                                            (i = -1 !== T.indexOf("px") ? parseFloat(T) : K(this.t, k, parseFloat(T), T.replace(b, "")) || 0),
+                                            (C = d[k]),
+                                            (i = -1 !== C.indexOf("px") ? parseFloat(C) : K(this.t, k, parseFloat(C), C.replace(b, "")) || 0),
                                             (S = i !== n[k] ? (2 > _t ? -n.ieOffsetX : -n.ieOffsetY) : 2 > _t ? p - n.ieOffsetX : f - n.ieOffsetY),
                                             (u[k] = (n[k] = Math.round(i - S * (0 === _t || 2 === _t ? 1 : P))) + "px");
                                 }
@@ -17501,8 +17501,8 @@ if (!self.__WB_pmw) {
                                 b,
                                 w,
                                 x,
-                                C,
                                 T,
+                                C,
                                 k = this.data,
                                 S = this.t.style,
                                 P = k.rotation,
@@ -17520,13 +17520,13 @@ if (!self.__WB_pmw) {
                             if (((((1 === t || 0 === t) && "auto" === H && (this.tween._totalTime === this.tween._totalDuration || !this.tween._totalTime)) || !H) && !R && !L && !M && !D && 1 === O) || (xt && $) || !Pt)
                                 return void (P || k.skewX || $
                                     ? ((P *= A),
-                                      (C = k.skewX * A),
-                                      (T = 1e5),
+                                      (T = k.skewX * A),
+                                      (C = 1e5),
                                       (e = Math.cos(P) * E),
                                       (s = Math.sin(P) * E),
-                                      (i = Math.sin(P - C) * -I),
-                                      (r = Math.cos(P - C) * I),
-                                      C && "simple" === k.skewType && ((_ = Math.tan(C)), (_ = Math.sqrt(1 + _ * _)), (i *= _), (r *= _), k.skewY && ((e *= _), (s *= _))),
+                                      (i = Math.sin(P - T) * -I),
+                                      (r = Math.cos(P - T) * I),
+                                      T && "simple" === k.skewType && ((_ = Math.tan(T)), (_ = Math.sqrt(1 + _ * _)), (i *= _), (r *= _), k.skewY && ((e *= _), (s *= _))),
                                       $ &&
                                           ((N += k.xOrigin - (k.xOrigin * e + k.yOrigin * i) + k.xOffset),
                                           (z += k.yOrigin - (k.xOrigin * s + k.yOrigin * r) + k.yOffset),
@@ -17534,9 +17534,9 @@ if (!self.__WB_pmw) {
                                           (m = 1e-6),
                                           m > N && N > -m && (N = 0),
                                           m > z && z > -m && (z = 0)),
-                                      (b = ((e * T) | 0) / T + "," + ((s * T) | 0) / T + "," + ((i * T) | 0) / T + "," + ((r * T) | 0) / T + "," + N + "," + z + ")"),
-                                      $ && xt ? this.t.setAttribute("transform", "matrix(" + b) : (S[Tt] = (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) matrix(" : "matrix(") + b))
-                                    : (S[Tt] = (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) matrix(" : "matrix(") + E + ",0,0," + I + "," + N + "," + z + ")"));
+                                      (b = ((e * C) | 0) / C + "," + ((s * C) | 0) / C + "," + ((i * C) | 0) / C + "," + ((r * C) | 0) / C + "," + N + "," + z + ")"),
+                                      $ && xt ? this.t.setAttribute("transform", "matrix(" + b) : (S[Ct] = (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) matrix(" : "matrix(") + b))
+                                    : (S[Ct] = (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) matrix(" : "matrix(") + E + ",0,0," + I + "," + N + "," + z + ")"));
                             if ((p && ((m = 1e-4), m > E && E > -m && (E = O = 2e-5), m > I && I > -m && (I = O = 2e-5), !L || k.z || k.rotationX || k.rotationY || (L = 0)), P || k.skewX))
                                 (P *= A),
                                     (g = e = Math.cos(P)),
@@ -17547,7 +17547,7 @@ if (!self.__WB_pmw) {
                                     (r = g);
                             else {
                                 if (!(M || D || 1 !== O || L || $))
-                                    return void (S[Tt] =
+                                    return void (S[Ct] =
                                         (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) translate3d(" : "translate3d(") +
                                         N +
                                         "px," +
@@ -17586,7 +17586,7 @@ if (!self.__WB_pmw) {
                                       (b += w + (m > o && o > -m ? x : o) + w + (m > h && h > -m ? x : h) + w + (m > d && d > -m ? x : d) + w))
                                     : (b += ",0,0,0,0,1,0,"),
                                 (b += N + w + z + w + R + w + (L ? 1 + -R / L : 1) + ")"),
-                                (S[Tt] = b);
+                                (S[Ct] = b);
                         });
                     (h = Dt.prototype),
                         (h.x = h.y = h.z = h.skewX = h.skewY = h.rotation = h.rotationX = h.rotationY = h.zOrigin = h.xPercent = h.yPercent = h.xOffset = h.yOffset = 0),
@@ -17610,77 +17610,77 @@ if (!self.__WB_pmw) {
                                         y = t._gsTransform,
                                         b = t.style,
                                         w = 1e-6,
-                                        x = Ct.length,
-                                        C = l,
-                                        T = {},
+                                        x = Tt.length,
+                                        T = l,
+                                        C = {},
                                         k = "transformOrigin";
                                     if (
                                         (l.display ? ((d = G(t, "display")), (b.display = "block"), (h = $t(t, s, !0, l.parseTransform)), (b.display = d)) : (h = $t(t, s, !0, l.parseTransform)),
                                         (n._transform = h),
-                                        "string" == typeof C.transform && Tt)
+                                        "string" == typeof T.transform && Ct)
                                     )
                                         (d = L.style),
-                                            (d[Tt] = C.transform),
+                                            (d[Ct] = T.transform),
                                             (d.display = "block"),
                                             (d.position = "absolute"),
                                             R.body.appendChild(L),
                                             (c = $t(L, null, !1)),
                                             R.body.removeChild(L),
                                             c.perspective || (c.perspective = h.perspective),
-                                            null != C.xPercent && (c.xPercent = rt(C.xPercent, h.xPercent)),
-                                            null != C.yPercent && (c.yPercent = rt(C.yPercent, h.yPercent));
-                                    else if ("object" == typeof C) {
+                                            null != T.xPercent && (c.xPercent = rt(T.xPercent, h.xPercent)),
+                                            null != T.yPercent && (c.yPercent = rt(T.yPercent, h.yPercent));
+                                    else if ("object" == typeof T) {
                                         if (
                                             ((c = {
-                                                scaleX: rt(null != C.scaleX ? C.scaleX : C.scale, h.scaleX),
-                                                scaleY: rt(null != C.scaleY ? C.scaleY : C.scale, h.scaleY),
-                                                scaleZ: rt(C.scaleZ, h.scaleZ),
-                                                x: rt(C.x, h.x),
-                                                y: rt(C.y, h.y),
-                                                z: rt(C.z, h.z),
-                                                xPercent: rt(C.xPercent, h.xPercent),
-                                                yPercent: rt(C.yPercent, h.yPercent),
-                                                perspective: rt(C.transformPerspective, h.perspective),
+                                                scaleX: rt(null != T.scaleX ? T.scaleX : T.scale, h.scaleX),
+                                                scaleY: rt(null != T.scaleY ? T.scaleY : T.scale, h.scaleY),
+                                                scaleZ: rt(T.scaleZ, h.scaleZ),
+                                                x: rt(T.x, h.x),
+                                                y: rt(T.y, h.y),
+                                                z: rt(T.z, h.z),
+                                                xPercent: rt(T.xPercent, h.xPercent),
+                                                yPercent: rt(T.yPercent, h.yPercent),
+                                                perspective: rt(T.transformPerspective, h.perspective),
                                             }),
-                                            (g = C.directionalRotation),
+                                            (g = T.directionalRotation),
                                             null != g)
                                         )
-                                            if ("object" == typeof g) for (d in g) C[d] = g[d];
-                                            else C.rotation = g;
-                                        "string" == typeof C.x && -1 !== C.x.indexOf("%") && ((c.x = 0), (c.xPercent = rt(C.x, h.xPercent))),
-                                            "string" == typeof C.y && -1 !== C.y.indexOf("%") && ((c.y = 0), (c.yPercent = rt(C.y, h.yPercent))),
-                                            (c.rotation = ot("rotation" in C ? C.rotation : "shortRotation" in C ? C.shortRotation + "_short" : "rotationZ" in C ? C.rotationZ : h.rotation, h.rotation, "rotation", T)),
+                                            if ("object" == typeof g) for (d in g) T[d] = g[d];
+                                            else T.rotation = g;
+                                        "string" == typeof T.x && -1 !== T.x.indexOf("%") && ((c.x = 0), (c.xPercent = rt(T.x, h.xPercent))),
+                                            "string" == typeof T.y && -1 !== T.y.indexOf("%") && ((c.y = 0), (c.yPercent = rt(T.y, h.yPercent))),
+                                            (c.rotation = ot("rotation" in T ? T.rotation : "shortRotation" in T ? T.shortRotation + "_short" : "rotationZ" in T ? T.rotationZ : h.rotation, h.rotation, "rotation", C)),
                                             Pt &&
-                                                ((c.rotationX = ot("rotationX" in C ? C.rotationX : "shortRotationX" in C ? C.shortRotationX + "_short" : h.rotationX || 0, h.rotationX, "rotationX", T)),
-                                                (c.rotationY = ot("rotationY" in C ? C.rotationY : "shortRotationY" in C ? C.shortRotationY + "_short" : h.rotationY || 0, h.rotationY, "rotationY", T))),
-                                            (c.skewX = null == C.skewX ? h.skewX : ot(C.skewX, h.skewX)),
-                                            (c.skewY = null == C.skewY ? h.skewY : ot(C.skewY, h.skewY)),
+                                                ((c.rotationX = ot("rotationX" in T ? T.rotationX : "shortRotationX" in T ? T.shortRotationX + "_short" : h.rotationX || 0, h.rotationX, "rotationX", C)),
+                                                (c.rotationY = ot("rotationY" in T ? T.rotationY : "shortRotationY" in T ? T.shortRotationY + "_short" : h.rotationY || 0, h.rotationY, "rotationY", C))),
+                                            (c.skewX = null == T.skewX ? h.skewX : ot(T.skewX, h.skewX)),
+                                            (c.skewY = null == T.skewY ? h.skewY : ot(T.skewY, h.skewY)),
                                             (u = c.skewY - h.skewY) && ((c.skewX += u), (c.rotation += u));
                                     }
                                     for (
-                                        Pt && null != C.force3D && ((h.force3D = C.force3D), (m = !0)),
-                                            h.skewType = C.skewType || h.skewType || o.defaultSkewType,
+                                        Pt && null != T.force3D && ((h.force3D = T.force3D), (m = !0)),
+                                            h.skewType = T.skewType || h.skewType || o.defaultSkewType,
                                             f = h.force3D || h.z || h.rotationX || h.rotationY || c.z || c.rotationX || c.rotationY || c.perspective,
-                                            f || null == C.scale || (c.scaleZ = 1);
+                                            f || null == T.scale || (c.scaleZ = 1);
                                         --x > -1;
 
                                     )
-                                        (i = Ct[x]),
+                                        (i = Tt[x]),
                                             (p = c[i] - h[i]),
-                                            (p > w || -w > p || null != C[i] || null != z[i]) && ((m = !0), (r = new mt(h, i, h[i], p, r)), i in T && (r.e = T[i]), (r.xs0 = 0), (r.plugin = a), n._overwriteProps.push(r.n));
+                                            (p > w || -w > p || null != T[i] || null != z[i]) && ((m = !0), (r = new mt(h, i, h[i], p, r)), i in C && (r.e = C[i]), (r.xs0 = 0), (r.plugin = a), n._overwriteProps.push(r.n));
                                     return (
-                                        (p = C.transformOrigin),
+                                        (p = T.transformOrigin),
                                         h.svg &&
-                                            (p || C.svgOrigin) &&
+                                            (p || T.svgOrigin) &&
                                             ((v = h.xOffset),
                                             (_ = h.yOffset),
-                                            At(t, nt(p), c, C.svgOrigin, C.smoothOrigin),
+                                            At(t, nt(p), c, T.svgOrigin, T.smoothOrigin),
                                             (r = gt(h, "xOrigin", (y ? h : c).xOrigin, c.xOrigin, r, k)),
                                             (r = gt(h, "yOrigin", (y ? h : c).yOrigin, c.yOrigin, r, k)),
                                             (v !== h.xOffset || _ !== h.yOffset) && ((r = gt(h, "xOffset", y ? v : h.xOffset, h.xOffset, r, k)), (r = gt(h, "yOffset", y ? _ : h.yOffset, h.yOffset, r, k))),
                                             (p = xt ? null : "0px 0px")),
                                         (p || (Pt && f && h.zOrigin)) &&
-                                            (Tt
+                                            (Ct
                                                 ? ((m = !0),
                                                   (i = St),
                                                   (p = (p || G(t, i, s, !1, "50% 50%")) + ""),
@@ -17724,12 +17724,12 @@ if (!self.__WB_pmw) {
                                     b,
                                     w,
                                     x,
-                                    C,
-                                    T = ["borderTopLeftRadius", "borderTopRightRadius", "borderBottomRightRadius", "borderBottomLeftRadius"],
+                                    T,
+                                    C = ["borderTopLeftRadius", "borderTopRightRadius", "borderBottomRightRadius", "borderBottomLeftRadius"],
                                     k = t.style;
-                                for (g = parseFloat(t.offsetWidth), v = parseFloat(t.offsetHeight), l = e.split(" "), h = 0; h < T.length; h++)
-                                    this.p.indexOf("border") && (T[h] = X(T[h])),
-                                        (d = u = G(t, T[h], s, !1, "0px")),
+                                for (g = parseFloat(t.offsetWidth), v = parseFloat(t.offsetHeight), l = e.split(" "), h = 0; h < C.length; h++)
+                                    this.p.indexOf("border") && (C[h] = X(C[h])),
+                                        (d = u = G(t, C[h], s, !1, "0px")),
                                         -1 !== d.indexOf(" ") && ((u = d.split(" ")), (d = u[0]), (u = u[1])),
                                         (p = c = l[h]),
                                         (f = parseFloat(d)),
@@ -17740,9 +17740,9 @@ if (!self.__WB_pmw) {
                                         _ !== y &&
                                             ((w = K(t, "borderLeft", f, y)),
                                             (x = K(t, "borderTop", f, y)),
-                                            "%" === _ ? ((d = (w / g) * 100 + "%"), (u = (x / v) * 100 + "%")) : "em" === _ ? ((C = K(t, "borderLeft", 1, "em")), (d = w / C + "em"), (u = x / C + "em")) : ((d = w + "px"), (u = x + "px")),
+                                            "%" === _ ? ((d = (w / g) * 100 + "%"), (u = (x / v) * 100 + "%")) : "em" === _ ? ((T = K(t, "borderLeft", 1, "em")), (d = w / T + "em"), (u = x / T + "em")) : ((d = w + "px"), (u = x + "px")),
                                             b && ((p = parseFloat(d) + m + _), (c = parseFloat(u) + m + _))),
-                                        (o = vt(k, T[h], d + " " + u, p + " " + c, !1, "0px", o));
+                                        (o = vt(k, C[h], d + " " + u, p + " " + c, !1, "0px", o));
                                 return o;
                             },
                             prefix: !0,
@@ -17824,7 +17824,7 @@ if (!self.__WB_pmw) {
                             i = this.t,
                             n = i.filter || G(this.data, "filter") || "",
                             s = (this.s + this.c * t) | 0;
-                        100 === s && (-1 === n.indexOf("atrix(") && -1 === n.indexOf("radient(") && -1 === n.indexOf("oader(") ? (i.removeAttribute("filter"), (e = !G(this.data, "filter"))) : ((i.filter = n.replace(C, "")), (e = !0))),
+                        100 === s && (-1 === n.indexOf("atrix(") && -1 === n.indexOf("radient(") && -1 === n.indexOf("oader(") ? (i.removeAttribute("filter"), (e = !G(this.data, "filter"))) : ((i.filter = n.replace(T, "")), (e = !0))),
                             e || (this.xn1 && (i.filter = n = n || "alpha(opacity=" + s + ")"), -1 === n.indexOf("pacity") ? (0 === s && this.xn1) || (i.filter = n + " alpha(opacity=" + s + ")") : (i.filter = n.replace(w, "opacity=" + s)));
                     };
                     bt("opacity,alpha,autoAlpha", {
@@ -17898,7 +17898,7 @@ if (!self.__WB_pmw) {
                                 a = l.transform.parse;
                             if ("all" === this.e) (o.cssText = ""), (s = !0);
                             else for (e = this.e.split(" ").join("").split(","), n = e.length; --n > -1; ) (i = e[n]), l[i] && (l[i].parse === a ? (s = !0) : (i = "transformOrigin" === i ? St : l[i].p)), Wt(o, i);
-                            s && (Wt(o, Tt), (r = this.t._gsTransform), r && (r.svg && (this.t.removeAttribute("data-svg-origin"), this.t.removeAttribute("transform")), delete this.t._gsTransform));
+                            s && (Wt(o, Ct), (r = this.t._gsTransform), r && (r.svg && (this.t.removeAttribute("data-svg-origin"), this.t.removeAttribute("transform")), delete this.t._gsTransform));
                         }
                     };
                     for (
@@ -17927,27 +17927,27 @@ if (!self.__WB_pmw) {
                                 y,
                                 b,
                                 w,
-                                C = t.style;
+                                T = t.style;
                             if (
-                                (u && "" === C.zIndex && ((h = G(t, "zIndex", s)), ("auto" === h || "" === h) && this._addLazySet(C, "zIndex", 0)),
-                                "string" == typeof e && ((g = C.cssText), (h = Q(t, s)), (C.cssText = g + ";" + e), (h = J(t, h, Q(t)).difs), !j && x.test(e) && (h.opacity = parseFloat(RegExp.$1)), (e = h), (C.cssText = g)),
+                                (u && "" === T.zIndex && ((h = G(t, "zIndex", s)), ("auto" === h || "" === h) && this._addLazySet(T, "zIndex", 0)),
+                                "string" == typeof e && ((g = T.cssText), (h = Q(t, s)), (T.cssText = g + ";" + e), (h = J(t, h, Q(t)).difs), !j && x.test(e) && (h.opacity = parseFloat(RegExp.$1)), (e = h), (T.cssText = g)),
                                 e.className ? (this._firstPT = p = l.className.parse(t, e.className, "className", this, null, null, e)) : (this._firstPT = p = this.parse(t, e, null)),
                                 this._transformType)
                             ) {
                                 for (
                                     w = 3 === this._transformType,
-                                        Tt
+                                        Ct
                                             ? d &&
                                               ((u = !0),
-                                              "" === C.zIndex && ((y = G(t, "zIndex", s)), ("auto" === y || "" === y) && this._addLazySet(C, "zIndex", 0)),
-                                              f && this._addLazySet(C, "WebkitBackfaceVisibility", this._vars.WebkitBackfaceVisibility || (w ? "visible" : "hidden")))
-                                            : (C.zoom = 1),
+                                              "" === T.zIndex && ((y = G(t, "zIndex", s)), ("auto" === y || "" === y) && this._addLazySet(T, "zIndex", 0)),
+                                              f && this._addLazySet(T, "WebkitBackfaceVisibility", this._vars.WebkitBackfaceVisibility || (w ? "visible" : "hidden")))
+                                            : (T.zoom = 1),
                                         m = p;
                                     m && m._next;
 
                                 )
                                     m = m._next;
-                                (b = new mt(t, "transform", 0, 0, null, 2)), this._linkCSSP(b, null, m), (b.setRatio = Tt ? Ht : Lt), (b.data = this._transform || $t(t, s, !0)), (b.tween = a), (b.pr = -1), r.pop();
+                                (b = new mt(t, "transform", 0, 0, null, 2)), this._linkCSSP(b, null, m), (b.setRatio = Ct ? Ht : Lt), (b.data = this._transform || $t(t, s, !0)), (b.tween = a), (b.pr = -1), r.pop();
                             }
                             if (i) {
                                 for (; p; ) {
@@ -17977,7 +17977,7 @@ if (!self.__WB_pmw) {
                                         ? (i = a.parse(t, p, o, this, i, r, e))
                                         : ((d = G(t, o, s) + ""),
                                           (g = "string" == typeof p),
-                                          "color" === o || "fill" === o || "stroke" === o || -1 !== o.indexOf("Color") || (g && T.test(p))
+                                          "color" === o || "fill" === o || "stroke" === o || -1 !== o.indexOf("Color") || (g && C.test(p))
                                               ? (g || ((p = ht(p)), (p = (p.length > 3 ? "rgba(" : "rgb(") + p.join(",") + ")")), (i = vt(_, o, d, p, !0, "transparent", i, 0, r)))
                                               : !g || (-1 === p.indexOf(" ") && -1 === p.indexOf(","))
                                               ? ((h = parseFloat(d)),
@@ -18586,10 +18586,10 @@ if (!self.__WB_pmw) {
                 )
                     (r = n[s] + ",Power" + s), x(new b(null, null, 1, s), r, "easeOut", !0), x(new b(null, null, 2, s), r, "easeIn" + (0 === s ? ",easeNone" : "")), x(new b(null, null, 3, s), r, "easeInOut");
                 (w.linear = h.easing.Linear.easeIn), (w.swing = h.easing.Quad.easeInOut);
-                var C = v("events.EventDispatcher", function (t) {
+                var T = v("events.EventDispatcher", function (t) {
                     (this._listeners = {}), (this._eventTarget = t || this);
                 });
-                (r = C.prototype),
+                (r = T.prototype),
                     (r.addEventListener = function (t, e, i, n, s) {
                         s = s || 0;
                         var r,
@@ -18611,7 +18611,7 @@ if (!self.__WB_pmw) {
                             s = this._listeners[t];
                         if (s) for (e = s.length, i = this._eventTarget; --e > -1; ) (n = s[e]), n && (n.up ? n.c.call(n.s || i, { type: t, target: i }) : n.c.call(n.s || i));
                     });
-                var T = t.requestAnimationFrame,
+                var C = t.requestAnimationFrame,
                     k = t.cancelAnimationFrame,
                     S =
                         Date.now ||
@@ -18619,7 +18619,7 @@ if (!self.__WB_pmw) {
                             return new Date().getTime();
                         },
                     P = S();
-                for (n = ["ms", "moz", "webkit", "o"], s = n.length; --s > -1 && !T; ) (T = t[n[s] + "RequestAnimationFrame"]), (k = t[n[s] + "CancelAnimationFrame"] || t[n[s] + "CancelRequestAnimationFrame"]);
+                for (n = ["ms", "moz", "webkit", "o"], s = n.length; --s > -1 && !C; ) (C = t[n[s] + "RequestAnimationFrame"]), (k = t[n[s] + "CancelAnimationFrame"] || t[n[s] + "CancelRequestAnimationFrame"]);
                 v("Ticker", function (t, e) {
                     var i,
                         n,
@@ -18628,7 +18628,7 @@ if (!self.__WB_pmw) {
                         l,
                         h = this,
                         u = S(),
-                        p = e !== !1 && T ? "auto" : !1,
+                        p = e !== !1 && C ? "auto" : !1,
                         f = 500,
                         m = 33,
                         g = "tick",
@@ -18644,7 +18644,7 @@ if (!self.__WB_pmw) {
                                 t !== !0 && (s = n(v)),
                                 o && h.dispatchEvent(g);
                         };
-                    C.call(h),
+                    T.call(h),
                         (h.time = h.frame = 0),
                         (h.tick = function () {
                             v(!0);
@@ -18660,8 +18660,8 @@ if (!self.__WB_pmw) {
                                 (n =
                                     0 === i
                                         ? d
-                                        : p && T
-                                        ? T
+                                        : p && C
+                                        ? C
                                         : function (t) {
                                               return setTimeout(t, (1e3 * (l - h.time) + 1) | 0);
                                           }),
@@ -19618,8 +19618,8 @@ if (!self.__WB_pmw) {
                     b = /(?:\d|\-|\+|=|#|\.)*/g,
                     w = /opacity *= *([^)]*)/i,
                     x = /opacity:([^;]*)/i,
-                    C = /alpha\(opacity *=.+?\)/i,
-                    T = /^(rgb|hsl)/,
+                    T = /alpha\(opacity *=.+?\)/i,
+                    C = /^(rgb|hsl)/,
                     k = /([A-Z])/g,
                     S = /-([a-z])/gi,
                     P = /(^(?:url\(\"|url\())|(?:(\"\))$|\)$)/gi,
@@ -19715,7 +19715,7 @@ if (!self.__WB_pmw) {
                             r = {};
                         if ((e = e || V(t, null)))
                             if ((i = e.length)) for (; --i > -1; ) (s = e[i]), (-1 === s.indexOf("-transform") || kt === s) && (r[s.replace(S, D)] = e.getPropertyValue(s));
-                            else for (i in e) (-1 === i.indexOf("Transform") || Tt === i) && (r[i] = e[i]);
+                            else for (i in e) (-1 === i.indexOf("Transform") || Ct === i) && (r[i] = e[i]);
                         else if ((e = t.currentStyle || t.style)) for (i in e) "string" == typeof i && void 0 === r[i] && (r[i.replace(S, D)] = e[i]);
                         return (
                             j || (r.opacity = B(t)),
@@ -20018,8 +20018,8 @@ if (!self.__WB_pmw) {
                             b,
                             w,
                             x,
-                            C,
                             T,
+                            C,
                             k,
                             S = i.split(", ").join(",").split(" "),
                             P = n.split(", ").join(",").split(" "),
@@ -20037,7 +20037,7 @@ if (!self.__WB_pmw) {
                         )
                             if (((f = S[u]), (m = P[u]), (b = parseFloat(f)), b || 0 === b)) o.appendXtra("", b, st(m, b), m.replace(v, ""), M && -1 !== m.indexOf("px"), !0);
                             else if (s && ut.test(f))
-                                (T = "," === m.charAt(m.length - 1) ? ")," : ")"),
+                                (C = "," === m.charAt(m.length - 1) ? ")," : ")"),
                                     (k = -1 !== m.indexOf("hsl") && j),
                                     (f = ht(f, k)),
                                     (m = ht(m, k)),
@@ -20049,21 +20049,21 @@ if (!self.__WB_pmw) {
                                               ? o
                                                     .appendXtra(w ? "hsla(" : "hsl(", f[0], st(m[0], f[0]), ",", !1, !0)
                                                     .appendXtra("", f[1], st(m[1], f[1]), "%,", !1)
-                                                    .appendXtra("", f[2], st(m[2], f[2]), w ? "%," : "%" + T, !1)
+                                                    .appendXtra("", f[2], st(m[2], f[2]), w ? "%," : "%" + C, !1)
                                               : o
                                                     .appendXtra(w ? "rgba(" : "rgb(", f[0], m[0] - f[0], ",", !0, !0)
                                                     .appendXtra("", f[1], m[1] - f[1], ",", !0)
-                                                    .appendXtra("", f[2], m[2] - f[2], w ? "," : T, !0),
-                                          w && ((f = f.length < 4 ? 1 : f[3]), o.appendXtra("", f, (m.length < 4 ? 1 : m[3]) - f, T, !1))),
+                                                    .appendXtra("", f[2], m[2] - f[2], w ? "," : C, !0),
+                                          w && ((f = f.length < 4 ? 1 : f[3]), o.appendXtra("", f, (m.length < 4 ? 1 : m[3]) - f, C, !1))),
                                     (ut.lastIndex = 0);
                             else if ((_ = f.match(g))) {
                                 if (((y = m.match(v)), !y || y.length !== _.length)) return o;
-                                for (p = 0, d = 0; d < _.length; d++) (C = _[d]), (x = f.indexOf(C, p)), o.appendXtra(f.substr(p, x - p), Number(C), st(y[d], C), "", M && "px" === f.substr(x + C.length, 2), 0 === d), (p = x + C.length);
+                                for (p = 0, d = 0; d < _.length; d++) (T = _[d]), (x = f.indexOf(T, p)), o.appendXtra(f.substr(p, x - p), Number(T), st(y[d], T), "", M && "px" === f.substr(x + T.length, 2), 0 === d), (p = x + T.length);
                                 o["xs" + o.l] += f.substr(p);
                             } else o["xs" + o.l] += o.l ? " " + m : m;
                         if (-1 !== n.indexOf("=") && o.data) {
-                            for (T = o.xs0 + o.data.s, u = 1; u < o.l; u++) T += o["xs" + u] + o.data["xn" + u];
-                            o.e = T + o["xs" + u];
+                            for (C = o.xs0 + o.data.s, u = 1; u < o.l; u++) C += o["xs" + u] + o.data["xn" + u];
+                            o.e = C + o["xs" + u];
                         }
                         return o.l || ((o.type = -1), (o.xs0 = o.e)), o.xfirst || o;
                     }),
@@ -20147,8 +20147,8 @@ if (!self.__WB_pmw) {
                     }),
                     (o.useSVGTransformAttr = d || p);
                 var xt,
-                    Ct = "scaleX,scaleY,scaleZ,x,y,z,skewX,skewY,rotation,rotationX,rotationY,perspective,xPercent,yPercent".split(","),
-                    Tt = X("transform"),
+                    Tt = "scaleX,scaleY,scaleZ,x,y,z,skewX,skewY,rotation,rotationX,rotationY,perspective,xPercent,yPercent".split(","),
+                    Ct = X("transform"),
                     kt = Y + "transform",
                     St = X("transformOrigin"),
                     Pt = null !== X("perspective"),
@@ -20176,7 +20176,7 @@ if (!self.__WB_pmw) {
                                 (e = Et("rect", t, { width: 100, height: 50, x: 100 })),
                                 (i = e.getBoundingClientRect().width),
                                 (e.style[St] = "50% 50%"),
-                                (e.style[Tt] = "scaleX(0.5)"),
+                                (e.style[Ct] = "scaleX(0.5)"),
                                 (n = i === e.getBoundingClientRect().width && !(p && Pt)),
                                 It.removeChild(t)),
                             n
@@ -20235,12 +20235,12 @@ if (!self.__WB_pmw) {
                             a = t._gsTransform || new Dt(),
                             l = 1e5;
                         if (
-                            (Tt
+                            (Ct
                                 ? (n = G(t, kt, null, !0))
                                 : t.currentStyle && ((n = t.currentStyle.filter.match(E)), (n = n && 4 === n.length ? [n[0].substr(4), Number(n[2].substr(4)), Number(n[1].substr(4)), n[3].substr(4), a.x || 0, a.y || 0].join(",") : "")),
                             (i = !n || "none" === n || "matrix(1, 0, 0, 1, 0, 0)" === n),
                             (a.svg || (t.getBBox && Nt(t))) &&
-                                (i && -1 !== (t.style[Tt] + "").indexOf("matrix") && ((n = t.style[Tt]), (i = 0)),
+                                (i && -1 !== (t.style[Ct] + "").indexOf("matrix") && ((n = t.style[Ct]), (i = 0)),
                                 (s = t.getAttribute("transform")),
                                 i && s && (-1 !== s.indexOf("matrix") ? ((n = s), (i = 0)) : -1 !== s.indexOf("translate") && ((n = "matrix(1,0,0,1," + s.match(/(?:\-|\b)[\d\-\.e]+\b/gi).join(",") + ")"), (i = 0)))),
                             i)
@@ -20269,8 +20269,8 @@ if (!self.__WB_pmw) {
                                     b,
                                     w,
                                     x,
-                                    C,
-                                    T = a[0],
+                                    T,
+                                    C = a[0],
                                     k = a[1],
                                     S = a[2],
                                     P = a[3],
@@ -20290,25 +20290,25 @@ if (!self.__WB_pmw) {
                                     (p.rotationX = F * N),
                                     F &&
                                         ((x = Math.cos(-F)),
-                                        (C = Math.sin(-F)),
-                                        (y = D * x + O * C),
-                                        (b = M * x + A * C),
-                                        (w = E * x + z * C),
-                                        (O = D * -C + O * x),
-                                        (A = M * -C + A * x),
-                                        (z = E * -C + z * x),
-                                        (H = I * -C + H * x),
+                                        (T = Math.sin(-F)),
+                                        (y = D * x + O * T),
+                                        (b = M * x + A * T),
+                                        (w = E * x + z * T),
+                                        (O = D * -T + O * x),
+                                        (A = M * -T + A * x),
+                                        (z = E * -T + z * x),
+                                        (H = I * -T + H * x),
                                         (D = y),
                                         (M = b),
                                         (E = w)),
                                     (F = Math.atan2(-S, z)),
                                     (p.rotationY = F * N),
-                                    F && ((x = Math.cos(-F)), (C = Math.sin(-F)), (y = T * x - O * C), (b = k * x - A * C), (w = S * x - z * C), (A = k * C + A * x), (z = S * C + z * x), (H = P * C + H * x), (T = y), (k = b), (S = w)),
-                                    (F = Math.atan2(k, T)),
+                                    F && ((x = Math.cos(-F)), (T = Math.sin(-F)), (y = C * x - O * T), (b = k * x - A * T), (w = S * x - z * T), (A = k * T + A * x), (z = S * T + z * x), (H = P * T + H * x), (C = y), (k = b), (S = w)),
+                                    (F = Math.atan2(k, C)),
                                     (p.rotation = F * N),
-                                    F && ((x = Math.cos(-F)), (C = Math.sin(-F)), (T = T * x + D * C), (b = k * x + M * C), (M = k * -C + M * x), (E = S * -C + E * x), (k = b)),
+                                    F && ((x = Math.cos(-F)), (T = Math.sin(-F)), (C = C * x + D * T), (b = k * x + M * T), (M = k * -T + M * x), (E = S * -T + E * x), (k = b)),
                                     p.rotationX && Math.abs(p.rotationX) + Math.abs(p.rotation) > 359.9 && ((p.rotationX = p.rotation = 0), (p.rotationY = 180 - p.rotationY)),
-                                    (p.scaleX = ((Math.sqrt(T * T + k * k) * g + 0.5) | 0) / g),
+                                    (p.scaleX = ((Math.sqrt(C * C + k * k) * g + 0.5) | 0) / g),
                                     (p.scaleY = ((Math.sqrt(M * M + A * A) * g + 0.5) | 0) / g),
                                     (p.scaleZ = ((Math.sqrt(E * E + z * z) * g + 0.5) | 0) / g),
                                     (p.skewX = 0),
@@ -20316,7 +20316,7 @@ if (!self.__WB_pmw) {
                                     (p.x = R),
                                     (p.y = $),
                                     (p.z = L),
-                                    p.svg && ((p.x -= p.xOrigin - (p.xOrigin * T - p.yOrigin * D)), (p.y -= p.yOrigin - (p.yOrigin * k - p.xOrigin * M)));
+                                    p.svg && ((p.x -= p.xOrigin - (p.xOrigin * C - p.yOrigin * D)), (p.y -= p.yOrigin - (p.yOrigin * k - p.xOrigin * M)));
                             } else if ((!Pt || r || !a.length || p.x !== a[4] || p.y !== a[5] || (!p.rotationX && !p.rotationY)) && (void 0 === p.x || "none" !== G(t, "display", i))) {
                                 var W = a.length >= 6,
                                     j = W ? a[0] : 1,
@@ -20344,9 +20344,9 @@ if (!self.__WB_pmw) {
                             n &&
                                 ((t._gsTransform = p),
                                 p.svg &&
-                                    (xt && t.style[Tt]
+                                    (xt && t.style[Ct]
                                         ? e.delayedCall(0.001, function () {
-                                              Wt(t.style, Tt);
+                                              Wt(t.style, Ct);
                                           })
                                         : !xt &&
                                           t.getAttribute("transform") &&
@@ -20378,10 +20378,10 @@ if (!self.__WB_pmw) {
                                 _ = "absolute" !== d.position,
                                 y = "progid:DXImageTransform.Microsoft.Matrix(M11=" + a + ", M12=" + l + ", M21=" + h + ", M22=" + c,
                                 x = n.x + (g * n.xPercent) / 100,
-                                C = n.y + (v * n.yPercent) / 100;
+                                T = n.y + (v * n.yPercent) / 100;
                             if (
-                                (null != n.ox && ((p = (n.oxp ? g * n.ox * 0.01 : n.ox) - g / 2), (f = (n.oyp ? v * n.oy * 0.01 : n.oy) - v / 2), (x += p - (p * a + f * l)), (C += f - (p * h + f * c))),
-                                _ ? ((p = g / 2), (f = v / 2), (y += ", Dx=" + (p - (p * a + f * l) + x) + ", Dy=" + (f - (p * h + f * c) + C) + ")")) : (y += ", sizingMethod='auto expand')"),
+                                (null != n.ox && ((p = (n.oxp ? g * n.ox * 0.01 : n.ox) - g / 2), (f = (n.oyp ? v * n.oy * 0.01 : n.oy) - v / 2), (x += p - (p * a + f * l)), (T += f - (p * h + f * c))),
+                                _ ? ((p = g / 2), (f = v / 2), (y += ", Dx=" + (p - (p * a + f * l) + x) + ", Dy=" + (f - (p * h + f * c) + T) + ")")) : (y += ", sizingMethod='auto expand')"),
                                 -1 !== e.indexOf("DXImageTransform.Microsoft.Matrix(") ? (u.filter = e.replace(I, y)) : (u.filter = y + " " + e),
                                 (0 === t || 1 === t) &&
                                     1 === a &&
@@ -20391,7 +20391,7 @@ if (!self.__WB_pmw) {
                                     ((_ && -1 === y.indexOf("Dx=0, Dy=0")) || (w.test(e) && 100 !== parseFloat(RegExp.$1)) || (-1 === e.indexOf(e.indexOf("Alpha")) && u.removeAttribute("filter"))),
                                 !_)
                             ) {
-                                var T,
+                                var C,
                                     k,
                                     S,
                                     P = 8 > m ? 1 : -1;
@@ -20399,14 +20399,14 @@ if (!self.__WB_pmw) {
                                     p = n.ieOffsetX || 0,
                                         f = n.ieOffsetY || 0,
                                         n.ieOffsetX = Math.round((g - ((0 > a ? -a : a) * g + (0 > l ? -l : l) * v)) / 2 + x),
-                                        n.ieOffsetY = Math.round((v - ((0 > c ? -c : c) * v + (0 > h ? -h : h) * g)) / 2 + C),
+                                        n.ieOffsetY = Math.round((v - ((0 > c ? -c : c) * v + (0 > h ? -h : h) * g)) / 2 + T),
                                         _t = 0;
                                     4 > _t;
                                     _t++
                                 )
                                     (k = et[_t]),
-                                        (T = d[k]),
-                                        (i = -1 !== T.indexOf("px") ? parseFloat(T) : K(this.t, k, parseFloat(T), T.replace(b, "")) || 0),
+                                        (C = d[k]),
+                                        (i = -1 !== C.indexOf("px") ? parseFloat(C) : K(this.t, k, parseFloat(C), C.replace(b, "")) || 0),
                                         (S = i !== n[k] ? (2 > _t ? -n.ieOffsetX : -n.ieOffsetY) : 2 > _t ? p - n.ieOffsetX : f - n.ieOffsetY),
                                         (u[k] = (n[k] = Math.round(i - S * (0 === _t || 2 === _t ? 1 : P))) + "px");
                             }
@@ -20434,8 +20434,8 @@ if (!self.__WB_pmw) {
                             b,
                             w,
                             x,
-                            C,
                             T,
+                            C,
                             k = this.data,
                             S = this.t.style,
                             P = k.rotation,
@@ -20453,13 +20453,13 @@ if (!self.__WB_pmw) {
                         if (((((1 === t || 0 === t) && "auto" === H && (this.tween._totalTime === this.tween._totalDuration || !this.tween._totalTime)) || !H) && !R && !L && !M && !D && 1 === O) || (xt && $) || !Pt)
                             return void (P || k.skewX || $
                                 ? ((P *= A),
-                                  (C = k.skewX * A),
-                                  (T = 1e5),
+                                  (T = k.skewX * A),
+                                  (C = 1e5),
                                   (e = Math.cos(P) * E),
                                   (s = Math.sin(P) * E),
-                                  (i = Math.sin(P - C) * -I),
-                                  (r = Math.cos(P - C) * I),
-                                  C && "simple" === k.skewType && ((_ = Math.tan(C)), (_ = Math.sqrt(1 + _ * _)), (i *= _), (r *= _), k.skewY && ((e *= _), (s *= _))),
+                                  (i = Math.sin(P - T) * -I),
+                                  (r = Math.cos(P - T) * I),
+                                  T && "simple" === k.skewType && ((_ = Math.tan(T)), (_ = Math.sqrt(1 + _ * _)), (i *= _), (r *= _), k.skewY && ((e *= _), (s *= _))),
                                   $ &&
                                       ((N += k.xOrigin - (k.xOrigin * e + k.yOrigin * i) + k.xOffset),
                                       (z += k.yOrigin - (k.xOrigin * s + k.yOrigin * r) + k.yOffset),
@@ -20467,9 +20467,9 @@ if (!self.__WB_pmw) {
                                       (m = 1e-6),
                                       m > N && N > -m && (N = 0),
                                       m > z && z > -m && (z = 0)),
-                                  (b = ((e * T) | 0) / T + "," + ((s * T) | 0) / T + "," + ((i * T) | 0) / T + "," + ((r * T) | 0) / T + "," + N + "," + z + ")"),
-                                  $ && xt ? this.t.setAttribute("transform", "matrix(" + b) : (S[Tt] = (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) matrix(" : "matrix(") + b))
-                                : (S[Tt] = (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) matrix(" : "matrix(") + E + ",0,0," + I + "," + N + "," + z + ")"));
+                                  (b = ((e * C) | 0) / C + "," + ((s * C) | 0) / C + "," + ((i * C) | 0) / C + "," + ((r * C) | 0) / C + "," + N + "," + z + ")"),
+                                  $ && xt ? this.t.setAttribute("transform", "matrix(" + b) : (S[Ct] = (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) matrix(" : "matrix(") + b))
+                                : (S[Ct] = (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) matrix(" : "matrix(") + E + ",0,0," + I + "," + N + "," + z + ")"));
                         if ((p && ((m = 1e-4), m > E && E > -m && (E = O = 2e-5), m > I && I > -m && (I = O = 2e-5), !L || k.z || k.rotationX || k.rotationY || (L = 0)), P || k.skewX))
                             (P *= A),
                                 (g = e = Math.cos(P)),
@@ -20480,7 +20480,7 @@ if (!self.__WB_pmw) {
                                 (r = g);
                         else {
                             if (!(M || D || 1 !== O || L || $))
-                                return void (S[Tt] =
+                                return void (S[Ct] =
                                     (k.xPercent || k.yPercent ? "translate(" + k.xPercent + "%," + k.yPercent + "%) translate3d(" : "translate3d(") +
                                     N +
                                     "px," +
@@ -20519,7 +20519,7 @@ if (!self.__WB_pmw) {
                                   (b += w + (m > o && o > -m ? x : o) + w + (m > h && h > -m ? x : h) + w + (m > d && d > -m ? x : d) + w))
                                 : (b += ",0,0,0,0,1,0,"),
                             (b += N + w + z + w + R + w + (L ? 1 + -R / L : 1) + ")"),
-                            (S[Tt] = b);
+                            (S[Ct] = b);
                     });
                 (h = Dt.prototype),
                     (h.x = h.y = h.z = h.skewX = h.skewY = h.rotation = h.rotationX = h.rotationY = h.zOrigin = h.xPercent = h.yPercent = h.xOffset = h.yOffset = 0),
@@ -20543,77 +20543,77 @@ if (!self.__WB_pmw) {
                                     y = t._gsTransform,
                                     b = t.style,
                                     w = 1e-6,
-                                    x = Ct.length,
-                                    C = l,
-                                    T = {},
+                                    x = Tt.length,
+                                    T = l,
+                                    C = {},
                                     k = "transformOrigin";
                                 if (
                                     (l.display ? ((d = G(t, "display")), (b.display = "block"), (h = $t(t, s, !0, l.parseTransform)), (b.display = d)) : (h = $t(t, s, !0, l.parseTransform)),
                                     (n._transform = h),
-                                    "string" == typeof C.transform && Tt)
+                                    "string" == typeof T.transform && Ct)
                                 )
                                     (d = L.style),
-                                        (d[Tt] = C.transform),
+                                        (d[Ct] = T.transform),
                                         (d.display = "block"),
                                         (d.position = "absolute"),
                                         R.body.appendChild(L),
                                         (c = $t(L, null, !1)),
                                         R.body.removeChild(L),
                                         c.perspective || (c.perspective = h.perspective),
-                                        null != C.xPercent && (c.xPercent = rt(C.xPercent, h.xPercent)),
-                                        null != C.yPercent && (c.yPercent = rt(C.yPercent, h.yPercent));
-                                else if ("object" == typeof C) {
+                                        null != T.xPercent && (c.xPercent = rt(T.xPercent, h.xPercent)),
+                                        null != T.yPercent && (c.yPercent = rt(T.yPercent, h.yPercent));
+                                else if ("object" == typeof T) {
                                     if (
                                         ((c = {
-                                            scaleX: rt(null != C.scaleX ? C.scaleX : C.scale, h.scaleX),
-                                            scaleY: rt(null != C.scaleY ? C.scaleY : C.scale, h.scaleY),
-                                            scaleZ: rt(C.scaleZ, h.scaleZ),
-                                            x: rt(C.x, h.x),
-                                            y: rt(C.y, h.y),
-                                            z: rt(C.z, h.z),
-                                            xPercent: rt(C.xPercent, h.xPercent),
-                                            yPercent: rt(C.yPercent, h.yPercent),
-                                            perspective: rt(C.transformPerspective, h.perspective),
+                                            scaleX: rt(null != T.scaleX ? T.scaleX : T.scale, h.scaleX),
+                                            scaleY: rt(null != T.scaleY ? T.scaleY : T.scale, h.scaleY),
+                                            scaleZ: rt(T.scaleZ, h.scaleZ),
+                                            x: rt(T.x, h.x),
+                                            y: rt(T.y, h.y),
+                                            z: rt(T.z, h.z),
+                                            xPercent: rt(T.xPercent, h.xPercent),
+                                            yPercent: rt(T.yPercent, h.yPercent),
+                                            perspective: rt(T.transformPerspective, h.perspective),
                                         }),
-                                        (g = C.directionalRotation),
+                                        (g = T.directionalRotation),
                                         null != g)
                                     )
-                                        if ("object" == typeof g) for (d in g) C[d] = g[d];
-                                        else C.rotation = g;
-                                    "string" == typeof C.x && -1 !== C.x.indexOf("%") && ((c.x = 0), (c.xPercent = rt(C.x, h.xPercent))),
-                                        "string" == typeof C.y && -1 !== C.y.indexOf("%") && ((c.y = 0), (c.yPercent = rt(C.y, h.yPercent))),
-                                        (c.rotation = ot("rotation" in C ? C.rotation : "shortRotation" in C ? C.shortRotation + "_short" : "rotationZ" in C ? C.rotationZ : h.rotation, h.rotation, "rotation", T)),
+                                        if ("object" == typeof g) for (d in g) T[d] = g[d];
+                                        else T.rotation = g;
+                                    "string" == typeof T.x && -1 !== T.x.indexOf("%") && ((c.x = 0), (c.xPercent = rt(T.x, h.xPercent))),
+                                        "string" == typeof T.y && -1 !== T.y.indexOf("%") && ((c.y = 0), (c.yPercent = rt(T.y, h.yPercent))),
+                                        (c.rotation = ot("rotation" in T ? T.rotation : "shortRotation" in T ? T.shortRotation + "_short" : "rotationZ" in T ? T.rotationZ : h.rotation, h.rotation, "rotation", C)),
                                         Pt &&
-                                            ((c.rotationX = ot("rotationX" in C ? C.rotationX : "shortRotationX" in C ? C.shortRotationX + "_short" : h.rotationX || 0, h.rotationX, "rotationX", T)),
-                                            (c.rotationY = ot("rotationY" in C ? C.rotationY : "shortRotationY" in C ? C.shortRotationY + "_short" : h.rotationY || 0, h.rotationY, "rotationY", T))),
-                                        (c.skewX = null == C.skewX ? h.skewX : ot(C.skewX, h.skewX)),
-                                        (c.skewY = null == C.skewY ? h.skewY : ot(C.skewY, h.skewY)),
+                                            ((c.rotationX = ot("rotationX" in T ? T.rotationX : "shortRotationX" in T ? T.shortRotationX + "_short" : h.rotationX || 0, h.rotationX, "rotationX", C)),
+                                            (c.rotationY = ot("rotationY" in T ? T.rotationY : "shortRotationY" in T ? T.shortRotationY + "_short" : h.rotationY || 0, h.rotationY, "rotationY", C))),
+                                        (c.skewX = null == T.skewX ? h.skewX : ot(T.skewX, h.skewX)),
+                                        (c.skewY = null == T.skewY ? h.skewY : ot(T.skewY, h.skewY)),
                                         (u = c.skewY - h.skewY) && ((c.skewX += u), (c.rotation += u));
                                 }
                                 for (
-                                    Pt && null != C.force3D && ((h.force3D = C.force3D), (m = !0)),
-                                        h.skewType = C.skewType || h.skewType || o.defaultSkewType,
+                                    Pt && null != T.force3D && ((h.force3D = T.force3D), (m = !0)),
+                                        h.skewType = T.skewType || h.skewType || o.defaultSkewType,
                                         f = h.force3D || h.z || h.rotationX || h.rotationY || c.z || c.rotationX || c.rotationY || c.perspective,
-                                        f || null == C.scale || (c.scaleZ = 1);
+                                        f || null == T.scale || (c.scaleZ = 1);
                                     --x > -1;
 
                                 )
-                                    (i = Ct[x]),
+                                    (i = Tt[x]),
                                         (p = c[i] - h[i]),
-                                        (p > w || -w > p || null != C[i] || null != z[i]) && ((m = !0), (r = new mt(h, i, h[i], p, r)), i in T && (r.e = T[i]), (r.xs0 = 0), (r.plugin = a), n._overwriteProps.push(r.n));
+                                        (p > w || -w > p || null != T[i] || null != z[i]) && ((m = !0), (r = new mt(h, i, h[i], p, r)), i in C && (r.e = C[i]), (r.xs0 = 0), (r.plugin = a), n._overwriteProps.push(r.n));
                                 return (
-                                    (p = C.transformOrigin),
+                                    (p = T.transformOrigin),
                                     h.svg &&
-                                        (p || C.svgOrigin) &&
+                                        (p || T.svgOrigin) &&
                                         ((v = h.xOffset),
                                         (_ = h.yOffset),
-                                        At(t, nt(p), c, C.svgOrigin, C.smoothOrigin),
+                                        At(t, nt(p), c, T.svgOrigin, T.smoothOrigin),
                                         (r = gt(h, "xOrigin", (y ? h : c).xOrigin, c.xOrigin, r, k)),
                                         (r = gt(h, "yOrigin", (y ? h : c).yOrigin, c.yOrigin, r, k)),
                                         (v !== h.xOffset || _ !== h.yOffset) && ((r = gt(h, "xOffset", y ? v : h.xOffset, h.xOffset, r, k)), (r = gt(h, "yOffset", y ? _ : h.yOffset, h.yOffset, r, k))),
                                         (p = xt ? null : "0px 0px")),
                                     (p || (Pt && f && h.zOrigin)) &&
-                                        (Tt
+                                        (Ct
                                             ? ((m = !0),
                                               (i = St),
                                               (p = (p || G(t, i, s, !1, "50% 50%")) + ""),
@@ -20657,12 +20657,12 @@ if (!self.__WB_pmw) {
                                 b,
                                 w,
                                 x,
-                                C,
-                                T = ["borderTopLeftRadius", "borderTopRightRadius", "borderBottomRightRadius", "borderBottomLeftRadius"],
+                                T,
+                                C = ["borderTopLeftRadius", "borderTopRightRadius", "borderBottomRightRadius", "borderBottomLeftRadius"],
                                 k = t.style;
-                            for (g = parseFloat(t.offsetWidth), v = parseFloat(t.offsetHeight), l = e.split(" "), h = 0; h < T.length; h++)
-                                this.p.indexOf("border") && (T[h] = X(T[h])),
-                                    (d = u = G(t, T[h], s, !1, "0px")),
+                            for (g = parseFloat(t.offsetWidth), v = parseFloat(t.offsetHeight), l = e.split(" "), h = 0; h < C.length; h++)
+                                this.p.indexOf("border") && (C[h] = X(C[h])),
+                                    (d = u = G(t, C[h], s, !1, "0px")),
                                     -1 !== d.indexOf(" ") && ((u = d.split(" ")), (d = u[0]), (u = u[1])),
                                     (p = c = l[h]),
                                     (f = parseFloat(d)),
@@ -20673,9 +20673,9 @@ if (!self.__WB_pmw) {
                                     _ !== y &&
                                         ((w = K(t, "borderLeft", f, y)),
                                         (x = K(t, "borderTop", f, y)),
-                                        "%" === _ ? ((d = (w / g) * 100 + "%"), (u = (x / v) * 100 + "%")) : "em" === _ ? ((C = K(t, "borderLeft", 1, "em")), (d = w / C + "em"), (u = x / C + "em")) : ((d = w + "px"), (u = x + "px")),
+                                        "%" === _ ? ((d = (w / g) * 100 + "%"), (u = (x / v) * 100 + "%")) : "em" === _ ? ((T = K(t, "borderLeft", 1, "em")), (d = w / T + "em"), (u = x / T + "em")) : ((d = w + "px"), (u = x + "px")),
                                         b && ((p = parseFloat(d) + m + _), (c = parseFloat(u) + m + _))),
-                                    (o = vt(k, T[h], d + " " + u, p + " " + c, !1, "0px", o));
+                                    (o = vt(k, C[h], d + " " + u, p + " " + c, !1, "0px", o));
                             return o;
                         },
                         prefix: !0,
@@ -20755,7 +20755,7 @@ if (!self.__WB_pmw) {
                         i = this.t,
                         n = i.filter || G(this.data, "filter") || "",
                         s = (this.s + this.c * t) | 0;
-                    100 === s && (-1 === n.indexOf("atrix(") && -1 === n.indexOf("radient(") && -1 === n.indexOf("oader(") ? (i.removeAttribute("filter"), (e = !G(this.data, "filter"))) : ((i.filter = n.replace(C, "")), (e = !0))),
+                    100 === s && (-1 === n.indexOf("atrix(") && -1 === n.indexOf("radient(") && -1 === n.indexOf("oader(") ? (i.removeAttribute("filter"), (e = !G(this.data, "filter"))) : ((i.filter = n.replace(T, "")), (e = !0))),
                         e || (this.xn1 && (i.filter = n = n || "alpha(opacity=" + s + ")"), -1 === n.indexOf("pacity") ? (0 === s && this.xn1) || (i.filter = n + " alpha(opacity=" + s + ")") : (i.filter = n.replace(w, "opacity=" + s)));
                 };
                 bt("opacity,alpha,autoAlpha", {
@@ -20829,7 +20829,7 @@ if (!self.__WB_pmw) {
                             a = l.transform.parse;
                         if ("all" === this.e) (o.cssText = ""), (s = !0);
                         else for (e = this.e.split(" ").join("").split(","), n = e.length; --n > -1; ) (i = e[n]), l[i] && (l[i].parse === a ? (s = !0) : (i = "transformOrigin" === i ? St : l[i].p)), Wt(o, i);
-                        s && (Wt(o, Tt), (r = this.t._gsTransform), r && (r.svg && (this.t.removeAttribute("data-svg-origin"), this.t.removeAttribute("transform")), delete this.t._gsTransform));
+                        s && (Wt(o, Ct), (r = this.t._gsTransform), r && (r.svg && (this.t.removeAttribute("data-svg-origin"), this.t.removeAttribute("transform")), delete this.t._gsTransform));
                     }
                 };
                 for (
@@ -20858,27 +20858,27 @@ if (!self.__WB_pmw) {
                             y,
                             b,
                             w,
-                            C = t.style;
+                            T = t.style;
                         if (
-                            (u && "" === C.zIndex && ((h = G(t, "zIndex", s)), ("auto" === h || "" === h) && this._addLazySet(C, "zIndex", 0)),
-                            "string" == typeof e && ((g = C.cssText), (h = Q(t, s)), (C.cssText = g + ";" + e), (h = J(t, h, Q(t)).difs), !j && x.test(e) && (h.opacity = parseFloat(RegExp.$1)), (e = h), (C.cssText = g)),
+                            (u && "" === T.zIndex && ((h = G(t, "zIndex", s)), ("auto" === h || "" === h) && this._addLazySet(T, "zIndex", 0)),
+                            "string" == typeof e && ((g = T.cssText), (h = Q(t, s)), (T.cssText = g + ";" + e), (h = J(t, h, Q(t)).difs), !j && x.test(e) && (h.opacity = parseFloat(RegExp.$1)), (e = h), (T.cssText = g)),
                             e.className ? (this._firstPT = p = l.className.parse(t, e.className, "className", this, null, null, e)) : (this._firstPT = p = this.parse(t, e, null)),
                             this._transformType)
                         ) {
                             for (
                                 w = 3 === this._transformType,
-                                    Tt
+                                    Ct
                                         ? d &&
                                           ((u = !0),
-                                          "" === C.zIndex && ((y = G(t, "zIndex", s)), ("auto" === y || "" === y) && this._addLazySet(C, "zIndex", 0)),
-                                          f && this._addLazySet(C, "WebkitBackfaceVisibility", this._vars.WebkitBackfaceVisibility || (w ? "visible" : "hidden")))
-                                        : (C.zoom = 1),
+                                          "" === T.zIndex && ((y = G(t, "zIndex", s)), ("auto" === y || "" === y) && this._addLazySet(T, "zIndex", 0)),
+                                          f && this._addLazySet(T, "WebkitBackfaceVisibility", this._vars.WebkitBackfaceVisibility || (w ? "visible" : "hidden")))
+                                        : (T.zoom = 1),
                                     m = p;
                                 m && m._next;
 
                             )
                                 m = m._next;
-                            (b = new mt(t, "transform", 0, 0, null, 2)), this._linkCSSP(b, null, m), (b.setRatio = Tt ? Ht : Lt), (b.data = this._transform || $t(t, s, !0)), (b.tween = a), (b.pr = -1), r.pop();
+                            (b = new mt(t, "transform", 0, 0, null, 2)), this._linkCSSP(b, null, m), (b.setRatio = Ct ? Ht : Lt), (b.data = this._transform || $t(t, s, !0)), (b.tween = a), (b.pr = -1), r.pop();
                         }
                         if (i) {
                             for (; p; ) {
@@ -20908,7 +20908,7 @@ if (!self.__WB_pmw) {
                                     ? (i = a.parse(t, p, o, this, i, r, e))
                                     : ((d = G(t, o, s) + ""),
                                       (g = "string" == typeof p),
-                                      "color" === o || "fill" === o || "stroke" === o || -1 !== o.indexOf("Color") || (g && T.test(p))
+                                      "color" === o || "fill" === o || "stroke" === o || -1 !== o.indexOf("Color") || (g && C.test(p))
                                           ? (g || ((p = ht(p)), (p = (p.length > 3 ? "rgba(" : "rgb(") + p.join(",") + ")")), (i = vt(_, o, d, p, !0, "transparent", i, 0, r)))
                                           : !g || (-1 === p.indexOf(" ") && -1 === p.indexOf(","))
                                           ? ((h = parseFloat(d)),
@@ -21749,59 +21749,59 @@ if (!self.__WB_pmw) {
                     return (r += t + '">'), r + e + o;
                 }
                 function f() {
-                    if (!T.k) return e(P);
+                    if (!C.k) return e(P);
                     var t = "",
                         i = 0;
-                    T.lR.lastIndex = 0;
-                    for (var n = T.lR.exec(P); n; ) {
+                    C.lR.lastIndex = 0;
+                    for (var n = C.lR.exec(P); n; ) {
                         t += e(P.substr(i, n.index - i));
-                        var s = d(T, n);
-                        s ? ((D += s[1]), (t += p(s[0], e(n[0])))) : (t += e(n[0])), (i = T.lR.lastIndex), (n = T.lR.exec(P));
+                        var s = d(C, n);
+                        s ? ((D += s[1]), (t += p(s[0], e(n[0])))) : (t += e(n[0])), (i = C.lR.lastIndex), (n = C.lR.exec(P));
                     }
                     return t + e(P.substr(i));
                 }
                 function m() {
-                    var t = "string" == typeof T.sL;
-                    if (t && !x[T.sL]) return e(P);
-                    var i = t ? c(T.sL, P, !0, k[T.sL]) : u(P, T.sL.length ? T.sL : void 0);
-                    return T.r > 0 && (D += i.r), t && (k[T.sL] = i.top), p(i.language, i.value, !1, !0);
+                    var t = "string" == typeof C.sL;
+                    if (t && !x[C.sL]) return e(P);
+                    var i = t ? c(C.sL, P, !0, k[C.sL]) : u(P, C.sL.length ? C.sL : void 0);
+                    return C.r > 0 && (D += i.r), t && (k[C.sL] = i.top), p(i.language, i.value, !1, !0);
                 }
                 function g() {
-                    return void 0 !== T.sL ? m() : f();
+                    return void 0 !== C.sL ? m() : f();
                 }
                 function v(t, i) {
                     var n = t.cN ? p(t.cN, "", !0) : "";
-                    t.rB ? ((S += n), (P = "")) : t.eB ? ((S += e(i) + n), (P = "")) : ((S += n), (P = i)), (T = Object.create(t, { parent: { value: T } }));
+                    t.rB ? ((S += n), (P = "")) : t.eB ? ((S += e(i) + n), (P = "")) : ((S += n), (P = i)), (C = Object.create(t, { parent: { value: C } }));
                 }
                 function _(t, i) {
                     if (((P += t), void 0 === i)) return (S += g()), 0;
-                    var n = o(i, T);
+                    var n = o(i, C);
                     if (n) return (S += g()), v(n, i), n.rB ? 0 : i.length;
-                    var s = a(T, i);
+                    var s = a(C, i);
                     if (s) {
-                        var r = T;
+                        var r = C;
                         r.rE || r.eE || (P += i), (S += g());
-                        do T.cN && (S += "</span>"), (D += T.r), (T = T.parent);
-                        while (T != s.parent);
+                        do C.cN && (S += "</span>"), (D += C.r), (C = C.parent);
+                        while (C != s.parent);
                         return r.eE && (S += e(i)), (P = ""), s.starts && v(s.starts, ""), r.rE ? 0 : i.length;
                     }
-                    if (l(i, T)) throw new Error('Illegal lexeme "' + i + '" for mode "' + (T.cN || "<unnamed>") + '"');
+                    if (l(i, C)) throw new Error('Illegal lexeme "' + i + '" for mode "' + (C.cN || "<unnamed>") + '"');
                     return (P += i), i.length || 1;
                 }
                 var y = b(t);
                 if (!y) throw new Error('Unknown language: "' + t + '"');
                 h(y);
-                var C,
-                    T = r || y,
+                var T,
+                    C = r || y,
                     k = {},
                     S = "";
-                for (C = T; C != y; C = C.parent) C.cN && (S = p(C.cN, "", !0) + S);
+                for (T = C; T != y; T = T.parent) T.cN && (S = p(T.cN, "", !0) + S);
                 var P = "",
                     D = 0;
                 try {
-                    for (var M, E, I = 0; (T.t.lastIndex = I), (M = T.t.exec(i)), M; ) (E = _(i.substr(I, M.index - I), M[0])), (I = M.index + E);
-                    for (_(i.substr(I)), C = T; C.parent; C = C.parent) C.cN && (S += "</span>");
-                    return { r: D, value: S, language: t, top: T };
+                    for (var M, E, I = 0; (C.t.lastIndex = I), (M = C.t.exec(i)), M; ) (E = _(i.substr(I, M.index - I), M[0])), (I = M.index + E);
+                    for (_(i.substr(I)), T = C; T.parent; T = T.parent) T.cN && (S += "</span>");
+                    return { r: D, value: S, language: t, top: C };
                 } catch (O) {
                     if (-1 != O.message.indexOf("Illegal")) return { r: 0, value: e(i) };
                     throw O;
@@ -21833,7 +21833,7 @@ if (!self.__WB_pmw) {
                 );
             }
             function p(t, e, i) {
-                var n = e ? C[e] : i,
+                var n = e ? T[e] : i,
                     s = [t.trim()];
                 return t.match(/\bhljs\b/) || s.push("hljs"), -1 === t.indexOf(n) && s.push(n), s.join(" ").trim();
             }
@@ -21873,18 +21873,18 @@ if (!self.__WB_pmw) {
                 var n = (x[e] = i(t));
                 n.aliases &&
                     n.aliases.forEach(function (t) {
-                        C[t] = e;
+                        T[t] = e;
                     });
             }
             function y() {
                 return Object.keys(x);
             }
             function b(t) {
-                return (t = (t || "").toLowerCase()), x[t] || x[C[t]];
+                return (t = (t || "").toLowerCase()), x[t] || x[T[t]];
             }
             var w = { classPrefix: "hljs-", tabReplace: null, useBR: !1, languages: void 0 },
                 x = {},
-                C = {};
+                T = {};
             return (
                 (t.highlight = c),
                 (t.highlightAuto = u),
@@ -23076,11 +23076,11 @@ if (!self.__WB_pmw) {
                             b = r.marginTop + r.marginBottom,
                             w = r.borderLeftWidth + r.borderRightWidth,
                             x = r.borderTopWidth + r.borderBottomWidth,
-                            C = o && u,
-                            T = i(e.width);
-                        T !== !1 && (r.width = T + (C ? 0 : v + w));
+                            T = o && u,
+                            C = i(e.width);
+                        C !== !1 && (r.width = C + (T ? 0 : v + w));
                         var k = i(e.height);
-                        return k !== !1 && (r.height = k + (C ? 0 : _ + x)), (r.innerWidth = r.width - (v + w)), (r.innerHeight = r.height - (_ + x)), (r.outerWidth = r.width + y), (r.outerHeight = r.height + b), r;
+                        return k !== !1 && (r.height = k + (T ? 0 : _ + x)), (r.innerWidth = r.width - (v + w)), (r.innerHeight = r.height - (_ + x)), (r.outerWidth = r.width + y), (r.outerHeight = r.height + b), r;
                     }
                 }
                 function l(e, i) {
@@ -24850,7 +24850,7 @@ if (!self.__WB_pmw) {
                             .attr("src", t.href);
                     i(t.wrap).bind("onReset", function () {
                         try {
-                            i(this).find("iframe").hide().attr("src", "//web.archive.org/web/20170209150007/https://about:blank").end().empty();
+                            i(this).find("iframe").hide().attr("src", "//web.archive.org/web/20170327130038/https://about:blank").end().empty();
                         } catch (t) {}
                     }),
                         t.iframe.preload &&
@@ -24954,8 +24954,8 @@ if (!self.__WB_pmw) {
                         b = a.getViewport(),
                         w = 0,
                         x = !1,
-                        C = !1,
-                        T = a.wrap,
+                        T = !1,
+                        C = a.wrap,
                         k = a.skin,
                         S = a.inner,
                         P = a.current,
@@ -24971,7 +24971,7 @@ if (!self.__WB_pmw) {
                         $ = m(R[1] + R[3]),
                         L = m(R[0] + R[2]);
                     if (
-                        (T.add(k).add(S).width("auto").height("auto").removeClass("fancybox-tmp"),
+                        (C.add(k).add(S).width("auto").height("auto").removeClass("fancybox-tmp"),
                         (t = m(k.outerWidth(!0) - k.width())),
                         (e = m(k.outerHeight(!0) - k.height())),
                         (n = $ + t),
@@ -25004,19 +25004,19 @@ if (!self.__WB_pmw) {
                             : ((D = Math.max(E, Math.min(D, O))), P.autoHeight && "iframe" !== P.type && (S.width(D), (M = S.height())), (M = Math.max(I, Math.min(M, A)))),
                         P.fitToView)
                     )
-                        if ((S.width(D).height(M), T.width(D + t), (u = T.width()), (d = T.height()), P.aspectRatio))
+                        if ((S.width(D).height(M), C.width(D + t), (u = C.width()), (d = C.height()), P.aspectRatio))
                             for (; (u > f || d > v) && D > E && M > I && !(w++ > 19); )
-                                (M = Math.max(I, Math.min(A, M - 10))), (D = m(M * c)), E > D && ((D = E), (M = m(D / c))), D > O && ((D = O), (M = m(D / c))), S.width(D).height(M), T.width(D + t), (u = T.width()), (d = T.height());
+                                (M = Math.max(I, Math.min(A, M - 10))), (D = m(M * c)), E > D && ((D = E), (M = m(D / c))), D > O && ((D = O), (M = m(D / c))), S.width(D).height(M), C.width(D + t), (u = C.width()), (d = C.height());
                         else (D = Math.max(E, Math.min(D, D - (u - f)))), (M = Math.max(I, Math.min(M, M - (d - v))));
                     z && "auto" === N && o > M && f > D + t + z && (D += z),
                         S.width(D).height(M),
-                        T.width(D + t),
-                        (u = T.width()),
-                        (d = T.height()),
+                        C.width(D + t),
+                        (u = C.width()),
+                        (d = C.height()),
                         (x = (u > f || d > v) && D > E && M > I),
-                        (C = P.aspectRatio ? l > D && h > M && r > D && o > M : (l > D || h > M) && (r > D || o > M)),
-                        i.extend(P, { dim: { width: g(u), height: g(d) }, origWidth: r, origHeight: o, canShrink: x, canExpand: C, wPadding: t, hPadding: e, wrapSpace: d - k.outerHeight(!0), skinSpace: k.height() - M }),
-                        !_ && P.autoHeight && M > I && A > M && !C && S.height("auto");
+                        (T = P.aspectRatio ? l > D && h > M && r > D && o > M : (l > D || h > M) && (r > D || o > M)),
+                        i.extend(P, { dim: { width: g(u), height: g(d) }, origWidth: r, origHeight: o, canShrink: x, canExpand: T, wPadding: t, hPadding: e, wrapSpace: d - k.outerHeight(!0), skinSpace: k.height() - M }),
+                        !_ && P.autoHeight && M > I && A > M && !T && S.height("auto");
                 },
                 _getPosition: function (t) {
                     var e = a.current,
@@ -25618,12 +25618,12 @@ if (!self.__WB_pmw) {
                 var i;
                 (i = t.parents()), i.push(t[0]), (i = i.not(":visible")), w(i, { visibility: "hidden", display: "block", position: "absolute" }, e);
             }
-            function C(t, e) {
+            function T(t, e) {
                 return function () {
                     t.unwrap().unwrap().unbind(e.eventNamespace);
                 };
             }
-            var T = !0,
+            var C = !0,
                 k = !1,
                 S = [
                     {
@@ -25691,7 +25691,7 @@ if (!self.__WB_pmw) {
                                 }),
                                 l(a, t, e),
                                 {
-                                    remove: C(t, e),
+                                    remove: T(t, e),
                                     update: function () {
                                         o(n, e), a.removeClass(e.checkedClass), l(a, t, e), h(n, t, e);
                                     },
@@ -25782,7 +25782,7 @@ if (!self.__WB_pmw) {
                                 }),
                                 l(d, t, i),
                                 {
-                                    remove: C(t, i),
+                                    remove: T(t, i),
                                     update: function () {
                                         o(c, i), l(d, t, i), h(c, t, i);
                                     },
@@ -25876,7 +25876,7 @@ if (!self.__WB_pmw) {
                         },
                     },
                 ];
-            m() && !g() && (T = !1),
+            m() && !g() && (C = !1),
                 (e.uniform = {
                     defaults: {
                         activeClass: "active",
@@ -25913,8 +25913,8 @@ if (!self.__WB_pmw) {
                     var n = this;
                     return (
                         (i = e.extend({}, e.uniform.defaults, i)),
-                        k || ((k = !0), p() && (T = !1)),
-                        T
+                        k || ((k = !0), p() && (C = !1)),
+                        C
                             ? (i.resetSelector &&
                                   e(i.resetSelector).mouseup(function () {
                                       t.setTimeout(function () {
@@ -26028,7 +26028,7 @@ if (!self.__WB_pmw) {
         }),
         (function () {
             function t() {
-                (O = "none" == $(".head").css("display") ? !0 : !1), (A = $(window).outerHeight());
+                (A = "none" == $(".head").css("display") ? !0 : !1), (N = $(window).outerHeight());
             }
             function e(t) {
                 var e = 0;
@@ -26060,21 +26060,17 @@ if (!self.__WB_pmw) {
                 var t = $(".values-list").find(".values-list__item");
                 e(t);
             }
-
             function o() {
-                if ("desktop" === ft()) {
+                if ("desktop" === mt()) {
                     if ($(".company-page").length) {
                         $(".bg").attr("id", "particle-slider");
                         new ParticleSlider({ ptlGap: 2, ptlSize: 2, width: 1e9, height: 1e9, mouseForce: 20, showArrowControls: !0 });
-                    } 
-                    else if ($(".top").length) {
+                    } else if ($(".top").length) {
                         $(".bg").attr("id", "particle-slider");
                         new ParticleSlider({ ptlGap: 5, ptlSize: 2, width: 1e9, height: 1e9, mouseForce: 500, showArrowControls: !0 });
                     }
-                } 
-                else $(".bg").removeAttr("id");
+                } else $(".bg").removeAttr("id");
             }
-
             function a(t) {
                 $(t)
                     .on("touchstart", function (t) {
@@ -26195,12 +26191,12 @@ if (!self.__WB_pmw) {
                                 t.eq(s).addClass("active").css("opacity", "1"),
                                 e.removeClass("active"),
                                 e.eq(s).addClass("active"),
-                                TweenMax.to(".custom-dots", z, { x: -o }),
-                                TweenMax.fromTo(t.eq(n), N, { left: 0, ease: Expo.easeOut }, { left: -1400, ease: Expo.easeOut }),
+                                TweenMax.to(".custom-dots", R, { x: -o }),
+                                TweenMax.fromTo(t.eq(n), z, { left: 0, ease: Expo.easeOut }, { left: -1400, ease: Expo.easeOut }),
                                 TweenMax.fromTo(
                                     t.eq(s),
-                                    N,
-                                    { left: R, opacity: 0, ease: Expo.easeOut },
+                                    z,
+                                    { left: L, opacity: 0, ease: Expo.easeOut },
                                     {
                                         left: 0,
                                         opacity: 1,
@@ -26224,12 +26220,12 @@ if (!self.__WB_pmw) {
                                 t.eq(n).addClass("active"),
                                 e.removeClass("active"),
                                 e.eq(n).addClass("active"),
-                                TweenMax.to(".custom-dots", z, { x: -o }),
-                                TweenMax.fromTo(t.eq(r), N, { left: 0, ease: Expo.easeOut }, { left: -1400, ease: Expo.easeOut }),
+                                TweenMax.to(".custom-dots", R, { x: -o }),
+                                TweenMax.fromTo(t.eq(r), z, { left: 0, ease: Expo.easeOut }, { left: -1400, ease: Expo.easeOut }),
                                 TweenMax.fromTo(
                                     t.eq(s),
-                                    N,
-                                    { left: R, opacity: 0, ease: Expo.easeOut },
+                                    z,
+                                    { left: L, opacity: 0, ease: Expo.easeOut },
                                     {
                                         left: 0,
                                         opacity: 1,
@@ -26251,8 +26247,8 @@ if (!self.__WB_pmw) {
                     n = $(".designed-list").outerHeight(!0),
                     s = $(".services-list").outerHeight(!0),
                     r = $(".concepts").outerHeight(!0),
-                    o = $(".design-featured").outerHeight(!0) + A / 2;
-                    new ScrollMagic.Scene({ triggerElement: ".design-title", triggerHook: "onLeave", duration: i }).setClassToggle("body", "light_black-scene").addTo(t),
+                    o = $(".design-featured").outerHeight(!0) + N / 2;
+                new ScrollMagic.Scene({ triggerElement: ".design-title", triggerHook: "onLeave", duration: i }).setClassToggle("body", "light_black-scene").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".designed-list", triggerHook: "onCenter", offset: e, duration: n }).setClassToggle("body", "light_gray-scene").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".services-list", triggerHook: "onCenter", offset: e, duration: s }).setClassToggle("body", "light_black-scene").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".concepts", triggerHook: "onCenter", offset: e, duration: r }).setClassToggle("body", "purple-scene").addTo(t),
@@ -26260,38 +26256,38 @@ if (!self.__WB_pmw) {
             }
             function f(t) {
                 var e = new TimelineMax(),
-                    i = TweenLite.from(".challenges__title", H, { y: W, opacity: 0, ease: Power1.easeOut }),
-                    n = TweenLite.from(".together-title", H, { y: W, opacity: 0, ease: Power1.easeOut }),
-                    s = TweenLite.from(".globetrotters-title", H, { y: W, opacity: 0, ease: Power1.easeOut }),
-                    r = TweenLite.from(".values-title", H, { y: W, opacity: 0, ease: Power1.easeOut }),
-                    o = TweenLite.from(".environment-title", H, { y: W, opacity: 0, ease: Power1.easeOut }),
-                    a = TweenLite.from(".vacancies-title", H, { y: W, opacity: 0, ease: Power1.easeOut }),
+                    i = TweenLite.from(".challenges__title", F, { y: j, opacity: 0, ease: Power1.easeOut }),
+                    n = TweenLite.from(".together-title", F, { y: j, opacity: 0, ease: Power1.easeOut }),
+                    s = TweenLite.from(".globetrotters-title", F, { y: j, opacity: 0, ease: Power1.easeOut }),
+                    r = TweenLite.from(".values-title", F, { y: j, opacity: 0, ease: Power1.easeOut }),
+                    o = TweenLite.from(".environment-title", F, { y: j, opacity: 0, ease: Power1.easeOut }),
+                    a = TweenLite.from(".vacancies-title", F, { y: j, opacity: 0, ease: Power1.easeOut }),
                     l = $(".team-list").find(".person"),
-                    h = TweenMax.staggerFrom(l, L, { y: W, opacity: 0, ease: Power0.easeOut }, B),
+                    h = TweenMax.staggerFrom(l, H, { y: j, opacity: 0, ease: Power0.easeOut }, q),
                     c = $(".challenges-list").find(".challenges-list__item"),
                     u = $(".values-list").find(".values-list__item"),
                     d = $(".environment .photogallery").find(".photo"),
                     p = $(".vacancies-list").find(".vacancies-list__item"),
                     f = $(".top").outerHeight(!0),
                     m = $("header").outerHeight(!0),
-                    g = A / 3,
-                    v = A / 3,
+                    g = N / 3,
+                    v = N / 3,
                     _ = $(".global-params__item h2").outerHeight(!0) / 2,
                     y = $(".challenges").outerHeight(!0),
                     b = $(".together").outerHeight(!0) + $(".environment").outerHeight(!0),
                     w = $(".timeline").outerHeight(!0),
                     x = $(".globetrotters").outerHeight(!0),
-                    C = $(".values").outerHeight(!0),
-                    T = $(".custom-slider__w").outerHeight(!0),
+                    T = $(".values").outerHeight(!0),
+                    C = $(".custom-slider__w").outerHeight(!0),
                     k = $(".globetrotters .global-params__item").find("h2"),
-                    S = TweenMax.staggerFrom(c, L, { y: W, opacity: 0, ease: Power1.easeOut }),
-                    P = TweenMax.staggerFrom(p, L, { scale: "0", opacity: 0, ease: Power1.easeOut }, j),
-                    D = TweenMax.staggerFrom(u, L, { y: W, opacity: 0, ease: Power1.easeOut }, j),
-                    M = TweenMax.staggerFrom(d, L, { y: W, opacity: 0, ease: Power1.easeOut }, j),
+                    S = TweenMax.staggerFrom(c, H, { y: j, opacity: 0, ease: Power1.easeOut }),
+                    P = TweenMax.staggerFrom(p, H, { scale: "0", opacity: 0, ease: Power1.easeOut }, B),
+                    D = TweenMax.staggerFrom(u, H, { y: j, opacity: 0, ease: Power1.easeOut }, B),
+                    M = TweenMax.staggerFrom(d, H, { y: j, opacity: 0, ease: Power1.easeOut }, B),
                     E = e
-                        .from(".timeline-title", L, { y: W, opacity: 0, ease: Power1.easeOut })
-                        .from(".timeline .tabs-content", L, { x: W, opacity: 0, ease: Power1.easeOut })
-                        .from(".timeline .tabs-control", L, { x: -50, opacity: 0, ease: Power1.easeOut });
+                        .from(".timeline-title", H, { y: j, opacity: 0, ease: Power1.easeOut })
+                        .from(".timeline .tabs-content", H, { x: j, opacity: 0, ease: Power1.easeOut })
+                        .from(".timeline .tabs-control", H, { x: -50, opacity: 0, ease: Power1.easeOut });
                 k.countTo({ speed: 600, refreshInterval: 10 });
                 new ScrollMagic.Scene({ triggerElement: ".challenges", triggerHook: "onLeave" })
                     .on("enter", function () {
@@ -26304,20 +26300,20 @@ if (!self.__WB_pmw) {
                     new ScrollMagic.Scene({ triggerElement: ".challenges", triggerHook: "onEnter", offset: g, duration: y + m }).setClassToggle("body", "active_light-gray-background").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".challenges", triggerHook: "onEnter", offset: f - m, duration: m }).setClassToggle("header", "active_light-gray-header-add").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".challenges", triggerHook: "onEnter", offset: f, duration: y - m }).setClassToggle("header", "active_light-gray-header").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".custom-slider__w", triggerHook: "onEnter", offset: g, duration: T }).setClassToggle("body", "active_white-background").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".custom-slider__w", triggerHook: "onEnter", offset: g, duration: C }).setClassToggle("body", "active_white-background").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".timeline", triggerHook: "onEnter", offset: g, duration: w })
                         .setClassToggle("body", "active_dark-black-background")
                         .on("leave", function () {
-                            TweenLite.to($(".custom-slider__w.white"), F, { opacity: 1, ease: Power1.easeOut });
+                            TweenLite.to($(".custom-slider__w.white"), W, { opacity: 1, ease: Power1.easeOut });
                         })
                         .on("enter", function () {
-                            TweenLite.to($(".custom-slider__w.white"), F, { opacity: 0, ease: Power1.easeOut });
+                            TweenLite.to($(".custom-slider__w.white"), W, { opacity: 0, ease: Power1.easeOut });
                         })
                         .addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".globetrotters", triggerHook: "onEnter", offset: g, duration: x }).setClassToggle("body", "active_map-black-background").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".values", triggerHook: "onEnter", offset: g, duration: C }).setClassToggle("body", "active_values-black-background").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".values", triggerHook: "onEnter", offset: g, duration: T }).setClassToggle("body", "active_values-black-background").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".together", triggerHook: "onEnter", offset: g, duration: b }).setClassToggle("body", "active_light-gray-background2").addTo(t),
-                    new ScrollMagic.Scene({ triggerElement: ".vacancies", triggerHook: "onEnter", offset: g, duration: T }).setClassToggle("body", "active_white-background").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".vacancies", triggerHook: "onEnter", offset: g, duration: C }).setClassToggle("body", "active_white-background").addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".timeline", triggerHook: "onEnter", offset: v }).setTween(E).addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".challenges", triggerHook: "onEnter", offset: v }).setTween(i).addTo(t),
                     new ScrollMagic.Scene({ triggerElement: ".challenges-list", triggerHook: "onEnter", offset: v }).setTween(S).addTo(t),
@@ -26355,7 +26351,7 @@ if (!self.__WB_pmw) {
                         []),
                     r = [];
                 $(".service-list__item").each(function (t) {
-                    var e = TweenLite.from($(this), q, { y: Y, opacity: 0, ease: Power1.easeOut });
+                    var e = TweenLite.from($(this), Y, { y: U, opacity: 0, ease: Power1.easeOut });
                     s.push(e);
                     for (var i = $(this).attr("class").split(" "), n = 0; n < i.length; n++)
                         if ("service-list__item" !== i[n] && "clearfix" !== i[n]) {
@@ -26381,7 +26377,7 @@ if (!self.__WB_pmw) {
                     s = ($(".tabs-control").find("ul").outerHeight(), $(".next-year")),
                     r = $(".next-year-mob"),
                     o = $(".timeline .param h2").find("span");
-                if ((o.countTo({ speed: 600, refreshInterval: 10 }), "mobile" !== ft())) {
+                if ((o.countTo({ speed: 600, refreshInterval: 10 }), "mobile" !== mt())) {
                     var a = s.hasClass("forward") ? !0 : !1,
                         l = [],
                         h = $(".tabs-control li").not(":last-child");
@@ -26407,9 +26403,9 @@ if (!self.__WB_pmw) {
                                     h === i ? e.eq(h - 1).addClass("prev") : 0 === h ? e.eq(h + 1).addClass("next") : (e.eq(h - 1).addClass("prev"), e.eq(h + 1).addClass("next"));
                                 var u = l.length,
                                     d = t(l, u) - t(l, h),
-                                    p = X + d;
+                                    p = V + d;
                                 0 === h
-                                    ? TweenLite.to(s, U, {
+                                    ? TweenLite.to(s, X, {
                                           y: -d,
                                           ease: Power1.easeIn,
                                           onComplete: function () {
@@ -26417,15 +26413,15 @@ if (!self.__WB_pmw) {
                                           },
                                       })
                                     : h === u
-                                    ? TweenLite.to(s, U, {
+                                    ? TweenLite.to(s, X, {
                                           y: -d,
                                           ease: Power1.easeIn,
                                           onComplete: function () {
                                               $(".next-year").removeClass("forward"), (a = !1);
                                           },
                                       })
-                                    : TweenLite.to(s, U, { y: -d, ease: Power1.easeIn }),
-                                    TweenLite.to(".timeline .line", U, { height: p, ease: Power1.easeIn });
+                                    : TweenLite.to(s, X, { y: -d, ease: Power1.easeIn }),
+                                    TweenLite.to(".timeline .line", X, { height: p, ease: Power1.easeIn });
                             }
                         }),
                         s.on("click", function (r) {
@@ -26443,9 +26439,9 @@ if (!self.__WB_pmw) {
                                 h === i ? e.eq(h - 1).addClass("prev") : 0 === h ? e.eq(h + 1).addClass("next") : (e.eq(h - 1).addClass("prev"), e.eq(h + 1).addClass("next"));
                             var c = l.length,
                                 u = t(l, c) - t(l, h),
-                                d = X + u;
+                                d = V + u;
                             0 === h
-                                ? TweenLite.to(s, U, {
+                                ? TweenLite.to(s, X, {
                                       y: -u,
                                       ease: Power1.easeIn,
                                       onComplete: function () {
@@ -26453,17 +26449,17 @@ if (!self.__WB_pmw) {
                                       },
                                   })
                                 : h === c
-                                ? TweenLite.to(s, U, {
+                                ? TweenLite.to(s, X, {
                                       y: -u,
                                       ease: Power1.easeIn,
                                       onComplete: function () {
                                           $(".next-year").removeClass("forward"), (a = !1);
                                       },
                                   })
-                                : TweenLite.to(s, U, { y: -u, ease: Power1.easeIn }),
-                                TweenLite.to(".timeline .line", U, { height: d, ease: Power1.easeIn });
+                                : TweenLite.to(s, X, { y: -u, ease: Power1.easeIn }),
+                                TweenLite.to(".timeline .line", X, { height: d, ease: Power1.easeIn });
                         }),
-                        "desktop" === ft() &&
+                        "desktop" === mt() &&
                             e
                                 .find("a")
                                 .on("mouseenter", function () {
@@ -26500,8 +26496,8 @@ if (!self.__WB_pmw) {
                                 r === i ? e.eq(r - 1).addClass("prev") : 0 === r ? e.eq(r + 1).addClass("next") : (e.eq(r - 1).addClass("prev"), e.eq(r + 1).addClass("next"));
                             var a = c.length,
                                 l = t(c, a) - t(c, r),
-                                h = V + l;
-                            TweenLite.to(".tabs-control", U, { x: l, ease: Power1.easeIn }), TweenLite.to(".timeline .line", U, { width: h, ease: Power1.easeIn });
+                                h = G + l;
+                            TweenLite.to(".tabs-control", X, { x: l, ease: Power1.easeIn }), TweenLite.to(".timeline .line", X, { width: h, ease: Power1.easeIn });
                         });
                 }
             }
@@ -26510,7 +26506,7 @@ if (!self.__WB_pmw) {
                     i = [];
                 $(".line").each(function (t) {
                     var n = new TimelineMax(),
-                        s = n.from($(this).find("h2"), Z, { opacity: 0, y: G, ease: Power1.easeOut }, "h2").from($(this).find("p"), Q, { opacity: 0, y: K, ease: Power1.easeOut }, "h2");
+                        s = n.from($(this).find("h2"), Q, { opacity: 0, y: K, ease: Power1.easeOut }, "h2").from($(this).find("p"), J, { opacity: 0, y: Z, ease: Power1.easeOut }, "h2");
                     e.push(s);
                     for (var r = $(this).attr("class").split(" "), o = 0; o < r.length; o++)
                         if ("line" !== r[o] && "clearfix" !== r[o]) {
@@ -26520,7 +26516,7 @@ if (!self.__WB_pmw) {
                 });
                 var n = [];
                 $(".line").each(function (s) {
-                    var r = new ScrollMagic.Scene({ triggerElement: i[s], offset: -150, duration: J }).setTween(e[s]).addTo(t);
+                    var r = new ScrollMagic.Scene({ triggerElement: i[s], offset: -150, duration: tt }).setTween(e[s]).addTo(t);
                     n.push(r);
                 });
             }
@@ -26541,54 +26537,54 @@ if (!self.__WB_pmw) {
                     f = $(".dribble .dotted-line"),
                     m = new TimelineMax();
                 e.countTo({
-                    from: tt,
+                    from: et,
                     to: 203300,
-                    speed: et,
-                    refreshInterval: it,
+                    speed: it,
+                    refreshInterval: nt,
                     formatter: function (t, e) {
                         return t.toFixed(e.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, " ");
                     },
                 }),
                     i.countTo({
-                        from: tt,
+                        from: et,
                         to: 56798,
-                        speed: et,
-                        refreshInterval: it,
+                        speed: it,
+                        refreshInterval: nt,
                         formatter: function (t, e) {
                             return t.toFixed(e.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, " ");
                         },
                     }),
                     n.countTo({
-                        from: tt,
+                        from: et,
                         to: 54393,
-                        speed: et,
-                        refreshInterval: it,
+                        speed: it,
+                        refreshInterval: nt,
                         formatter: function (t, e) {
                             return t.toFixed(e.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, " ");
                         },
                     });
                 var g = m
                     .to(s, 1.2, { width: "100%" })
-                    .to(r, ht, { opacity: 1 })
-                    .to(h, nt, { opacity: 1 }, ot)
-                    .to(c, nt, { height: st }, ot)
-                    .to(o, rt, { opacity: 1 }, ot)
+                    .to(r, ct, { opacity: 1 })
+                    .to(h, st, { opacity: 1 }, at)
+                    .to(c, st, { height: rt }, at)
+                    .to(o, ot, { opacity: 1 }, at)
                     .addCallback(function (t) {
                         e.countTo("restart");
-                    }, ot)
-                    .to(u, nt, { opacity: 1 }, at)
-                    .to(d, nt, { height: st }, at)
-                    .to(a, rt, { opacity: 1 }, at)
+                    }, at)
+                    .to(u, st, { opacity: 1 }, lt)
+                    .to(d, st, { height: rt }, lt)
+                    .to(a, ot, { opacity: 1 }, lt)
                     .addCallback(function (t) {
                         i.countTo("restart");
-                    }, at)
-                    .to(p, nt, { opacity: 1 }, lt)
-                    .to(f, nt, { height: st }, lt)
-                    .to(l, rt, { opacity: 1 }, lt)
+                    }, lt)
+                    .to(p, st, { opacity: 1 }, ht)
+                    .to(f, st, { height: rt }, ht)
+                    .to(l, ot, { opacity: 1 }, ht)
                     .addCallback(function (t) {
                         n.countTo("restart");
-                    }, lt);
-                new ScrollMagic.Scene({ triggerElement: ".start-graph", offset: ct })
+                    }, ht);
+                new ScrollMagic.Scene({ triggerElement: ".start-graph", offset: ut })
                     .setTween(g)
                     .on("enter", function () {
                         $(".top").css("visibility", "hidden");
@@ -26599,31 +26595,38 @@ if (!self.__WB_pmw) {
                     .addTo(t);
             }
             function y(t) {
-                var e = ([$(".wrapper.white"), $("header")], TweenLite.from(".azure .text__w", ut, { y: dt, opacity: 0, ease: Power1.easeOut })),
-                    i = TweenLite.from(".purple .text__w", ut, { y: dt, opacity: 0, ease: Power1.easeOut }),
-                    n = TweenLite.from(".black .text__w", ut, { y: dt, opacity: 0, ease: Power1.easeOut }),
-                   
+                var e = ([$(".wrapper"), $("header")], TweenLite.from(".azure .text__w", dt, { y: pt, opacity: 0, ease: Power1.easeOut })),
+                    i = TweenLite.from(".purple .text__w", dt, { y: pt, opacity: 0, ease: Power1.easeOut }),
+                    n = TweenLite.from(".black .text__w", dt, { y: pt, opacity: 0, ease: Power1.easeOut }),
                     s = $(".purple").outerHeight(),
                     r = $(".azure").outerHeight(),
                     o = $(".black").outerHeight(),
                     a = window.innerHeight / 3,
-                    l = $(".talents").innerHeight() + $(".info").innerHeight() + a,
-                    h = $(".indicators").innerHeight(),
-                    c = $("header").outerHeight();
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", triggerHook: "onLeave", offset: -c, duration: c }).setClassToggle("header", "active_purple-header-add").addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", triggerHook: "onLeave", duration: s - c - a }).setClassToggle("header", "active_purple-header").addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", offset: -a, duration: s + a }).setClassToggle("body", "active_purple-scene").addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", offset: a }).setTween(i).addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.azure", triggerHook: "onCenter", duration: r }).setClassToggle("body", "active_azure-scene").addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.azure", offset: a }).setTween(e).addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_black-scene").addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", offset: a }).setTween(n).addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_red-scene").addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".works-list__item.red", offset: a }).setTween(p).addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".indicators", offset: h }).setClassToggle("header", "active_black-header-footer").addTo(t),
-                new ScrollMagic.Scene({ triggerElement: ".info", duration: l }).setClassToggle("body", "active_light-black-scene").addTo(t);
+                    l = $(".info").innerHeight() + a,
+                    h = $(".talents").innerHeight() + a,
+                    c = $(".indicators").innerHeight(),
+                    u = $("header").outerHeight();
+                new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", triggerHook: "onLeave", offset: -u, duration: u }).setClassToggle("header", "active_purple-header-add").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", triggerHook: "onLeave", duration: s - u - a }).setClassToggle("header", "active_purple-header").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", offset: -a, duration: s + a }).setClassToggle("body", "active_purple-scene").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.purple", offset: a }).setTween(i).addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.azure", triggerHook: "onCenter", duration: r }).setClassToggle("body", "active_azure-scene").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.azure", offset: a }).setTween(e).addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", triggerHook: "onCenter", duration: o }).setClassToggle("body", "active_black-scene").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".works-list__item.black", offset: a }).setTween(n).addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".indicators", offset: c }).setClassToggle("header", "active_black-header-footer").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".info", duration: l }).setClassToggle("body", "active_light-black-scene").addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".talents", duration: h }).setClassToggle("body", "active_light-black-scene").addTo(t);
             }
-            function b() {
+            function b(t) {
+                var e = $(".index-challenges").find(".challenges-list__item"),
+                    i = N / 6,
+                    n = $(".index-challenges").innerHeight(),
+                    s = TweenMax.staggerFrom(e, H, { y: j, opacity: 0, ease: Power1.easeOut });
+                new ScrollMagic.Scene({ triggerElement: ".index-challenges .challenges-list", triggerHook: 1, offset: i }).setTween(s).addTo(t),
+                    new ScrollMagic.Scene({ triggerElement: ".index-challenges", duration: n, offset: 0 }).setClassToggle("body", "active_gray-scene").addTo(t);
+            }
+            function w() {
                 function t() {
                     return $(window).scrollTop() + $(window).height() > $(document).height() - 100;
                 }
@@ -26699,7 +26702,7 @@ if (!self.__WB_pmw) {
                         return "fast" === m || a > p;
                     }
                     var o = $(this).scrollTop();
-                    (f = p >= o ? "top" : "down"), (m = p >= o + 30 ? "fast" : "slow"), (p = o), "desktop" === ft() && (i() && n(), e() && r() && s());
+                    (f = p >= o ? "top" : "down"), (m = p >= o + 30 ? "fast" : "slow"), (p = o), "desktop" === mt() && (i() && n(), e() && r() && s());
                 }),
                     $(".blog-filter a").bind("click", function () {
                         d = !0;
@@ -26724,20 +26727,20 @@ if (!self.__WB_pmw) {
                         (t.which > 0 || "mousedown" == t.type || "mousewheel" == t.type || "wheel" == t.type) && e() && i() && s();
                     });
             }
-            function w() {
-                if ($(".article-w").length && "desktop" === ft()) {
+            function x() {
+                if ($(".article-w").length && "desktop" === mt()) {
                     var t = $(".article-image").outerHeight(),
-                        e = $(".article-w").outerHeight() - $(".blog-header").outerHeight() - pt,
+                        e = $(".article-w").outerHeight() - $(".blog-header").outerHeight() - ft,
                         i = $("ul.share-buttons");
                     $(document).on("scroll", function (n) {
-                        if ("desktop" === ft()) {
+                        if ("desktop" === mt()) {
                             var s = $(window).scrollTop();
                             s > t ? i.addClass("fixed") : i.removeClass("fixed"), s > e ? i.fadeOut({ duration: 100 }) : (i.fadeIn({ duration: 100 }), i.removeAttr("style"));
                         }
                     });
                 }
             }
-            function x() {
+            function T() {
                 $(".blog-filter li a").on("click", function (t) {
                     t.preventDefault(), $(".blog-filter li a").removeClass("active"), $(this).addClass("active");
                 });
@@ -26757,21 +26760,21 @@ if (!self.__WB_pmw) {
                         (e = $(window).scrollTop()), s.attr("value", e);
                     });
             }
-            function T() {
+            function k() {
                 var t = $(".blog-page .blog-info"),
-                    e = A - $(".blog-nav").outerHeight(),
+                    e = N - $(".blog-nav").outerHeight(),
                     i = e - $("footer").outerHeight();
                 t.each(function () {
-                    "desktop" === ft() ? ($(this).is(":last-child") ? $(this).css("height", i) : $(this).css("height", e)) : $(this).css("height", "");
+                    "desktop" === mt() ? ($(this).is(":last-child") ? $(this).css("height", i) : $(this).css("height", e)) : $(this).css("height", "");
                 });
             }
-            function k() {
+            function S() {
                 var t = $(".hidden-link");
                 t.on("click", function (t) {
                     return 2 == t.which ? window.open($(this).data("url"), "_blank") : (window.location.href = $(this).data("url")), !1;
                 });
             }
-            function S(t) {
+            function P(t) {
                 null !== t &&
                     t.addEventListener("touchstart", function () {
                         var e = t.scrollTop,
@@ -26780,7 +26783,7 @@ if (!self.__WB_pmw) {
                         0 === e ? (t.scrollTop = 1) : n === i && (t.scrollTop = e - 1);
                     });
             }
-            function P() {
+            function D() {
                 function t(t) {
                     t.each(function () {
                         var t = this.src.substr(this.src.lastIndexOf(".", this.src.lastIndexOf(".")) + 1).toLowerCase();
@@ -26790,7 +26793,7 @@ if (!self.__WB_pmw) {
                 var e = $(".post img");
                 t(e);
             }
-            function D(t) {
+            function M(t) {
                 t.each(function () {
                     function t() {
                         return e.length > 1 && !e.includes("yalantis.com") && !$(this).attr("target");
@@ -26799,7 +26802,7 @@ if (!self.__WB_pmw) {
                     t() && $(this).attr("target", "_blank");
                 });
             }
-            function M(t, e, i, n) {
+            function E(t, e, i, n) {
                 var e = isNaN((e = Math.abs(e))) ? 2 : e,
                     i = void 0 == i ? "." : i,
                     n = void 0 == n ? "," : n,
@@ -26818,64 +26821,64 @@ if (!self.__WB_pmw) {
                         : "")
                 );
             }
-            function E(t) {
-                return t > 999999 ? (t / 1e6).toFixed(0) + "m" : t > 9999 ? (t / 1e3).toFixed(0) + "k" : t > 999 ? M(t, 0) : t;
-            }
             function I(t) {
+                return t > 999999 ? (t / 1e6).toFixed(0) + "m" : t > 9999 ? (t / 1e3).toFixed(0) + "k" : t > 999 ? E(t, 0) : t;
+            }
+            function O(t) {
                 var e = $(t);
                 $.each(e, function (t, e) {
-                    var i = E(e.innerHTML);
+                    var i = I(e.innerHTML);
                     e.innerHTML = i;
                 });
             }
             jQuery.extend(verge);
-            var O = !1,
-                A = 0;
-            const N = 0.8,
-                z = 0.5,
-                R = 1400,
-                L = 0.4,
-                H = 0.6,
-                F = 0.2,
-                W = 50,
-                j = 0.2,
-                B = 0.1,
-                q = 0.8,
-                Y = 150,
-                U = 0.3,
-                X = $(".timeline-content .tabs-control .line").height(),
-                V = $(".timeline-content .tabs-control .line").width(),
-                G = 100,
-                K = 200,
-                Z = 0.9,
-                Q = 1.3,
-                J = 200,
-                tt = 5e3,
-                et = 1e3,
-                it = 50,
-                nt = 0.9,
-                st = 90,
-                rt = 0.8,
-                ot = 0.2,
-                at = 0.3,
-                lt = 0.4,
+            var A = !1,
+                N = 0;
+            const z = 0.8,
+                R = 0.5,
+                L = 1400,
+                H = 0.4,
+                F = 0.6,
+                W = 0.2,
+                j = 50,
+                B = 0.2,
+                q = 0.1,
+                Y = 0.8,
+                U = 150,
+                X = 0.3,
+                V = $(".timeline-content .tabs-control .line").height(),
+                G = $(".timeline-content .tabs-control .line").width(),
+                K = 100,
+                Z = 200,
+                Q = 0.9,
+                J = 1.3,
+                tt = 200,
+                et = 5e3,
+                it = 1e3,
+                nt = 50,
+                st = 0.9,
+                rt = 90,
+                ot = 0.8,
+                at = 0.2,
+                lt = 0.3,
                 ht = 0.4,
-                ct = 200,
-                ut = 0.8,
-                dt = 200,
-                pt = 300;
-            var ft = function () {
+                ct = 0.4,
+                ut = 200,
+                dt = 0.8,
+                pt = 200,
+                ft = 300;
+            var mt = function () {
                 return window.innerWidth < 768 ? "mobile" : window.innerWidth < 900 ? "tabletPortrait" : window.innerWidth <= 1024 ? "tablet" : "desktop";
             };
             $(document).ready(function () {
-                if ($(".design-page").length && "desktop" === ft()) {
+                if ($(".design-page").length && "desktop" === mt()) {
                     var t = new ScrollMagic.Controller();
                     p(t);
                 }
             }),
                 $(window).load(function () {
                     if (
-                        (S(document.querySelector(".scrollable")),
+                        (P(document.querySelector(".scrollable")),
                         t(),
                         s(),
                         i(),
@@ -26888,28 +26891,28 @@ if (!self.__WB_pmw) {
                         h(),
                         u(),
                         g(),
-                        x(),
+                        T(),
                         $(".post table").stacktable(),
-                        w(),
-                        k(),
-                        "mobile" !== ft() && $(".company-page").length && d(),
-                        "desktop" === ft())
+                        x(),
+                        S(),
+                        "mobile" !== mt() && $(".company-page").length && d(),
+                        "desktop" === mt())
                     ) {
                         var e = new ScrollMagic.Controller();
-                        $(".company-page").length ? f(e) : $(".blog-page").length ? T() : $(".white").length ? m(e) : $(".design-page").length || (y(e), v(e), _(e));
+                        $(".company-page").length ? f(e) : $(".blog-page").length ? k() : $(".white").length ? m(e) : $(".design-page").length || (y(e), b(e), v(e), _(e));
                     } else
                         $(window).resize(function () {
-                            if ("desktop" !== ft() || $(".company-page").length || $(".white").length)
-                                "desktop" === ft() || $(".company-page").length || $(".white").length || $(".graph-overflow .graph-line .transparensy").removeClass("resize");
+                            if ("desktop" !== mt() || $(".company-page").length || $(".white").length)
+                                "desktop" === mt() || $(".company-page").length || $(".white").length || $(".graph-overflow .graph-line .transparensy").removeClass("resize");
                             else {
                                 var t = new ScrollMagic.Controller();
                                 _(t), $(".graph-overflow .graph-line .transparensy").addClass("resize");
                             }
                         });
-                    $(".article-w").length && (C(), P(), D($(".post a")), I(".social-counter")), $(".blog-page").length && b(), "design" === $("body").attr("data-page") && D($("a"));
+                    $(".article-w").length && (C(), D(), M($(".post a")), O(".social-counter")), $(".blog-page").length && w(), "design" === $("body").attr("data-page") && M($("a"));
                 }),
                 $(window).resize(function () {
-                    t(), s(), i(), r(), n(), T();
+                    t(), s(), i(), r(), n(), k();
                 }),
                 window.addEventListener(
                     "orientationchange",
@@ -26941,23 +26944,18 @@ if (!self.__WB_pmw) {
             function n() {
                 "desktop" !== p() && "tablet" !== p() ? ($(".head").css("display", "none"), (u = !0)) : e();
             }
-
-
-            
             function s() {
                 $(".device-menu").on("click", function (t) {
                     t.preventDefault(),
                         $(this).hasClass("open")
                             ? ($(".head").css("display", "none"), $(this).removeClass("open"), $(".head").removeClass("active"), $("html, body").removeClass("lock-screen"))
                             : ($(".head").css("display", "block"),
-                                $(this).addClass("open"),
-                                $("html, body").addClass("lock-screen"),
-                                $(".head").addClass("active"),
-                                TweenMax.staggerFromTo(".header-nav li", l, { opacity: 0, cycle: { x: [-100, h] } }, { opacity: 1, cycle: { x: [0, 0] } }, c));
+                              $(this).addClass("open"),
+                              $("html, body").addClass("lock-screen"),
+                              $(".head").addClass("active"),
+                              TweenMax.staggerFromTo(".header-nav li", l, { opacity: 0, cycle: { x: [-100, h] } }, { opacity: 1, cycle: { x: [0, 0] } }, c));
                 });
             }
-            
-
             function r() {
                 var t;
                 $("footer").each(function () {
@@ -27061,8 +27059,7 @@ if (!self.__WB_pmw) {
                 s || t.preventDefault();
             };
         })(window);
-    
-    var psParticle = function (t) {  
+    var psParticle = function (t) {
         (this.ps = t),
             (this.ttl = null),
             (this.color = t.colorArr),
@@ -27251,7 +27248,7 @@ if (!self.__WB_pmw) {
                     var e = document.createElement("a");
                     return (e.href = t), { full: t, protocol: e.protocol, hostname: e.hostname, port: e.port, pathname: e.pathname, search: e.search, hash: e.hash, host: e.host };
                 },
-                e = (t("https://web.archive.org/web/20170209150007/https://yalantis.com"), ["send", "event"]);
+                e = (t("http://web.archive.org/web/20170327130038/https://yalantis.com"), ["send", "event"]);
             $(document).on("click", ".section-ready-to-contact a", function (t) {
                 ga.apply(this, e.concat(["conversion", "clicked on call to action", "clicked on call to action on page " + window.location.pathname]));
             }),
@@ -27297,4 +27294,24 @@ if (!self.__WB_pmw) {
                     void 0 !== n && t && e && window.location.reload());
         }.call(this);
 }
+/*
+     FILE ARCHIVED ON 13:00:38 Mar 27, 2017 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 18:46:01 Nov 30, 2021.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
 
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  cdx.remote: 0.121
+  CDXLines.iter: 26.825 (3)
+  load_resource: 161.196
+  LoadShardBlock: 43.855 (3)
+  exclusion.robots: 0.293
+  esindex: 0.022
+  PetaboxLoader3.resolve: 83.463
+  captures_list: 85.017
+  exclusion.robots.policy: 0.276
+  PetaboxLoader3.datanode: 85.354 (4)
+*/
